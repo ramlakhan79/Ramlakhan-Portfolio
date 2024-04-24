@@ -2,8 +2,8 @@ import {
     Turnstile,
 } from "@marsidev/react-turnstile";
 
-const turnstileSiteKey = '0x4AAAAAAAKS1VVfqS6oXPTm';
-const useBasinFormId = '6ef567b5be7c';
+// const turnstileSiteKey = '0x4AAAAAAAKS1VVfqS6oXPTm';
+const useBasinFormId = '768f9cda9ef4';
 
 export default function ContactForm() {
     return (
@@ -11,6 +11,7 @@ export default function ContactForm() {
             <p className="text-center">Fields marked with asterisk (*) cannot be left blank.</p>
             <form
                 name="contact-form"
+                // action={`https://usebasin.com/f/${useBasinFormId}`}
                 action={`https://usebasin.com/f/${useBasinFormId}`}
                 method="POST"
                 className="w-[100%] flex flex-col flex-nowrap items-center gap-7"
@@ -50,10 +51,10 @@ export default function ContactForm() {
                         required
                     />
                 </label>
-
+{/* 
                 <Turnstile
                     siteKey={turnstileSiteKey}
-                />
+                /> */}
 
                 <button
                     type="submit"
