@@ -20,127 +20,172 @@ export const navMenu = [
 ]
 
 export const projects = [
-    {
-        title: 'MindFit Mental Health',
-        src: '/assets/images/projects/mindfit.webp',
-        altText: 'Screenshot of MindFit home page',
-        ariaLabel: "Opens modal window with more information about the MindFit Mental Health web project",
-        details: {
-            description: "MindFit Mental Health is located in East Rochester, New York. They provide strength-based individual and group mental health counseling services. They use cutting edge technology to help young people learn and practice skills in self-regulation, mindfulness, and positive thinking.",
-            technologies: [
-                {
-                    title: 'HTML',
-                    Icon: Icons.HtmlIcon,
-                },
-                {
-                    title: 'CSS',
-                    Icon: Icons.CSSIcon,
-                },
-                {
-                    title: 'JavaScript',
-                    Icon: Icons.JavascriptIcon,
-                },
-                {
-                    title: 'WordPress',
-                    Icon: Icons.WordPressIcon,
+  {
+    title: "My Personal Portfolio",
+    src: "/assets/images/projects/portfolio.png",
+    altText: "Screenshot of Portfolio home page",
+    ariaLabel:
+      "Opens modal window with more information about the My Personal Portfolio web project",
+    details: {
+      description:
+        "Welcome to Ramlakhan, where innovation meets expertise. Based in the web technologies, our portfolio showcases a diverse range of web development projects and services, each reflecting our commitment to quality, creativity, and client satisfaction. Whether you're looking for a sleek business website, a dynamic e-commerce platform, or a custom web application, our portfolio has something for you.",
+      technologies: [
+        {
+          title: "HTML",
+          Icon: Icons.HtmlIcon,
+        },
+        {
+          title: "CSS",
+          Icon: Icons.CSSIcon,
+        },
+        {
+          title: "JavaScript",
+          Icon: Icons.JavascriptIcon,
+        },
+        // {
+        //   title: "WordPress",
+        //   Icon: Icons.WordPressIcon,
+        // },
+        // {
+        //   title: "PHP",
+        //   Icon: Icons.PHPIcon,
+        // },
+        // {
+        //   title: "BackEnd",
+        //   Icon: Icons.DatabaseIcon,
+        // },
+        // {
+        //   title: "jQuery",
+        //   Icon: Icons.JQueryIcon,
+        // },
+        // {
+        //   title: "API",
+        //   Icon: Icons.APIIcon,
+        // },
+      ],
+      url: "https://ramlakhan130.netlify.app/",
+      githubUrl: null,
+    },
+  },
 
-                },
-                {
-                    title: 'PHP',
-                    Icon: Icons.PHPIcon,
-                },
-                {
-                    title: 'BackEnd',
-                    Icon: Icons.DatabaseIcon,
-                },
-                {
-                    title: 'jQuery',
-                    Icon: Icons.JQueryIcon,
-                },
-                {
-                    title: 'API',
-                    Icon: Icons.APIIcon,
-                },
-            ],
-            url: 'https://mindfitmentalhealth.com/',
-            githubUrl: null,
-        },
-    },
-    {
-        title: 'ThreeSeeds Organization',
-        src: '/assets/images/projects/threeseeds.webp',
-        altText: 'Screenshot of ThreeSeeds home page',
-        ariaLabel: "Opens modal window with more information about the ThreeSeeds web project",
-        details: {
-            description: "ThreeSeeds is a non-profit organization located in California. Their mission is to provide educational, employment, and entrepreneurial opportunities that build self-esteem and empowers one to become self-sufficient.",
-            technologies: [
-                {
-                    title: 'HTML',
-                    Icon: Icons.HtmlIcon,
-                },
-                {
-                    title: 'CSS',
-                    Icon: Icons.CSSIcon,
-                },
-                {
-                    title: 'JavaScript',
-                    Icon: Icons.JavascriptIcon,
-                },
-                {
-                    title: 'WordPress',
-                    Icon: Icons.WordPressIcon,
-                },
-                {
-                    title: 'PHP',
-                    Icon: Icons.PHPIcon,
-                },
-                {
-                    title: 'BackEnd',
-                    Icon: Icons.DatabaseIcon,
-                },
-            ],
-            url: 'https://www.threeseeds.org/',
-            githubUrl: null,
-        },
-    },
-    {
-        title: 'Blended Concoctions',
-        src: '/assets/images/projects/blended-concoctions.webp',
-        altText: 'Screenshot of Blended Concoctions home page',
-        ariaLabel: "Opens modal window with more information about the Blended Concoctions web project",
-        details: {
-            description: "A coffee shop website designed using vanilla HTML, CSS, JavaScript, and a hint of jQuery.",
-            technologies: [
-                {
-                    title: 'HTML',
-                    Icon: Icons.HtmlIcon,
-                },
-                {
-                    title: 'CSS',
-                    Icon: Icons.CSSIcon,
-                },
-                {
-                    title: 'JavaScript',
-                    Icon: Icons.JavascriptIcon,
-                },
-                {
-                    title: 'jQuery',
-                    Icon: Icons.JQueryIcon,
-                },
-            ],
-            url: "https://blended-concoctions.netlify.app/",
-            githubUrl: "https://github.com/edwardpark1/coffee-shop",
-        },
-    },
-]
+//   {
+//     title: "ThreeSeeds Organization",
+//     src: "/assets/images/projects/threeseeds.webp",
+//     altText: "Screenshot of ThreeSeeds home page",
+//     ariaLabel:
+//       "Opens modal window with more information about the ThreeSeeds web project",
+//     details: {
+//       description:
+//         "ThreeSeeds is a non-profit organization located in California. Their mission is to provide educational, employment, and entrepreneurial opportunities that build self-esteem and empowers one to become self-sufficient.",
+//       technologies: [
+//         {
+//           title: "HTML",
+//           Icon: Icons.HtmlIcon,
+//         },
+//         {
+//           title: "CSS",
+//           Icon: Icons.CSSIcon,
+//         },
+//         {
+//           title: "JavaScript",
+//           Icon: Icons.JavascriptIcon,
+//         },
+//         {
+//           title: "WordPress",
+//           Icon: Icons.WordPressIcon,
+//         },
+//         {
+//           title: "PHP",
+//           Icon: Icons.PHPIcon,
+//         },
+//         {
+//           title: "BackEnd",
+//           Icon: Icons.DatabaseIcon,
+//         },
+//       ],
+//       url: "https://www.threeseeds.org/",
+//       githubUrl: null,
+//     },
+//   },
+//   {
+//     title: "ThreeSeeds Organization",
+//     src: "/assets/images/projects/threeseeds.webp",
+//     altText: "Screenshot of ThreeSeeds home page",
+//     ariaLabel:
+//       "Opens modal window with more information about the ThreeSeeds web project",
+//     details: {
+//       description:
+//         "ThreeSeeds is a non-profit organization located in California. Their mission is to provide educational, employment, and entrepreneurial opportunities that build self-esteem and empowers one to become self-sufficient.",
+//       technologies: [
+//         {
+//           title: "HTML",
+//           Icon: Icons.HtmlIcon,
+//         },
+//         {
+//           title: "CSS",
+//           Icon: Icons.CSSIcon,
+//         },
+//         {
+//           title: "JavaScript",
+//           Icon: Icons.JavascriptIcon,
+//         },
+//         {
+//           title: "WordPress",
+//           Icon: Icons.WordPressIcon,
+//         },
+//         {
+//           title: "PHP",
+//           Icon: Icons.PHPIcon,
+//         },
+//         {
+//           title: "BackEnd",
+//           Icon: Icons.DatabaseIcon,
+//         },
+//       ],
+//       url: "https://www.threeseeds.org/",
+//       githubUrl: null,
+//     },
+//   },
+//   {
+//     title: "Blended Concoctions",
+//     src: "/assets/images/projects/blended-concoctions.webp",
+//     altText: "Screenshot of Blended Concoctions home page",
+//     ariaLabel:
+//       "Opens modal window with more information about the Blended Concoctions web project",
+//     details: {
+//       description:
+//         "A coffee shop website designed using vanilla HTML, CSS, JavaScript, and a hint of jQuery.",
+//       technologies: [
+//         {
+//           title: "HTML",
+//           Icon: Icons.HtmlIcon,
+//         },
+//         {
+//           title: "CSS",
+//           Icon: Icons.CSSIcon,
+//         },
+//         {
+//           title: "JavaScript",
+//           Icon: Icons.JavascriptIcon,
+//         },
+//         {
+//           title: "jQuery",
+//           Icon: Icons.JQueryIcon,
+//         },
+//       ],
+//       url: "https://blended-concoctions.netlify.app/",
+//       githubUrl: "https://github.com/edwardpark1/coffee-shop",
+//     },
+//   },
+];
 
 export const testimonials = [
     {
         quote: "I am incredibly grateful for Ramlakhan remarkable efforts of completely revamping our nonprofit's website. His dedication and expertise in enhancing the site's security measures while also ensuring a seamless user experience has been nothing short of exceptional. The new website not only boasts a robust security infrastructure that safeguards sensitive data, but it also welcomes visitors with an intuitive and user-friendly interface. Ramlakhan took our organization's mission to heart and translated it into an online platform that not only represents our values but also engages our audience effectively. His selfless commitment to improving our online presence has undoubtedly elevated our nonprofit's reach and impact. We owe him a debt of gratitude for his invaluable contribution in making our website a secure and inviting space for all.",
-        name: 'Alicia P.',
+        name: 'Pankaj P.',
         title: 'Executive Director of Three Seeds Organization',
-        src: '/assets/images/testimonials/alicia.webp',
-        altText: 'Profile of Alicia P.',
+        src: '/assets/images/testimonials/alicia.png',
+        altText: 'Profile of Pankaj P.',
     }
 ]
 
@@ -187,10 +232,10 @@ export const techSkills = [
                 title: 'Tailwind CSS',
                 Icon: Icons.TailwindCSSIcon,
             },
-            {
-                title: 'SASS, SCSS',
-                Icon: Icons.SassIcon,
-            },
+            // {
+            //     title: 'SASS, SCSS',
+            //     Icon: Icons.SassIcon,
+            // },
             {
                 title: 'JavaScript',
                 Icon: Icons.JavascriptIcon,
@@ -199,19 +244,19 @@ export const techSkills = [
                 title: 'React',
                 Icon: Icons.ReactIcon,
             },
-            {
-                title: 'jQuery',
-                Icon: Icons.JQueryIcon,
-            },
+            // {
+            //     title: 'jQuery',
+            //     Icon: Icons.JQueryIcon,
+            // },
         ],
     },
     {
         category: 'Back-End Development',
         skills: [
-            {
-                title: 'PHP',
-                Icon: Icons.PHPIcon,
-            },
+            // {
+            //     title: 'PHP',
+            //     Icon: Icons.PHPIcon,
+            // },
             {
                 title: 'NodeJS',
                 Icon: Icons.NodeJSIcon,
@@ -228,10 +273,10 @@ export const techSkills = [
                 title: 'MongoDB',
                 Icon: Icons.MongoDBIcon,
             },
-            {
-                title: 'SSRS',
-                Icon: Icons.SsrsIcon,
-            },
+            // {
+            //     title: 'SSRS',
+            //     Icon: Icons.SsrsIcon,
+            // },
         ],
     },
     {
@@ -241,10 +286,10 @@ export const techSkills = [
                 title: 'C#',
                 Icon: Icons.CsharpIcon,
             },
-            {
-                title: 'VBA',
-                Icon: Icons.VBIcon,
-            },
+            // {
+            //     title: 'VBA',
+            //     Icon: Icons.VBIcon,
+            // },
         ],
     },
     {
@@ -254,10 +299,10 @@ export const techSkills = [
                 title: 'WordPress',
                 Icon: Icons.WordPressIcon,
             },
-            {
-                title: 'Wix',
-                Icon: Icons.WixIcon,
-            },
+            // {
+            //     title: 'Wix',
+            //     Icon: Icons.WixIcon,
+            // },
         ],
     },
     {
@@ -297,14 +342,14 @@ export const techSkills = [
     {
         category: 'Microsoft Products',
         skills: [
-            {
-                title: 'Sharepoint',
-                Icon: Icons.SharepointIcon,
-            },
-            {
-                title: 'Excel',
-                Icon: Icons.ExcelIcon,
-            },
+            // {
+            //     title: 'Sharepoint',
+            //     Icon: Icons.SharepointIcon,
+            // },
+            // {
+            //     title: 'Excel',
+            //     Icon: Icons.ExcelIcon,
+            // },
             {
                 title: 'Access',
                 Icon: Icons.AccessIcon,
@@ -322,10 +367,10 @@ export const techSkills = [
                 title: 'REST APIs',
                 Icon: Icons.RestAPIIcon,
             },
-            {
-                title: 'LocalWP',
-                Icon: Icons.LocalWP,
-            },
+            // {
+            //     title: 'LocalWP',
+            //     Icon: Icons.LocalWP,
+            // },
         ],
     },
 ];
@@ -339,10 +384,10 @@ export const softSkills = [
         title: 'Teamwork',
         Icon: Icons.TeamworkIcon,
     },
-    {
-        title: 'Public Speaking',
-        Icon: Icons.PublicSpeakingIcon,
-    },
+    // {
+    //     title: 'Public Speaking',
+    //     Icon: Icons.PublicSpeakingIcon,
+    // },
     {
         title: 'Time Management',
         Icon: Icons.ScheduleIcon,
@@ -352,12 +397,12 @@ export const softSkills = [
 export const workExp = [
     {
         company: 'Ramlakhan',
-        location: 'Rochester, NY',
+        location: 'Bhopal, India',
         positions: [
             {
-                title: 'Freelancing Full-Stack Software Engineer',
+                title: 'Frontend Developer',
                 startDate: new Date(2023, 1),
-                endDate: 'present',
+                endDate: new Date(2023,2),
             },
         ],
         tasks: [
@@ -367,71 +412,71 @@ export const workExp = [
             "Demonstrate expertise in designing custom WordPress themes and plugins in PHP, enhancing website functionality and user interactivity",
         ],
     },
-    {
-        company: '100Devs',
-        location: 'Remote',
-        positions: [
-            {
-                title: 'Full-Stack Software Engineer',
-                startDate: new Date(2022, 3),
-                endDate: new Date(2023, 0),
-            },
-        ],
-        tasks: [
-            "Designed semantically structured and responsive websites for mobile and desktop devices",
-            "Collaborated with a team of developers to construct full-stack web applications",
-            "Utilized agile methodologies such as SCRUM for project management",
-        ],
-    },
-    {
-        company: 'Xerox Corporation',
-        location: 'Webster, NY',
-        positions: [
-            {
-                title: 'Global Equipment Systems Engineer',
-                startDate: new Date(2015, 9),
-                endDate: new Date(2022, 2),
-            },
-        ],
-        tasks: [
-            "Developed device customization processes for Fortune 500 clients and government accounts",
-            "Ranked number one in my department on process quality and defects testing by standardizing automation and fail-safes",
-            "Provided technical support for remote production sites to facilitate the completion of device configurations",
-            "Collaborated with a small team to improve processes",
-            "Designed C# and .NET desktop application solutions to support engineers",
-            "Successfully completed project of revamping Extract-Transform-Load system that led to 95% improved efficiency in terms of execution time, and incorporated troubleshooting features",
-            "Designed and managed secure SharePoint websites for clients",
-            "Wrote ad-hoc SQL queries for statistical analysis",
-            "Wrote macros in Excel to populate customer data on printer labels",
-        ],
-    },
+    // {
+    //     company: '100Devs',
+    //     location: 'Remote',
+    //     positions: [
+    //         {
+    //             title: 'Full-Stack Software Engineer',
+    //             startDate: new Date(2022, 3),
+    //             endDate: new Date(2023, 0),
+    //         },
+    //     ],
+    //     tasks: [
+    //         "Designed semantically structured and responsive websites for mobile and desktop devices",
+    //         "Collaborated with a team of developers to construct full-stack web applications",
+    //         "Utilized agile methodologies such as SCRUM for project management",
+    //     ],
+    // },
+    // {
+    //     company: 'Xerox Corporation',
+    //     location: 'Webster, NY',
+    //     positions: [
+    //         {
+    //             title: 'Global Equipment Systems Engineer',
+    //             startDate: new Date(2015, 9),
+    //             endDate: new Date(2022, 2),
+    //         },
+    //     ],
+    //     tasks: [
+    //         "Developed device customization processes for Fortune 500 clients and government accounts",
+    //         "Ranked number one in my department on process quality and defects testing by standardizing automation and fail-safes",
+    //         "Provided technical support for remote production sites to facilitate the completion of device configurations",
+    //         "Collaborated with a small team to improve processes",
+    //         "Designed C# and .NET desktop application solutions to support engineers",
+    //         "Successfully completed project of revamping Extract-Transform-Load system that led to 95% improved efficiency in terms of execution time, and incorporated troubleshooting features",
+    //         "Designed and managed secure SharePoint websites for clients",
+    //         "Wrote ad-hoc SQL queries for statistical analysis",
+    //         "Wrote macros in Excel to populate customer data on printer labels",
+    //     ],
+    // },
 ];
 
 export const extracurriculars = [
+    // {
+    //     company: 'Toastmasters International Organization',
+    //     location: 'Pittsford, NY',
+    //     positions: [
+    //         {
+    //             title: 'Vice President of Public Relations',
+    //             startDate: new Date(2023, 6),
+    //             endDate: 'present',
+    //         },
+    //         {
+    //             title: 'Sergeant at Arms',
+    //             startDate: new Date(2022, 4),
+    //             endDate: new Date(2023, 6),
+    //         },
+    //     ],
+    //     tasks: [
+    //         "Develop strategies to promote the club to the community, potential members, and guests",
+    //         "Manage the club's social media accounts and website to share club events, achievements, and information",
+    //         "Create content that showcases the club's activities and benefits",
+    //     ],
+    // },
     {
-        company: 'Toastmasters International Organization',
-        location: 'Pittsford, NY',
-        positions: [
-            {
-                title: 'Vice President of Public Relations',
-                startDate: new Date(2023, 6),
-                endDate: 'present',
-            },
-            {
-                title: 'Sergeant at Arms',
-                startDate: new Date(2022, 4),
-                endDate: new Date(2023, 6),
-            },
-        ],
-        tasks: [
-            "Develop strategies to promote the club to the community, potential members, and guests",
-            "Manage the club's social media accounts and website to share club events, achievements, and information",
-            "Create content that showcases the club's activities and benefits",
-        ],
-    },
-    {
-        company: 'Literacy Rochester',
-        location: 'East Rochester, NY',
+        company: 'Literacy Bhopal',
+        location: 'East Bhopal, India',
         positions: [
             {
                 title: 'Digital Volunteer',
@@ -451,49 +496,49 @@ export const educations = [
     {
         degree: 'Sagar Institute of Science and Technology, Bhopal',
         school: 'University at Bhopal, The State University of India',
-        startDate: new Date(2011, 10),
-        endDate: new Date(2015, 4),
+        startDate: new Date(2021, 8),
+        endDate: new Date(2025, 4),
         location: 'Bhopal, India',
     },
 ];
 
 export const dessertImages = [
-    {
-        src: '/assets/images/desserts/oreo-cupcakes.webp',
-        altText: 'Oreo cupcakes with the toastmasters club 10th anniversary cupcake topper',
-        value: 'oreo-cupcakes',
-        label: 'Oreo cupcakes',
-    },
-    {
-        src: '/assets/images/desserts/bagel-cake.webp',
-        altText: 'Large cake decorated to look like an everything bagel',
-        value: 'bagel-cake',
-        label: 'Everything bagel cake',
-    },
-    {
-        src: '/assets/images/desserts/souffle.webp',
-        altText: 'Cheese souffle in a ramekin',
-        value: 'souffle',
-        label: 'Cheese souffle',
-    },
-    {
-        src: '/assets/images/desserts/cookies.webp',
-        altText: 'Plate of chocolate chip cookies',
-        value: 'cookies',
-        label: 'Chocolate chip cookies',
-    },
-    {
-        src: '/assets/images/desserts/macaron-cupcake.webp',
-        altText: 'Red velvet cupcake with cream cheese frosting with a strawberry macaron on top',
-        value: 'macaron-cupcakes',
-        label: 'Red velvet cupcake',
-    },
-    {
-        src: '/assets/images/desserts/cannoli-cupcakes.webp',
-        altText: 'Cannoli cupcakes with chocolate chips on top',
-        value: 'cannoli-cupcakes',
-        label: 'Cannoli cupcakes',
-    },
+  {
+    src: "/assets/images/desserts/Picture.png",
+    altText: "to be writing",
+    value: "Picture",
+    label: "Picture",
+  },
+  {
+    src: "/assets/images/desserts/Picture2.webp",
+    altText: "to be writing",
+    value: "Picture2",
+    label: "Picture",
+  },
+  {
+    src: "/assets/images/desserts/Picture3.webp",
+    altText: "to be writing",
+    value: "Picture3",
+    label: " Picture3",
+  },
+  {
+    src: "/assets/images/desserts/Picture4.webp",
+    altText: "to be writing",
+    value: "Picture4",
+    label: "Picture4",
+  },
+  {
+    src: "/assets/images/desserts/Picture5.webp",
+    altText: "to be writing",
+    value: "Pictures",
+    label: "Picture5",
+  },
+  {
+    src: "/assets/images/desserts/Picture6.webp",
+    altText: "to be writing",
+    value: "Picture6",
+    label: "Picture",
+  },
 ];
 
 export const generalServices = [
