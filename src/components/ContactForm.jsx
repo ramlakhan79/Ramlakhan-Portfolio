@@ -11,7 +11,6 @@ export default function ContactForm() {
             <p className="text-center">Fields marked with asterisk (*) cannot be left blank.</p>
             <form
                 name="contact-form"
-                // action={`https://usebasin.com/f/${useBasinFormId}`}
                 action={`https://usebasin.com/f/${useBasinFormId}`}
                 method="POST"
                 className="w-[100%] flex flex-col flex-nowrap items-center gap-7"

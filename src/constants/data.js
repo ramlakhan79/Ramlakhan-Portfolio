@@ -68,115 +68,119 @@ export const projects = [
     },
   },
 
-//   {
-//     title: "ThreeSeeds Organization",
-//     src: "/assets/images/projects/threeseeds.webp",
-//     altText: "Screenshot of ThreeSeeds home page",
-//     ariaLabel:
-//       "Opens modal window with more information about the ThreeSeeds web project",
-//     details: {
-//       description:
-//         "ThreeSeeds is a non-profit organization located in California. Their mission is to provide educational, employment, and entrepreneurial opportunities that build self-esteem and empowers one to become self-sufficient.",
-//       technologies: [
-//         {
-//           title: "HTML",
-//           Icon: Icons.HtmlIcon,
-//         },
-//         {
-//           title: "CSS",
-//           Icon: Icons.CSSIcon,
-//         },
-//         {
-//           title: "JavaScript",
-//           Icon: Icons.JavascriptIcon,
-//         },
-//         {
-//           title: "WordPress",
-//           Icon: Icons.WordPressIcon,
-//         },
-//         {
-//           title: "PHP",
-//           Icon: Icons.PHPIcon,
-//         },
-//         {
-//           title: "BackEnd",
-//           Icon: Icons.DatabaseIcon,
-//         },
-//       ],
-//       url: "https://www.threeseeds.org/",
-//       githubUrl: null,
-//     },
-//   },
-//   {
-//     title: "ThreeSeeds Organization",
-//     src: "/assets/images/projects/threeseeds.webp",
-//     altText: "Screenshot of ThreeSeeds home page",
-//     ariaLabel:
-//       "Opens modal window with more information about the ThreeSeeds web project",
-//     details: {
-//       description:
-//         "ThreeSeeds is a non-profit organization located in California. Their mission is to provide educational, employment, and entrepreneurial opportunities that build self-esteem and empowers one to become self-sufficient.",
-//       technologies: [
-//         {
-//           title: "HTML",
-//           Icon: Icons.HtmlIcon,
-//         },
-//         {
-//           title: "CSS",
-//           Icon: Icons.CSSIcon,
-//         },
-//         {
-//           title: "JavaScript",
-//           Icon: Icons.JavascriptIcon,
-//         },
-//         {
-//           title: "WordPress",
-//           Icon: Icons.WordPressIcon,
-//         },
-//         {
-//           title: "PHP",
-//           Icon: Icons.PHPIcon,
-//         },
-//         {
-//           title: "BackEnd",
-//           Icon: Icons.DatabaseIcon,
-//         },
-//       ],
-//       url: "https://www.threeseeds.org/",
-//       githubUrl: null,
-//     },
-//   },
-//   {
-//     title: "Blended Concoctions",
-//     src: "/assets/images/projects/blended-concoctions.webp",
-//     altText: "Screenshot of Blended Concoctions home page",
-//     ariaLabel:
-//       "Opens modal window with more information about the Blended Concoctions web project",
-//     details: {
-//       description:
-//         "A coffee shop website designed using vanilla HTML, CSS, JavaScript, and a hint of jQuery.",
-//       technologies: [
-//         {
-//           title: "HTML",
-//           Icon: Icons.HtmlIcon,
-//         },
-//         {
-//           title: "CSS",
-//           Icon: Icons.CSSIcon,
-//         },
-//         {
-//           title: "JavaScript",
-//           Icon: Icons.JavascriptIcon,
-//         },
-//         {
-//           title: "jQuery",
-//           Icon: Icons.JQueryIcon,
-//         },
-//       ],
-//       url: "https://blended-concoctions.netlify.app/",
-//       githubUrl: "https://github.com/edwardpark1/coffee-shop",
-//     },
-//   },
+  {
+    title: "Chat Web Application",
+    src: "/assets/images/projects/chitchat.png",
+    altText: "Screenshot of chat web application home page",
+    ariaLabel:
+      "Opens modal window with more information about the chat web project",
+    details: {
+      description:
+        "A chat web application enables real-time communication between users through text-based messages. It typically includes features like message history, user authentication, notifications, and group chats, providing a seamless and interactive platform for conversation and collaboration.",
+      technologies: [
+        // {
+        //   title: "HTML",
+        //   Icon: Icons.HtmlIcon,
+        // },
+        // {
+        //   title: "CSS",
+        //   Icon: Icons.CSSIcon,
+        // },
+        // {
+        //   title: "JavaScript",
+        //   Icon: Icons.JavascriptIcon,
+        // },
+        {
+            title: "MongoDB",
+            Icon: Icons.MongoDBIcon,
+        },
+        {
+            title: "ExpressJS",
+            Icon: Icons.ExpressJSIcon,
+        },
+        {
+          title: "React",
+          Icon: Icons.ReactIcon,
+        },
+        {
+          title: "NodeJS",
+          Icon: Icons.NodeJSIcon,
+        },
+    ],
+      url: "https://chitchat-165i.onrender.com/",
+      githubUrl: null,
+    },
+  },
+  //   {
+  //     title: "ThreeSeeds Organization",
+  //     src: "/assets/images/projects/threeseeds.webp",
+  //     altText: "Screenshot of ThreeSeeds home page",
+  //     ariaLabel:
+  //       "Opens modal window with more information about the ThreeSeeds web project",
+  //     details: {
+  //       description:
+  //         "ThreeSeeds is a non-profit organization located in California. Their mission is to provide educational, employment, and entrepreneurial opportunities that build self-esteem and empowers one to become self-sufficient.",
+  //       technologies: [
+  //         {
+  //           title: "HTML",
+  //           Icon: Icons.HtmlIcon,
+  //         },
+  //         {
+  //           title: "CSS",
+  //           Icon: Icons.CSSIcon,
+  //         },
+  //         {
+  //           title: "JavaScript",
+  //           Icon: Icons.JavascriptIcon,
+  //         },
+  //         {
+  //           title: "WordPress",
+  //           Icon: Icons.WordPressIcon,
+  //         },
+  //         {
+  //           title: "PHP",
+  //           Icon: Icons.PHPIcon,
+  //         },
+  //         {
+  //           title: "BackEnd",
+  //           Icon: Icons.DatabaseIcon,
+  //         },
+  //       ],
+  //       url: "https://www.threeseeds.org/",
+  //       githubUrl: null,
+  //     },
+  //   },
+  //   {
+  //     title: "Blended Concoctions",
+  //     src: "/assets/images/projects/blended-concoctions.webp",
+  //     altText: "Screenshot of Blended Concoctions home page",
+  //     ariaLabel:
+  //       "Opens modal window with more information about the Blended Concoctions web project",
+  //     details: {
+  //       description:
+  //         "A coffee shop website designed using vanilla HTML, CSS, JavaScript, and a hint of jQuery.",
+  //       technologies: [
+  //         {
+  //           title: "HTML",
+  //           Icon: Icons.HtmlIcon,
+  //         },
+  //         {
+  //           title: "CSS",
+  //           Icon: Icons.CSSIcon,
+  //         },
+  //         {
+  //           title: "JavaScript",
+  //           Icon: Icons.JavascriptIcon,
+  //         },
+  //         {
+  //           title: "jQuery",
+  //           Icon: Icons.JQueryIcon,
+  //         },
+  //       ],
+  //       url: "https://blended-concoctions.netlify.app/",
+  //       githubUrl: "https://github.com/edwardpark1/coffee-shop",
+  //     },
+  //   },
 ];
 
 export const testimonials = [

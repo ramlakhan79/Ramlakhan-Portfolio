@@ -41,6 +41,32 @@ export default function HeaderLogo({ isDarkMode }) {
     }, [isDarkMode]);
 
     return (
+        // <svg
+        //     xmlns="http://www.w3.org/2000/svg"
+        //     viewBox="0 0 200 100"
+        //     width="200"
+        //     height="100"
+        // >
+        //     <defs>
+        //         <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+        //             <feGaussianBlur stdDeviation="5" />
+        //         </filter>
+        //     </defs>
+
+        //     <text
+        //         x="50%"
+        //         y="50%"
+        //         text-anchor="middle"
+        //         dominant-baseline="middle"
+        //         font-family="Arial, sans-serif"
+        //         font-size="48"
+        //         fill="blue"
+        //         // filter="url(#blur)"
+        //     >
+        //        Ramlakhan
+        //     </text>
+        // </svg>
+
         <svg
             className="h-12 md:h-13 lg:h-[136px]"
             version="1.1"

@@ -98,7 +98,7 @@ export default {
             3: '4px',
             4: '8px',
             5: '12px',
-            mobileBound: '14px',
+            mobileBound: '12px',
             6: '16px',
             7: '20px',
             8: '24px',
