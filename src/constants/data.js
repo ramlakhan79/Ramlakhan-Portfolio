@@ -91,12 +91,12 @@ export const projects = [
         //   Icon: Icons.JavascriptIcon,
         // },
         {
-            title: "MongoDB",
-            Icon: Icons.MongoDBIcon,
+          title: "MongoDB",
+          Icon: Icons.MongoDBIcon,
         },
         {
-            title: "ExpressJS",
-            Icon: Icons.ExpressJSIcon,
+          title: "ExpressJS",
+          Icon: Icons.ExpressJSIcon,
         },
         {
           title: "React",
@@ -106,50 +106,66 @@ export const projects = [
           title: "NodeJS",
           Icon: Icons.NodeJSIcon,
         },
-    ],
+      ],
       url: "https://chitchat-165i.onrender.com/",
       githubUrl: null,
     },
   },
-  //   {
-  //     title: "ThreeSeeds Organization",
-  //     src: "/assets/images/projects/threeseeds.webp",
-  //     altText: "Screenshot of ThreeSeeds home page",
-  //     ariaLabel:
-  //       "Opens modal window with more information about the ThreeSeeds web project",
-  //     details: {
-  //       description:
-  //         "ThreeSeeds is a non-profit organization located in California. Their mission is to provide educational, employment, and entrepreneurial opportunities that build self-esteem and empowers one to become self-sufficient.",
-  //       technologies: [
-  //         {
-  //           title: "HTML",
-  //           Icon: Icons.HtmlIcon,
-  //         },
-  //         {
-  //           title: "CSS",
-  //           Icon: Icons.CSSIcon,
-  //         },
-  //         {
-  //           title: "JavaScript",
-  //           Icon: Icons.JavascriptIcon,
-  //         },
-  //         {
-  //           title: "WordPress",
-  //           Icon: Icons.WordPressIcon,
-  //         },
-  //         {
-  //           title: "PHP",
-  //           Icon: Icons.PHPIcon,
-  //         },
-  //         {
-  //           title: "BackEnd",
-  //           Icon: Icons.DatabaseIcon,
-  //         },
-  //       ],
-  //       url: "https://www.threeseeds.org/",
-  //       githubUrl: null,
-  //     },
-  //   },
+  {
+    title: "Quiz Web Application",
+    src: "/assets/images/projects/quizweb.png",
+    altText: "Screenshot of Quiz web home page",
+    ariaLabel:
+      "Opens modal window with more information about the quiz web project",
+    details: {
+      description:
+        "A quiz web application allows users to take interactive quizzes on various topics. It typically offers multiple-choice questions, real-time scoring, and results analysis. Features may include timed quizzes, leaderboards, personalized question sets, and social sharing, creating an engaging and educational experience for users.",
+      technologies: [
+        // {
+        //   title: "HTML",
+        //   Icon: Icons.HtmlIcon,
+        // },
+        // {
+        //   title: "CSS",
+        //   Icon: Icons.CSSIcon,
+        // },
+        // {
+        //   title: "JavaScript",
+        //   Icon: Icons.JavascriptIcon,
+        // },
+        {
+          title: "MongoDB",
+          Icon: Icons.MongoDBIcon,
+        },
+        {
+          title: "ExpressJS",
+          Icon: Icons.ExpressJSIcon,
+        },
+        {
+          title: "React",
+          Icon: Icons.ReactIcon,
+        },
+        {
+          title: "NodeJS",
+          Icon: Icons.NodeJSIcon,
+        },
+        // {
+        //   title: "WordPress",
+        //   Icon: Icons.WordPressIcon,
+        // },
+        // {
+        //   title: "PHP",
+        //   Icon: Icons.PHPIcon,
+        // },
+        // {
+        //   title: "BackEnd",
+        //   Icon: Icons.DatabaseIcon,
+        // },
+      ],
+      url: "https://www.threeseeds.org/",
+      githubUrl: null,
+    },
+  },
   //   {
   //     title: "Blended Concoctions",
   //     src: "/assets/images/projects/blended-concoctions.webp",
