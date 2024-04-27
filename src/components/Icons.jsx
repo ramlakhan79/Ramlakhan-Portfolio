@@ -544,6 +544,93 @@ export const CPPIcon = () => (
     </svg>
 );
 
+export const LCIcon = () => (
+    <svg
+        className="h-iconMobile sm:h-iconSmall md:h-iconMedium lg:h-iconLarge"
+        version="1.1"
+        viewBox="0 0 50 50"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <title>Leetcode Icon</title>
+        <rect
+            x="5"
+            y="5"
+            width="40"
+            height="40"
+            rx="5"
+            fill="hsl(var(--color-primBlue-100))"
+        />
+        <text
+            x="25"
+            y="30"
+            fontSize="20"
+            textAnchor="middle"
+            fill="white"
+            fontWeight="bold"
+        >
+            LC
+        </text>
+    </svg>
+);
+export const CCIcon = () => (
+    <svg
+        className="h-iconMobile sm:h-iconSmall md:h-iconMedium lg:h-iconLarge"
+        version="1.1"
+        viewBox="0 0 50 50"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <title>CodeChef Icon</title>
+        <rect
+            x="5"
+            y="5"
+            width="40"
+            height="40"
+            rx="5"
+            fill="hsl(var(--color-primBlue-100))"
+        />
+        <text
+            x="25"
+            y="30"
+            fontSize="20"
+            textAnchor="middle"
+            fill="white"
+            fontWeight="bold"
+        >
+            CC
+        </text>
+    </svg>
+);
+export const GFGIcon = () => (
+    <svg
+        className="h-iconMobile sm:h-iconSmall md:h-iconMedium lg:h-iconLarge"
+        version="1.1"
+        viewBox="0 0 50 50"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <title>Geeksforgeeks Icon</title>
+        <rect
+            x="5"
+            y="5"
+            width="40"
+            height="40"
+            rx="5"
+            fill="hsl(var(--color-primBlue-100))"
+        />
+        <text
+            x="25"
+            y="30"
+            fontSize="20"
+            textAnchor="middle"
+            fill="white"
+            fontWeight="bold"
+        >
+            GFG
+        </text>
+    </svg>
+);
+
+
+
 // width="46.9" height="50"
 export const VBIcon = () => (
     <svg className="h-iconMobile sm:h-iconSmall md:h-iconMedium lg:h-iconLarge" version="1.1" viewBox="0 0 46.9 50" xmlns="http://www.w3.org/2000/svg">

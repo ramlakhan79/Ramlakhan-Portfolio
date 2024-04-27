@@ -1,23 +1,23 @@
 import * as Icons from "../components/Icons";
 
 export const navMenu = [
-    {
-        id: 'Home',
-        href: '/',
-    },
-    {
-        id: 'Services',
-        href: '/services',
-    },
-    {
-        id: 'About',
-        href: '/about',
-    },
-    {
-        id: 'Resume',
-        href: '/resume',
-    },
-]
+  {
+    id: "Home",
+    href: "/",
+  },
+  {
+    id: "Services",
+    href: "/services",
+  },
+  {
+    id: "About",
+    href: "/about",
+  },
+  {
+    id: "Resume",
+    href: "/resume",
+  },
+];
 
 export const projects = [
   // {
@@ -170,14 +170,24 @@ export const techSkills = [
   },
 
   {
-    category: "Content Management Systems",
+    category: "Coding Profile",
     skills: [
       {
-        title: "WordPress",
-        Icon: Icons.WordPressIcon,
+        title: "LeetCode",
+        Icon: Icons.LCIcon,
+      },
+      {
+        title: "CodeChef",
+        Icon: Icons.CCIcon,
+      },
+
+      {
+        title: "Geeksforgeeks",
+        Icon: Icons.GFGIcon,
       },
     ],
   },
+
   {
     category: "Front-End Development",
     skills: [
@@ -259,15 +269,25 @@ export const techSkills = [
       },
     ],
   },
+
   {
-    category: "Microsoft Products",
+    category: "Content Management Systems",
     skills: [
       {
-        title: "Access",
-        Icon: Icons.AccessIcon,
+        title: "WordPress",
+        Icon: Icons.WordPressIcon,
       },
     ],
   },
+  // {
+  //   category: "Microsoft Products",
+  //   skills: [
+  //     {
+  //       title: "Access",
+  //       Icon: Icons.AccessIcon,
+  //     },
+  //   ],
+  // },
   {
     category: "Others",
     skills: [
@@ -338,13 +358,28 @@ export const extracurriculars = [
 ];
 
 export const educations = [
-    {
-        degree: 'Sagar Institute of Science and Technology, Bhopal',
-        school: 'University at Bhopal, The State University of India',
-        startDate: new Date(2021, 8),
-        endDate: new Date(2025, 4),
-        location: 'Bhopal, India',
-    },
+  {
+    degree: "B.Tech",
+    school: "Sagar Institute of Science and Technology, Bhopal",
+    startDate: new Date(2021, 8),
+    endDate: new Date(2025, 4),
+    location: "Bhopal, India",
+  },
+  {
+    degree: "12th Class",
+    school: "Govt. Boys Higher Secondary School, Madhusudangarh",
+    startDate: new Date(2020, 8),
+    endDate: new Date(2021, 4),
+    location: "Guna, India",
+  },
+  {
+    degree: "10th Class",
+    school: "Govt. High School, Ukawad",
+    startDate: new Date(2018, 8),
+    endDate: new Date(2019, 4),
+    location: "Guna, India",
+  },
+  
 ];
 
 export const dessertImages = [
