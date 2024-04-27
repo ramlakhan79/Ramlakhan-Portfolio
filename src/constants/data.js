@@ -504,37 +504,37 @@ export const educations = [
 
 export const dessertImages = [
   {
-    src: "/assets/images/desserts/Picture1.png",
+    src: "/assets/images/desserts/picture1.jpg",
     altText: "to be writing",
     value: "Picture1",
     label: "Picture1",
   },
   {
-    src: "/assets/images/desserts/Picture2.webp",
+    src: "/assets/images/desserts/picture2.jpg",
     altText: "to be writing",
     value: "Picture2",
     label: "Picture2",
   },
   {
-    src: "/assets/images/desserts/Picture3.webp",
+    src: "/assets/images/desserts/picture3.jpg",
     altText: "to be writing",
     value: "Picture3",
     label: " Picture3",
   },
   {
-    src: "/assets/images/desserts/Picture4.webp",
+    src: "/assets/images/desserts/picture4.jpg",
     altText: "to be writing",
     value: "Picture4",
     label: "Picture4",
   },
   {
-    src: "/assets/images/desserts/Picture5.webp",
+    src: "/assets/images/desserts/picture5.jpg",
     altText: "to be writing",
     value: "Pictures5",
     label: "Pictures5",
   },
   {
-    src: "/assets/images/desserts/Picture6.webp",
+    src: "/assets/images/desserts/picture6.jpg",
     altText: "to be writing",
     value: "Picture6",
     label: "Picture6",
