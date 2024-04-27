@@ -492,16 +492,55 @@ export const ExcelIcon = () => (
 );
 
 // width="49.269" height="50"
-export const CsharpIcon = () => (
+// export const CsharpIcon = () => (
+//     <svg className="h-iconMobile sm:h-iconSmall md:h-iconMedium lg:h-iconLarge" version="1.1" viewBox="0 0 49.269 50" xmlns="http://www.w3.org/2000/svg">
+//         <title>Csharp icon</title>
+//         <g transform="matrix(.68734 0 0 .68734 -17.444 -19.647)" fill="hsl(var(--color-primBlue-100))">
+//             <path d="m25.38 64.92c-0.22-35.54 47.39-51.23 67.92-18.21l-15.75 9.12c-9.51-15.73-33.12-10.1-33.97 9.1 0.25 17.69 23.46 25.91 33.97 9.09l15.75 9.12c-18.09 31.4-67.01 20.1-67.92-18.22z" />
+//             <polygon points="83.31 74.4 85.42 54.6 88.42 54.6 86.37 74.4" />
+//             <polygon points="89.74 74.4 91.85 54.6 94.84 54.6 92.79 74.4" />
+//             <polygon points="82.06 59.31 82.06 62.2 97.06 62.2 97.06 59.31" />
+//             <polygon points="81.22 66.36 81.22 69.26 96.22 69.26 96.22 66.36" />
+//         </g>
+//     </svg>
+// );
+
+// width="49.269" height="50"
+export const CIcon = () => (
     <svg className="h-iconMobile sm:h-iconSmall md:h-iconMedium lg:h-iconLarge" version="1.1" viewBox="0 0 49.269 50" xmlns="http://www.w3.org/2000/svg">
-        <title>Csharp icon</title>
+        <title>C icon</title>
         <g transform="matrix(.68734 0 0 .68734 -17.444 -19.647)" fill="hsl(var(--color-primBlue-100))">
             <path d="m25.38 64.92c-0.22-35.54 47.39-51.23 67.92-18.21l-15.75 9.12c-9.51-15.73-33.12-10.1-33.97 9.1 0.25 17.69 23.46 25.91 33.97 9.09l15.75 9.12c-18.09 31.4-67.01 20.1-67.92-18.22z" />
-            <polygon points="83.31 74.4 85.42 54.6 88.42 54.6 86.37 74.4" />
-            <polygon points="89.74 74.4 91.85 54.6 94.84 54.6 92.79 74.4" />
-            <polygon points="82.06 59.31 82.06 62.2 97.06 62.2 97.06 59.31" />
-            <polygon points="81.22 66.36 81.22 69.26 96.22 69.26 96.22 66.36" />
         </g>
+    </svg>
+);
+
+export const CPPIcon = () => (
+    <svg
+        className="h-iconMobile sm:h-iconSmall md:h-iconMedium lg:h-iconLarge"
+        version="1.1"
+        viewBox="0 0 50 50"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <title>C++ Icon</title>
+        <rect
+            x="5"
+            y="5"
+            width="40"
+            height="40"
+            rx="5"
+            fill="hsl(var(--color-primBlue-100))"
+        />
+        <text
+            x="25"
+            y="30"
+            fontSize="20"
+            textAnchor="middle"
+            fill="white"
+            fontWeight="bold"
+        >
+            C++
+        </text>
     </svg>
 );
 

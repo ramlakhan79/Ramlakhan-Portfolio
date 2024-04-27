@@ -166,37 +166,6 @@ export const projects = [
       githubUrl: null,
     },
   },
-  //   {
-  //     title: "Blended Concoctions",
-  //     src: "/assets/images/projects/blended-concoctions.webp",
-  //     altText: "Screenshot of Blended Concoctions home page",
-  //     ariaLabel:
-  //       "Opens modal window with more information about the Blended Concoctions web project",
-  //     details: {
-  //       description:
-  //         "A coffee shop website designed using vanilla HTML, CSS, JavaScript, and a hint of jQuery.",
-  //       technologies: [
-  //         {
-  //           title: "HTML",
-  //           Icon: Icons.HtmlIcon,
-  //         },
-  //         {
-  //           title: "CSS",
-  //           Icon: Icons.CSSIcon,
-  //         },
-  //         {
-  //           title: "JavaScript",
-  //           Icon: Icons.JavascriptIcon,
-  //         },
-  //         {
-  //           title: "jQuery",
-  //           Icon: Icons.JQueryIcon,
-  //         },
-  //       ],
-  //       url: "https://blended-concoctions.netlify.app/",
-  //       githubUrl: "https://github.com/edwardpark1/coffee-shop",
-  //     },
-  //   },
 ];
 
 export const testimonials = [
@@ -237,162 +206,173 @@ export const socialMedias = [
 ];
 
 export const techSkills = [
-    {
-        category: 'Front-End Development',
-        skills: [
-            {
-                title: 'HTML',
-                Icon: Icons.HtmlIcon,
-            },
-            {
-                title: 'CSS',
-                Icon: Icons.CSSIcon,
-            },
-            {
-                title: 'Tailwind CSS',
-                Icon: Icons.TailwindCSSIcon,
-            },
-            // {
-            //     title: 'SASS, SCSS',
-            //     Icon: Icons.SassIcon,
-            // },
-            {
-                title: 'JavaScript',
-                Icon: Icons.JavascriptIcon,
-            },
-            {
-                title: 'React',
-                Icon: Icons.ReactIcon,
-            },
-            // {
-            //     title: 'jQuery',
-            //     Icon: Icons.JQueryIcon,
-            // },
-        ],
-    },
-    {
-        category: 'Back-End Development',
-        skills: [
-            // {
-            //     title: 'PHP',
-            //     Icon: Icons.PHPIcon,
-            // },
-            {
-                title: 'NodeJS',
-                Icon: Icons.NodeJSIcon,
-            },
-            {
-                title: 'ExpressJS',
-                Icon: Icons.ExpressJSIcon,
-            },
-            {
-                title: 'SQL Server',
-                Icon: Icons.SqlServerIcon,
-            },
-            {
-                title: 'MongoDB',
-                Icon: Icons.MongoDBIcon,
-            },
-            // {
-            //     title: 'SSRS',
-            //     Icon: Icons.SsrsIcon,
-            // },
-        ],
-    },
-    {
-        category: 'Programming Languages',
-        skills: [
-            {
-                title: 'C#',
-                Icon: Icons.CsharpIcon,
-            },
-            // {
-            //     title: 'VBA',
-            //     Icon: Icons.VBIcon,
-            // },
-        ],
-    },
-    {
-        category: 'Content Management Systems',
-        skills: [
-            {
-                title: 'WordPress',
-                Icon: Icons.WordPressIcon,
-            },
-            // {
-            //     title: 'Wix',
-            //     Icon: Icons.WixIcon,
-            // },
-        ],
-    },
-    {
-        category: 'Build Tools, Frameworks, and Versioning',
-        skills: [
-            {
-                title: 'Vite',
-                Icon: Icons.ViteIcon,
-            },
-            {
-                title: 'Git',
-                Icon: Icons.GitIcon,
-            },
-            {
-                title: 'GitHub',
-                Icon: Icons.GitHubIcon,
-            },
-        ],
-    },
-    {
-        category: 'Design and Prototyping',
-        skills: [
-            {
-                title: 'Responsive Design',
-                Icon: Icons.ResponsiveDesignIcon,
-            },
-            {
-                title: 'Pen and Paper',
-                Icon: Icons.SketchingIcon,
-            },
-            {
-                title: 'Figma',
-                Icon: Icons.FigmaIcon,
-            },
-        ],
-    },
-    {
-        category: 'Microsoft Products',
-        skills: [
-            // {
-            //     title: 'Sharepoint',
-            //     Icon: Icons.SharepointIcon,
-            // },
-            // {
-            //     title: 'Excel',
-            //     Icon: Icons.ExcelIcon,
-            // },
-            {
-                title: 'Access',
-                Icon: Icons.AccessIcon,
-            },
-        ],
-    },
-    {
-        category: 'Others',
-        skills: [
-            {
-                title: 'APIs',
-                Icon: Icons.APIIcon,
-            },
-            {
-                title: 'REST APIs',
-                Icon: Icons.RestAPIIcon,
-            },
-            // {
-            //     title: 'LocalWP',
-            //     Icon: Icons.LocalWP,
-            // },
-        ],
-    },
+  {
+    category: "Programming Languages",
+    skills: [
+      {
+        title: "C",
+        Icon: Icons.CIcon,
+      },
+      {
+        title: "C++",
+        Icon: Icons.CPPIcon,
+      },
+
+      {
+        title: "Java",
+        Icon: Icons.JavaIcon,
+      },
+      // {
+      //     title: 'VBA',
+      //     Icon: Icons.VBIcon,
+      // },
+    ],
+  },
+
+  {
+    category: "Content Management Systems",
+    skills: [
+      {
+        title: "WordPress",
+        Icon: Icons.WordPressIcon,
+      },
+      // {
+      //     title: 'Wix',
+      //     Icon: Icons.WixIcon,
+      // },
+    ],
+  },
+  {
+    category: "Front-End Development",
+    skills: [
+      {
+        title: "HTML",
+        Icon: Icons.HtmlIcon,
+      },
+      {
+        title: "CSS",
+        Icon: Icons.CSSIcon,
+      },
+      {
+        title: "Tailwind CSS",
+        Icon: Icons.TailwindCSSIcon,
+      },
+      // {
+      //     title: 'SASS, SCSS',
+      //     Icon: Icons.SassIcon,
+      // },
+      {
+        title: "JavaScript",
+        Icon: Icons.JavascriptIcon,
+      },
+      {
+        title: "React",
+        Icon: Icons.ReactIcon,
+      },
+      // {
+      //     title: 'jQuery',
+      //     Icon: Icons.JQueryIcon,
+      // },
+    ],
+  },
+  {
+    category: "Back-End Development",
+    skills: [
+      // {
+      //     title: 'PHP',
+      //     Icon: Icons.PHPIcon,
+      // },
+      {
+        title: "MongoDB",
+        Icon: Icons.MongoDBIcon,
+      },
+      {
+        title: "ExpressJS",
+        Icon: Icons.ExpressJSIcon,
+      },
+      {
+        title: "NodeJS",
+        Icon: Icons.NodeJSIcon,
+      },
+      {
+        title: "SQL Server",
+        Icon: Icons.SqlServerIcon,
+      },
+      // {
+      //     title: 'SSRS',
+      //     Icon: Icons.SsrsIcon,
+      // },
+    ],
+  },
+
+  {
+    category: "Build Tools, Frameworks, and Versioning",
+    skills: [
+      {
+        title: "Vite",
+        Icon: Icons.ViteIcon,
+      },
+      {
+        title: "Git",
+        Icon: Icons.GitIcon,
+      },
+      {
+        title: "GitHub",
+        Icon: Icons.GitHubIcon,
+      },
+    ],
+  },
+  {
+    category: "Design and Prototyping",
+    skills: [
+      {
+        title: "Responsive Design",
+        Icon: Icons.ResponsiveDesignIcon,
+      },
+      {
+        title: "Pen and Paper",
+        Icon: Icons.SketchingIcon,
+      },
+      {
+        title: "Figma",
+        Icon: Icons.FigmaIcon,
+      },
+    ],
+  },
+  {
+    category: "Microsoft Products",
+    skills: [
+      // {
+      //     title: 'Sharepoint',
+      //     Icon: Icons.SharepointIcon,
+      // },
+      // {
+      //     title: 'Excel',
+      //     Icon: Icons.ExcelIcon,
+      // },
+      {
+        title: "Access",
+        Icon: Icons.AccessIcon,
+      },
+    ],
+  },
+  {
+    category: "Others",
+    skills: [
+      {
+        title: "APIs",
+        Icon: Icons.APIIcon,
+      },
+      {
+        title: "REST APIs",
+        Icon: Icons.RestAPIIcon,
+      },
+      // {
+      //     title: 'LocalWP',
+      //     Icon: Icons.LocalWP,
+      // },
+    ],
+  },
 ];
 
 export const softSkills = [
@@ -524,16 +504,16 @@ export const educations = [
 
 export const dessertImages = [
   {
-    src: "/assets/images/desserts/Picture.png",
+    src: "/assets/images/desserts/Picture1.png",
     altText: "to be writing",
-    value: "Picture",
-    label: "Picture",
+    value: "Picture1",
+    label: "Picture1",
   },
   {
     src: "/assets/images/desserts/Picture2.webp",
     altText: "to be writing",
     value: "Picture2",
-    label: "Picture",
+    label: "Picture2",
   },
   {
     src: "/assets/images/desserts/Picture3.webp",
@@ -550,33 +530,33 @@ export const dessertImages = [
   {
     src: "/assets/images/desserts/Picture5.webp",
     altText: "to be writing",
-    value: "Pictures",
-    label: "Picture5",
+    value: "Pictures5",
+    label: "Pictures5",
   },
   {
     src: "/assets/images/desserts/Picture6.webp",
     altText: "to be writing",
     value: "Picture6",
-    label: "Picture",
+    label: "Picture6",
   },
 ];
 
 export const generalServices = [
-    {
-        title: 'Consulting and Strategy',
-        description: "I work closely alongside you to understand your goals, target audience, and business objectives. Using this insight, I develop a strategic plan designed to seamlessly transform your goals into a captivating digital presence.",
-        Icon: Icons.HandshakeIcon,
-    },
-    {
-        title: 'Branding',
-        description: "Let's craft a distinctive visual identity that resonates with your brand. An identity that not only establishes a strong visual presence, but also forges a profound connection with your audience, fostering a sense of trust and authenticity.",
-        Icon: Icons.BrightIdeaIcon,
-    },
-    {
-        title: 'Competitor Analysis',
-        description: "Through my competitor analysis service, I delve deep into the strategies employed within your industry or niche. Armed with this insight, you gain a distinct advantage, positioning yourself uniquely from others.",
-        Icon: Icons.TargetIcon,
-    },
+    // {
+    //     title: 'Consulting and Strategy',
+    //     description: "I work closely alongside you to understand your goals, target audience, and business objectives. Using this insight, I develop a strategic plan designed to seamlessly transform your goals into a captivating digital presence.",
+    //     Icon: Icons.HandshakeIcon,
+    // },
+    // {
+    //     title: 'Branding',
+    //     description: "Let's craft a distinctive visual identity that resonates with your brand. An identity that not only establishes a strong visual presence, but also forges a profound connection with your audience, fostering a sense of trust and authenticity.",
+    //     Icon: Icons.BrightIdeaIcon,
+    // },
+    // {
+    //     title: 'Competitor Analysis',
+    //     description: "Through my competitor analysis service, I delve deep into the strategies employed within your industry or niche. Armed with this insight, you gain a distinct advantage, positioning yourself uniquely from others.",
+    //     Icon: Icons.TargetIcon,
+    // },
     {
         title: 'Front-End Development',
         description: "Infusing artistry into functionality, my web design prowess creates visually stunning and intuitive interfaces that captivate your audience. Aesthetics and usability should go hand in hand.",
