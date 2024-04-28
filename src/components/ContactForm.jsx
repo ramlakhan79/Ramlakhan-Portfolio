@@ -27,6 +27,17 @@ export default function ContactForm() {
                 </label>
 
                 <label className="max-w-[30em] w-[100%]">
+                    Mobile No *
+                    <input
+                        type="text"
+                        id="contact-phone"
+                        name="contact-phone"
+                        className="mt-3 px-5 py-4 bg-transparent border-2 border-solid border-neutGray-500 rounded-[5px] max-w-[30em] w-[100%] backdrop-blur-[5px]"
+                        placeholder="phone number"
+                        required />
+                </label>
+
+                <label className="max-w-[30em] w-[100%]">
                     Email Address *
                     <input
                         type="email"
@@ -37,7 +48,7 @@ export default function ContactForm() {
                         required />
                 </label>
 
-                <input type="hidden" name="_gotcha"></input>
+                {/* <input type="hidden" name="_gotcha"></input> */}
 
                 <label className="max-w-[30em] w-[100%]">
                     Message *

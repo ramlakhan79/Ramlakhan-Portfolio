@@ -116,7 +116,7 @@ export const testimonials = [
     {
         quote: "I am incredibly grateful for Ramlakhan remarkable efforts of completely revamping our nonprofit's website. His dedication and expertise in enhancing the site's security measures while also ensuring a seamless user experience has been nothing short of exceptional. The new website not only boasts a robust security infrastructure that safeguards sensitive data, but it also welcomes visitors with an intuitive and user-friendly interface. Ramlakhan took our organization's mission to heart and translated it into an online platform that not only represents our values but also engages our audience effectively. His selfless commitment to improving our online presence has undoubtedly elevated our nonprofit's reach and impact. We owe him a debt of gratitude for his invaluable contribution in making our website a secure and inviting space for all.",
         name: 'Lakhan L.',
-        title: 'Executive Director of Three Seeds Organization',
+        title: 'Executive Director of Web Technologies Organization',
         src: '/assets/images/testimonials/testimo.png',
         altText: 'Profile of Lakhan L.',
     }
@@ -259,10 +259,10 @@ export const techSkills = [
         title: "Responsive Design",
         Icon: Icons.ResponsiveDesignIcon,
       },
-      {
-        title: "Pen and Paper",
-        Icon: Icons.SketchingIcon,
-      },
+      // {
+      //   title: "Pen and Paper",
+      //   Icon: Icons.SketchingIcon,
+      // },
       {
         title: "Figma",
         Icon: Icons.FigmaIcon,
@@ -270,15 +270,16 @@ export const techSkills = [
     ],
   },
 
-  {
-    category: "Content Management Systems",
-    skills: [
-      {
-        title: "WordPress",
-        Icon: Icons.WordPressIcon,
-      },
-    ],
-  },
+  // {
+  //   category: "Content Management Systems",
+  //   skills: [
+  //     {
+  //       title: "WordPress",
+  //       Icon: Icons.WordPressIcon,
+  //     },
+  //   ],
+  // },
+
   // {
   //   category: "Microsoft Products",
   //   skills: [
@@ -319,42 +320,42 @@ export const softSkills = [
 ];
 
 export const workExp = [
-    {
-        company: 'Ramlakhan',
-        location: 'Bhopal, India',
-        positions: [
-            {
-                title: 'Frontend Developer',
-                startDate: new Date(2023, 1),
-                endDate: new Date(2023,2),
-            },
-        ],
-        tasks: [
-            "Collaborate directly with clients to gather project requirements, provide regular updates, and deliver solutions that tailored to their specific needs",
-            "Conduct competitor analysis to identify clients' opportunities for differentiation and growth",
-            "Setup API calls and database structures for streamlining clients' business requirements",
-            "Demonstrate expertise in designing custom WordPress themes and plugins in PHP, enhancing website functionality and user interactivity",
-        ],
-    },
+    // {
+    //     company: 'Ramlakhan',
+    //     location: 'Bhopal, India',
+    //     positions: [
+    //         {
+    //             title: 'Frontend Developer',
+    //             startDate: new Date(2023, 1),
+    //             endDate: new Date(2023,2),
+    //         },
+    //     ],
+    //     tasks: [
+    //         "Collaborate directly with clients to gather project requirements, provide regular updates, and deliver solutions that tailored to their specific needs",
+    //         "Conduct competitor analysis to identify clients' opportunities for differentiation and growth",
+    //         "Setup API calls and database structures for streamlining clients' business requirements",
+    //         "Demonstrate expertise in designing custom WordPress themes and plugins in PHP, enhancing website functionality and user interactivity",
+    //     ],
+    // },
 ];
 
 export const extracurriculars = [
-    {
-        company: 'Literacy Bhopal',
-        location: 'East Bhopal, India',
-        positions: [
-            {
-                title: 'Digital Volunteer',
-                startDate: new Date(2022, 3),
-                endDate: new Date(2023, 9),
-            },
-        ],
-        tasks: [
-            "Diagnose and troubleshoot technical problems",
-            "Demonstrate strong communication skills by explaining technical concepts in a clear and understandable manner",
-            "Recognized for outstanding problem-solving capabilities",
-        ],
-    },
+    // {
+    //     company: 'Literacy Bhopal',
+    //     location: 'East Bhopal, India',
+    //     positions: [
+    //         {
+    //             title: 'Digital Volunteer',
+    //             startDate: new Date(2022, 3),
+    //             endDate: new Date(2023, 9),
+    //         },
+    //     ],
+    //     tasks: [
+    //         "Diagnose and troubleshoot technical problems",
+    //         "Demonstrate strong communication skills by explaining technical concepts in a clear and understandable manner",
+    //         "Recognized for outstanding problem-solving capabilities",
+    //     ],
+    // },
 ];
 
 export const educations = [
@@ -379,6 +380,7 @@ export const educations = [
     endDate: new Date(2019, 4),
     location: "Guna, India",
   },
+  
   
 ];
 

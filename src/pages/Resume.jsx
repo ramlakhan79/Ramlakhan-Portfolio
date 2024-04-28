@@ -25,10 +25,10 @@ export default function Resume() {
                     <Socials />
                 </div>
             </section>
-            <section className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
+            {/* <section className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
                 <h2>Professional Experience</h2>
                 <Experience experience={workExp} isSequential={true} />
-            </section>
+            </section> */}
             <section className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
                 <h2>Soft Skills</h2>
                 <SoftSkills />
@@ -37,10 +37,10 @@ export default function Resume() {
                 <h2>Technical Skills</h2>
                 <TechSkills />
             </section>
-            <section className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
+            {/* <section className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
                 <h2>Organizations</h2>
                 <Experience experience={extracurriculars} isSequential={false} />
-            </section>
+            </section> */}
             <section className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
                 <h2>Education</h2>
                 <Education />
