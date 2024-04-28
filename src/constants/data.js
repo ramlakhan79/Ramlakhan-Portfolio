@@ -110,17 +110,30 @@ export const projects = [
       githubUrl: "https://github.com/ramlakhan79/Quiz-Web-App",
     },
   },
+  
+];
+
+export const dailyquotes = [
+  {
+    quote: "Writing is its own reward.",
+    name: "--Henry Miller",
+    title: "Executive Director of Web Technologies Organization",
+    src: "/assets/images/testimonials/testimo.png",
+    altText: "Profile of Lakhan L.",
+  },
 ];
 
 export const testimonials = [
-    {
-        quote: "I am incredibly grateful for Ramlakhan remarkable efforts of completely revamping our nonprofit's website. His dedication and expertise in enhancing the site's security measures while also ensuring a seamless user experience has been nothing short of exceptional. The new website not only boasts a robust security infrastructure that safeguards sensitive data, but it also welcomes visitors with an intuitive and user-friendly interface. Ramlakhan took our organization's mission to heart and translated it into an online platform that not only represents our values but also engages our audience effectively. His selfless commitment to improving our online presence has undoubtedly elevated our nonprofit's reach and impact. We owe him a debt of gratitude for his invaluable contribution in making our website a secure and inviting space for all.",
-        name: 'Lakhan L.',
-        title: 'Executive Director of Web Technologies Organization',
-        src: '/assets/images/testimonials/testimo.png',
-        altText: 'Profile of Lakhan L.',
-    }
-]
+  {
+    quote:
+      "I am incredibly grateful for Ramlakhan remarkable efforts of completely revamping our nonprofit's website. His dedication and expertise in enhancing the site's security measures while also ensuring a seamless user experience has been nothing short of exceptional. The new website not only boasts a robust security infrastructure that safeguards sensitive data, but it also welcomes visitors with an intuitive and user-friendly interface. Ramlakhan took our organization's mission to heart and translated it into an online platform that not only represents our values but also engages our audience effectively. His selfless commitment to improving our online presence has undoubtedly elevated our nonprofit's reach and impact. We owe him a debt of gratitude for his invaluable contribution in making our website a secure and inviting space for all.",
+    name: "Lakhan L.",
+    title: "Executive Director of Web Technologies Organization",
+    src: "/assets/images/testimonials/testimo.png",
+    altText: "Profile of Lakhan L.",
+  },
+];
+
 
 export const socialMedias = [
   {
@@ -156,15 +169,18 @@ export const techSkills = [
       {
         title: "C",
         Icon: Icons.CIcon,
+        url: null,
       },
       {
         title: "C++",
         Icon: Icons.CPPIcon,
+        url: null,
       },
 
       {
         title: "Java",
         Icon: Icons.JavaIcon,
+        url: null,
       },
     ],
   },
@@ -175,15 +191,18 @@ export const techSkills = [
       {
         title: "LeetCode",
         Icon: Icons.LCIcon,
+        url: "https://leetcode.com/u/Ramlakhan_79/",
       },
       {
         title: "CodeChef",
         Icon: Icons.CCIcon,
+        url: "https://www.codechef.com/users/ramlakhan799",
       },
 
       {
         title: "Geeksforgeeks",
         Icon: Icons.GFGIcon,
+        url: "https://www.geeksforgeeks.org/user/ramlakhan79/",
       },
     ],
   },
@@ -194,22 +213,27 @@ export const techSkills = [
       {
         title: "HTML",
         Icon: Icons.HtmlIcon,
+        url: null,
       },
       {
         title: "CSS",
         Icon: Icons.CSSIcon,
+        url: null,
       },
       {
         title: "Tailwind CSS",
         Icon: Icons.TailwindCSSIcon,
+        url: null,
       },
       {
         title: "JavaScript",
         Icon: Icons.JavascriptIcon,
+        url: null,
       },
       {
         title: "React",
         Icon: Icons.ReactIcon,
+        url: null,
       },
     ],
   },
@@ -219,18 +243,22 @@ export const techSkills = [
       {
         title: "MongoDB",
         Icon: Icons.MongoDBIcon,
+        url: null,
       },
       {
         title: "ExpressJS",
         Icon: Icons.ExpressJSIcon,
+        url: null,
       },
       {
         title: "NodeJS",
         Icon: Icons.NodeJSIcon,
+        url: null,
       },
       {
         title: "SQL Server",
         Icon: Icons.SqlServerIcon,
+        url: null,
       },
     ],
   },
@@ -241,14 +269,17 @@ export const techSkills = [
       {
         title: "Vite",
         Icon: Icons.ViteIcon,
+        url: null,
       },
       {
         title: "Git",
         Icon: Icons.GitIcon,
+        url: null,
       },
       {
         title: "GitHub",
         Icon: Icons.GitHubIcon,
+        url: null,
       },
     ],
   },
@@ -258,6 +289,7 @@ export const techSkills = [
       {
         title: "Responsive Design",
         Icon: Icons.ResponsiveDesignIcon,
+        url: null,
       },
       // {
       //   title: "Pen and Paper",
@@ -266,6 +298,7 @@ export const techSkills = [
       {
         title: "Figma",
         Icon: Icons.FigmaIcon,
+        url: null,
       },
     ],
   },
@@ -295,10 +328,12 @@ export const techSkills = [
       {
         title: "APIs",
         Icon: Icons.APIIcon,
+        url: null,
       },
       {
         title: "REST APIs",
         Icon: Icons.RestAPIIcon,
+        url: null,
       },
     ],
   },
@@ -441,17 +476,17 @@ export const generalServices = [
     // },
     {
         title: 'Front-End Development',
-        description: "Infusing artistry into functionality, my web design prowess creates visually stunning and intuitive interfaces that captivate your audience. Aesthetics and usability should go hand in hand.",
+        description: "",
         Icon: Icons.WebDesignIcon,
     },
     {
         title: 'Back-End Development',
-        description: "Fueling your website's functionality behind the scenes, I create dynamic processes that bridge your business requirements and your website. Expect nothing less than efficient, user-friendly functionality that adds value to their experience.",
+        description: "",
         Icon: Icons.ServerIcon,
     },
     {
         title: 'Responsive Design',
-        description: "Your website will be flawlessly showcased across all screens for optimal viewing experience. Responsive design ensures your online presence adapts seamlessly to devices of all sizes.",
+        description: "",
         Icon: Icons.DesktopMobileIcon,
     },
 ];

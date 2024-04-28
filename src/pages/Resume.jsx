@@ -2,12 +2,12 @@
 import Socials from "../components/Socials";
 import TechSkills from "../components/TechSkills";
 import SoftSkills from "../components/SoftSkills";
-import Experience from "../components/Experience";
+// import Experience from "../components/Experience";
 import Education from "../components/Education";
-import {
-    workExp,
-    extracurriculars,
-} from "../constants/data";
+// import {
+//     workExp,
+//     extracurriculars,
+// } from "../constants/data";
 
 export default function Resume() {
     return (
