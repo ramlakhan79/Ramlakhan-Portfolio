@@ -118,10 +118,10 @@ export default function ProjectModal({ projectId, projectData, }) {
                     </ul>
                     <div className="flex flex-row flex-wrap gap-7 items-center justify-center">
                         {projectData.details.url !== null && (
-                            <a href={projectData.details.url} className="glassy-icon px-6 shrink-0">Visit Website</a>
+                            <a href={projectData.details.url} target="_blank" className="glassy-icon px-6 shrink-0">Visit Website</a>
                         )}
                         {projectData.details.githubUrl !== null && (
-                            <a href={projectData.details.githubUrl} className="glassy-icon px-6 shrink-0">Visit GitHub Project</a>
+                            <a href={projectData.details.githubUrl} target="_blank" className="glassy-icon px-6 shrink-0">Visit GitHub Project</a>
                         )}
                     </div>
                 </div>

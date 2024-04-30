@@ -18,7 +18,7 @@ export default function TechSkills() {
                                 </div>
                                 <div className="flex flex-row flex-wrap gap-7 items-center justify-center">
                                     {skill.url !== null && (
-                                        <a href={skill.url} className="glassy-icon px-6 shrink-0"> <skill.Icon /></a>
+                                        <a href={skill.url} target="_blank" className="glassy-icon px-6 shrink-0"> <skill.Icon /></a>
                                     )}
                                 </div>
                                  <span className="text-center">{skill.title}</span>
