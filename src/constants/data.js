@@ -6,16 +6,16 @@ export const navMenu = [
     href: "/",
   },
   {
-    id: "Services",
-    href: "/services",
-  },
-  {
     id: "About",
     href: "/about",
   },
   {
     id: "Resume",
     href: "/resume",
+  },
+  {
+    id: "Services",
+    href: "/services",
   },
 ];
 
@@ -47,6 +47,53 @@ export const projects = [
   //     githubUrl: null,
   //   },
   // },
+  {
+    title: "3D Calculator",
+    src: "/assets/images/projects/calculator.png",
+    altText: "Screenshot of 3D Calculator home page",
+    ariaLabel:
+      "Opens modal window with more information about the 3D Calculator project",
+    details: {
+      description:
+        "A 3D Calculator application enables real-time calculation of addition, division, multiplication and subtraction etc. It typically includes features like addition, division, multiplication and subtraction.",
+      technologies: [
+        {
+          title: "HTML",
+          Icon: Icons.HtmlIcon,
+        },
+        {
+          title: "CSS",
+          Icon: Icons.CSSIcon,
+        },
+      ],
+      url: "https://3dcalculator130.netlify.app/",
+      githubUrl: null,
+    },
+  },
+
+  {
+    title: "Temperature Convertor",
+    src: "/assets/images/projects/temperature.png",
+    altText: "Screenshot of Temperature Convertor home page",
+    ariaLabel:
+      "Opens modal window with more information about the Temperature Convertor project",
+    details: {
+      description:
+        "A Temprature Convertor application  is convert the temperature.",
+      technologies: [
+        {
+          title: "HTML",
+          Icon: Icons.HtmlIcon,
+        },
+        {
+          title: "CSS",
+          Icon: Icons.CSSIcon,
+        },
+      ],
+      url: "https://temperature.netlify.app/",
+      githubUrl: null,
+    },
+  },
 
   {
     title: "Chat Web Application",
@@ -106,11 +153,10 @@ export const projects = [
           Icon: Icons.NodeJSIcon,
         },
       ],
-      url:null,
+      url: "https://quiz-web-app-khaki.vercel.app/",
       githubUrl: "https://github.com/ramlakhan79/Quiz-Web-App",
     },
   },
-  
 ];
 
 export const dailyquotes = [
