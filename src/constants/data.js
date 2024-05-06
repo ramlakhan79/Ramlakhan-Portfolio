@@ -1,3 +1,4 @@
+import Dailyquotes from "../components/Dailyquotes";
 import * as Icons from "../components/Icons";
 
 export const navMenu = [
@@ -159,15 +160,405 @@ export const projects = [
   },
 ];
 
-export const dailyquotes = [
+// export const dailyQuotes = [
+//   {
+//     day: 1,
+//     quote: "Writing is its own reward.",
+//     name: "--Henry Miller ",
+//     title: "Executive Director of Web Technologies Organization",
+//     src: "/assets/images/testimonials/testimo.png",
+//     altText: "Profile of Lakhan L.",
+//   },
+ 
+// ];
+
+export const quoteUpdate = [
   {
-    quote: "Writing is its own reward.",
-    name: "--Henry Miller",
-    title: "Executive Director of Web Technologies Organization",
-    src: "/assets/images/testimonials/testimo.png",
-    altText: "Profile of Lakhan L.",
+    dayq: 1,
+    dailyquotes: [
+      {
+        quote: "Writing is its own reward.",
+        name: "--Henry Miller",
+        title: "Author",
+        src: "/assets/images/testimonials/testimo.png",
+        altText: "Profile of Henry Miller",
+      },
+    ],
+  },
+  {
+    dayq: 2,
+    dailyquotes: [
+      {
+        quote:
+          "Success is not the key to happiness. Happiness is the key to success.",
+        name: "--Albert Schweitzer",
+        title: "Philosopher",
+        src: "/assets/images/testimonials/albert-schweitzer.png",
+        altText: "Profile of Albert Schweitzer",
+      },
+    ],
+  },
+  {
+    dayq: 3,
+    dailyquotes: [
+      {
+        quote:
+          "Your time is limited, so don't waste it living someone else's life.",
+        name: "--Steve Jobs",
+        title: "Apple Co-Founder",
+        src: "/assets/images/testimonials/steve-jobs.png",
+        altText: "Profile of Steve Jobs",
+      },
+    ],
+  },
+  {
+    dayq: 4,
+    dailyquotes: [
+      {
+        quote: "Creativity is intelligence having fun.",
+        name: "--Albert Einstein",
+        title: "Physicist",
+        src: "/assets/images/testimonials/albert-einstein.png",
+        altText: "Profile of Albert Einstein",
+      },
+    ],
+  },
+  {
+    dayq: 5,
+    dailyquotes: [
+      {
+        quote: "In the middle of difficulty lies opportunity.",
+        name: "--Albert Einstein",
+        title: "Physicist",
+        src: "/assets/images/testimonials/albert-einstein.png",
+        altText: "Profile of Albert Einstein",
+      },
+    ],
+  },
+  {
+    dayq: 6,
+    dailyquotes: [
+      {
+        quote:
+          "The only limit to our realization of tomorrow is our doubts of today.",
+        name: "--Franklin D. Roosevelt",
+        title: "Former US President",
+        src: "/assets/images/testimonials/fdr.png",
+        altText: "Profile of Franklin D. Roosevelt",
+      },
+    ],
+  },
+  {
+    dayq: 7,
+    dailyquotes: [
+      {
+        quote:
+          "It does not matter how slowly you go as long as you do not stop.",
+        name: "--Confucius",
+        title: "Philosopher",
+        src: "/assets/images/testimonials/confucius.png",
+        altText: "Profile of Confucius",
+      },
+    ],
+  },
+  {
+    dayq: 8,
+    dailyquotes: [
+      {
+        quote: "The best way to predict your future is to create it.",
+        name: "--Peter Drucker",
+        title: "Management Consultant",
+        src: "/assets/images/testimonials/peter-drucker.png",
+        altText: "Profile of Peter Drucker",
+      },
+    ],
+  },
+  {
+    dayq: 9,
+    dailyquotes: [
+      {
+        quote: "Don't watch the clock; do what it does. Keep going.",
+        name: "--Sam Levenson",
+        title: "Writer",
+        src: "/assets/images/testimonials/sam-levenson.png",
+        altText: "Profile of Sam Levenson",
+      },
+    ],
+  },
+  {
+    dayq: 10,
+    dailyquotes: [
+      {
+        quote:
+          "I have not failed. I've just found 10,000 ways that won't work.",
+        name: "--Thomas Edison",
+        title: "Inventor",
+        src: "/assets/images/testimonials/thomas-edison.png",
+        altText: "Profile of Thomas Edison",
+      },
+    ],
+  },
+  {
+    dayq: 11,
+    dailyquotes: [
+      {
+        quote:
+          "Success is walking from failure to failure with no loss of enthusiasm.",
+        name: "--Winston Churchill",
+        title: "Former UK Prime Minister",
+        src: "/assets/images/testimonials/winston-churchill.png",
+        altText: "Profile of Winston Churchill",
+      },
+    ],
+  },
+  {
+    dayq: 12,
+    dailyquotes: [
+      {
+        quote:
+          "Whether you think you can or you think you can't, you're right.",
+        name: "--Henry Ford",
+        title: "Automaker",
+        src: "/assets/images/testimonials/henry-ford.png",
+        altText: "Profile of Henry Ford",
+      },
+    ],
+  },
+  {
+    dayq: 13,
+    dailyquotes: [
+      {
+        quote: "The journey of a thousand miles begins with one step.",
+        name: "--Lao Tzu",
+        title: "Philosopher",
+        src: "/assets/images/testimonials/lao-tzu.png",
+        altText: "Profile of Lao Tzu",
+      },
+    ],
+  },
+  {
+    dayq: 14,
+    dailyquotes: [
+      {
+        quote: "It always seems impossible until it's done.",
+        name: "--Nelson Mandela",
+        title: "Former South African President",
+        src: "/assets/images/testimonials/nelson-mandela.png",
+        altText: "Profile of Nelson Mandela",
+      },
+    ],
+  },
+  {
+    dayq: 15,
+    dailyquotes: [
+      {
+        quote:
+          "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+        name: "--Nelson Mandela",
+        title: "Former South African President",
+        src: "/assets/images/testimonials/nelson-mandela.png",
+        altText: "Profile of Nelson Mandela",
+      },
+    ],
+  },
+  {
+    dayq: 16,
+    dailyquotes: [
+      {
+        quote: "If you want to achieve greatness, stop asking for permission.",
+        name: "--Anonymous",
+        title: "Unknown",
+        src: "/assets/images/testimonials/anonymous.png",
+        altText: "Profile of Anonymous",
+      },
+    ],
+  },
+  {
+    dayq: 17,
+    dailyquotes: [
+      {
+        quote: "You miss 100% of the shots you don't take.",
+        name: "--Wayne Gretzky",
+        title: "Hockey Player",
+        src: "/assets/images/testimonials/wayne-gretzky.png",
+        altText: "Profile of Wayne Gretzky",
+      },
+    ],
+  },
+  {
+    dayq: 18,
+    dailyquotes: [
+      {
+        quote: "Believe you can and you're halfway there.",
+        name: "--Theodore Roosevelt",
+        title: "Former US President",
+        src: "/assets/images/testimonials/theodore-roosevelt.png",
+        altText: "Profile of Theodore Roosevelt",
+      },
+    ],
+  },
+  {
+    dayq: 19,
+    dailyquotes: [
+      {
+        quote:
+          "Perfection is not attainable, but if we chase perfection we can catch excellence.",
+        name: "--Vince Lombardi",
+        title: "Football Coach",
+        src: "/assets/images/testimonials/vince-lombardi.png",
+        altText: "Profile of Vince Lombardi",
+      },
+    ],
+  },
+  {
+    dayq: 20,
+    dailyquotes: [
+      {
+        quote: "Act as if what you do makes a difference. It does.",
+        name: "--William James",
+        title: "Psychologist",
+        src: "/assets/images/testimonials/william-james.png",
+        altText: "Profile of William James",
+      },
+    ],
+  },
+  {
+    dayq: 21,
+    dailyquotes: [
+      {
+        quote: "The future depends on what you do today.",
+        name: "--Mahatma Gandhi",
+        title: "Indian Leader",
+        src: "/assets/images/testimonials/gandhi.png",
+        altText: "Profile of Mahatma Gandhi",
+      },
+    ],
+  },
+  {
+    dayq: 22,
+    dailyquotes: [
+      {
+        quote: "It is never too late to be what you might have been.",
+        name: "--George Eliot",
+        title: "Author",
+        src: "/assets/images/testimonials/george-eliot.png",
+        altText: "Profile of George Eliot",
+      },
+    ],
+  },
+  {
+    dayq: 23,
+    dailyquotes: [
+      {
+        quote: "Do what you can, with what you have, where you are.",
+        name: "--Theodore Roosevelt",
+        title: "Former US President",
+        src: "/assets/images/testimonials/theodore-roosevelt.png",
+        altText: "Profile of Theodore Roosevelt",
+      },
+    ],
+  },
+  {
+    dayq: 24,
+    dailyquotes: [
+      {
+        quote: "Dream big and dare to fail.",
+        name: "--Norman Vaughan",
+        title: "Explorer",
+        src: "/assets/images/testimonials/norman-vaughan.png",
+        altText: "Profile of Norman Vaughan",
+      },
+    ],
+  },
+  {
+    dayq: 25,
+    dailyquotes: [
+      {
+        quote: "The way to get started is to quit talking and begin doing.",
+        name: "--Walt Disney",
+        title: "Animator",
+        src: "/assets/images/testimonials/walt-disney.png",
+        altText: "Profile of Walt Disney",
+      },
+    ],
+  },
+  {
+    dayq: 26,
+    dailyquotes: [
+      {
+        quote: "Opportunities don't happen, you create them.",
+        name: "--Chris Grosser",
+        title: "Entrepreneur",
+        src: "/assets/images/testimonials/chris-grosser.png",
+        altText: "Profile of Chris Grosser",
+      },
+    ],
+  },
+  {
+    dayq: 27,
+    dailyquotes: [
+      {
+        quote: "To live a creative life, we must lose our fear of being wrong.",
+        name: "--Joseph Chilton Pearce",
+        title: "Author",
+        src: "/assets/images/testimonials/joseph-chilton-pearce.png",
+        altText: "Profile of Joseph Chilton Pearce",
+      },
+    ],
+  },
+  {
+    dayq: 28,
+    dailyquotes: [
+      {
+        quote:
+          "It's not whether you get knocked down; it's whether you get up.",
+        name: "--Vince Lombardi",
+        title: "Football Coach",
+        src: "/assets/images/testimonials/vince-lombardi.png",
+        altText: "Profile of Vince Lombardi",
+      },
+    ],
+  },
+  {
+    dayq: 29,
+    dailyquotes: [
+      {
+        quote: "Strive not to be a success, but rather to be of value.",
+        name: "--Albert Einstein",
+        title: "Physicist",
+        src: "/assets/images/testimonials/albert-einstein.png",
+        altText: "Profile of Albert Einstein",
+      },
+    ],
+  },
+  {
+    dayq: 30,
+    dailyquotes: [
+      {
+        quote:
+          "What you get by achieving your goals is not as important as what you become by achieving them.",
+        name: "--Zig Ziglar",
+        title: "Motivational Speaker",
+        src: "/assets/images/testimonials/zig-ziglar.png",
+        altText: "Profile of Zig Ziglar",
+      },
+    ],
+  },
+  {
+    dayq: 31,
+    dailyquotes: [
+      {
+        quote:
+          "Your life does not get better by chance, it gets better by change.",
+        name: "--Jim Rohn",
+        title: "Motivational Speaker",
+        src: "/assets/images/testimonials/jim-rohn.png",
+        altText: "Profile of Jim Rohn",
+      },
+    ],
   },
 ];
+
 
 export const testimonials = [
   {

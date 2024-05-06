@@ -15,7 +15,7 @@ export default function Home() {
             <SplashSection splashMessage={'RAMLAKHAN Developer'} isDarkMode={isDarkMode} isErrorMode={false} />
             <section className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
                 <h1 className="text-center max-w-[18em]">Problem Solving and Web Experiences</h1>
-                <p className="text-justify">Hello, and welcome! I&apos;m Ramlakhan Lodhi, a MERN Stack developer with a passion for solving visions through exceptional web experiences. With a blend of creativity and technical expertise, I take pride in crafting user-centric websites that leave a lasting impact. Together, let&apos;s unravel the possibilities of the digital realm and create online solutions that captivate, inspire, and drive success.</p>
+                <p className="text-justify">Hello, and welcome! I&apos;m Ramlakhan Lodhi, a MERN Stack developer.I am a passionate competitive programmer and highly interested in algorithmic problem solving. I am very interested in new technologies and am always eager to learn new technologies that enhance my knowledge. Together, let&apos;s Explore the vast opportunities in the digital world and design online solutions that engage, inspire, and propel success.</p>
             </section>
             <section className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
                 <h2>My Projects</h2>
