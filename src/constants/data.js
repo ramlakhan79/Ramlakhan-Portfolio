@@ -966,20 +966,20 @@ export const specialties = [
         title: 'Portfolio Websites',
         Icon: Icons.PortfolioIcon,
     },
-    {
-        title: 'CMS Development and Customization',
-        Icon: Icons.WebContentIcon,
-    },
-    {
-        title: 'Web Performance Optimization',
-        Icon: Icons.RocketIcon,
-    },
-    {
-        title: 'Website Maintenance',
-        Icon: Icons.ToolsIcon,
-    },
-    {
-        title: 'Website Migration',
-        Icon: Icons.LeftRightArrowsIcon,
-    },
+    // {
+    //     title: 'CMS Development and Customization',
+    //     Icon: Icons.WebContentIcon,
+    // },
+    // {
+    //     title: 'Web Performance Optimization',
+    //     Icon: Icons.RocketIcon,
+    // },
+    // {
+    //     title: 'Website Maintenance',
+    //     Icon: Icons.ToolsIcon,
+    // },
+    // {
+    //     title: 'Website Migration',
+    //     Icon: Icons.LeftRightArrowsIcon,
+    // },
 ];
