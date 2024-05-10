@@ -701,6 +701,27 @@ export const techSkills = [
   },
 
   {
+    category: "CS Fundamentals",
+    skills: [
+      {
+        title: "DBMS",
+        Icon: Icons.DBMSIcon,
+        url: null,
+      },
+      {
+        title: "OS",
+        Icon: Icons.OSIcon,
+        url: null,
+      },
+      {
+        title: "OOPM",
+        Icon: Icons.OOPMIcon,
+        url: null,
+      },
+    ],
+  },
+
+  {
     category: "Build Tools, Frameworks, and Versioning",
     skills: [
       {

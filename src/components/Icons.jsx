@@ -123,6 +123,7 @@ export const FaviconIcon = () => {
     );
 };
 
+
 // width="44.092" height="50"
 export const HtmlIcon = () => (
     <svg className="h-iconMobile sm:h-iconSmall md:h-iconMedium lg:h-iconLarge" version="1.1" viewBox="0 0 44.092 50" xmlns="http://www.w3.org/2000/svg">
@@ -418,23 +419,6 @@ export const SsrsIcon = () => (
     </svg>
 );
 
-// width="36.883" height="50"
-export const JavaIcon = () => (
-    <svg className="h-iconMobile sm:h-iconSmall md:h-iconMedium lg:h-iconLarge" version="1.1" viewBox="0 0 36.883 50" xmlns="http://www.w3.org/2000/svg">
-        <title>Java icon</title>
-        <g transform="matrix(.40691 0 0 .40691 .0051034 0)" fill="hsl(var(--color-primBlue-100))">
-            <path d="m29.19 95.03s-4.7 2.73 3.34 3.65c9.74 1.11 14.71 0.95 25.44-1.08 0 0 2.82 1.77 6.76 3.3-24.05 10.32-54.44-0.59-35.54-5.87z" />
-            <path d="m26.25 81.58s-5.27 3.9 2.78 4.73c10.4 1.07 18.62 1.16 32.83-1.58 0 0 1.97 1.99 5.06 3.08-29.09 8.51-61.49 0.67-40.67-6.23z" />
-            <path d="m51.03 58.76c5.93 6.82-1.56 12.96-1.56 12.96s15.05-7.77 8.14-17.5c-6.46-9.07-11.41-13.58 15.39-29.12 0 0-42.06 10.5-21.97 33.66z" />
-            <path d="m82.84 104.98s3.47 2.86-3.83 5.08c-13.88 4.21-57.79 5.48-69.99 0.17-4.38-1.91 3.84-4.55 6.42-5.11 2.7-0.59 4.24-0.48 4.24-0.48-4.88-3.43-31.52 6.74-13.53 9.66 49.05 7.95 89.41-3.58 76.69-9.32z" />
-            <path d="m31.45 67.64s-22.33 5.3-7.91 7.23c6.09 0.82 18.23 0.63 29.54-0.32 9.24-0.78 18.52-2.44 18.52-2.44s-3.26 1.4-5.62 3.01c-22.68 5.96-66.49 3.19-53.88-2.91 10.67-5.16 19.35-4.57 19.35-4.57z" />
-            <path d="m71.51 90.03c23.05-11.98 12.39-23.49 4.95-21.94-1.82 0.38-2.64 0.71-2.64 0.71s0.68-1.06 1.97-1.52c14.72-5.17 26.04 15.26-4.75 23.36 0.01 0 0.36-0.32 0.47-0.61z" />
-            <path d="m57.61 0s12.77 12.77-12.11 32.41c-19.95 15.75-4.55 24.74-0.01 35-11.64-10.5-20.19-19.75-14.46-28.36 8.42-12.64 31.73-18.76 26.58-39.05z" />
-            <path d="m33.71 122.49c22.13 1.42 56.11-0.79 56.92-11.26 0 0-1.55 3.97-18.29 7.12-18.89 3.55-42.18 3.14-56 0.86 0 0.01 2.83 2.35 17.37 3.28z" />
-        </g>
-    </svg>
-);
-
 // width="50" height="48.838"
 export const AccessIcon = () => (
     <svg className="w-iconMobile sm:w-iconSmall md:w-iconMedium lg:w-iconLarge" data-name="Layer 1" version="1.1" viewBox="0 0 50 48.838" xmlns="http://www.w3.org/2000/svg">
@@ -505,6 +489,10 @@ export const ExcelIcon = () => (
 //     </svg>
 // );
 
+/*==============================================
+             Languages Icon Block Start
+===============================================*/
+
 // width="49.269" height="50"
 export const CIcon = () => (
     <svg className="h-iconMobile sm:h-iconSmall md:h-iconMedium lg:h-iconLarge" version="1.1" viewBox="0 0 49.269 50" xmlns="http://www.w3.org/2000/svg">
@@ -543,6 +531,32 @@ export const CPPIcon = () => (
         </text>
     </svg>
 );
+
+// width="36.883" height="50"
+export const JavaIcon = () => (
+    <svg className="h-iconMobile sm:h-iconSmall md:h-iconMedium lg:h-iconLarge" version="1.1" viewBox="0 0 36.883 50" xmlns="http://www.w3.org/2000/svg">
+        <title>Java icon</title>
+        <g transform="matrix(.40691 0 0 .40691 .0051034 0)" fill="hsl(var(--color-primBlue-100))">
+            <path d="m29.19 95.03s-4.7 2.73 3.34 3.65c9.74 1.11 14.71 0.95 25.44-1.08 0 0 2.82 1.77 6.76 3.3-24.05 10.32-54.44-0.59-35.54-5.87z" />
+            <path d="m26.25 81.58s-5.27 3.9 2.78 4.73c10.4 1.07 18.62 1.16 32.83-1.58 0 0 1.97 1.99 5.06 3.08-29.09 8.51-61.49 0.67-40.67-6.23z" />
+            <path d="m51.03 58.76c5.93 6.82-1.56 12.96-1.56 12.96s15.05-7.77 8.14-17.5c-6.46-9.07-11.41-13.58 15.39-29.12 0 0-42.06 10.5-21.97 33.66z" />
+            <path d="m82.84 104.98s3.47 2.86-3.83 5.08c-13.88 4.21-57.79 5.48-69.99 0.17-4.38-1.91 3.84-4.55 6.42-5.11 2.7-0.59 4.24-0.48 4.24-0.48-4.88-3.43-31.52 6.74-13.53 9.66 49.05 7.95 89.41-3.58 76.69-9.32z" />
+            <path d="m31.45 67.64s-22.33 5.3-7.91 7.23c6.09 0.82 18.23 0.63 29.54-0.32 9.24-0.78 18.52-2.44 18.52-2.44s-3.26 1.4-5.62 3.01c-22.68 5.96-66.49 3.19-53.88-2.91 10.67-5.16 19.35-4.57 19.35-4.57z" />
+            <path d="m71.51 90.03c23.05-11.98 12.39-23.49 4.95-21.94-1.82 0.38-2.64 0.71-2.64 0.71s0.68-1.06 1.97-1.52c14.72-5.17 26.04 15.26-4.75 23.36 0.01 0 0.36-0.32 0.47-0.61z" />
+            <path d="m57.61 0s12.77 12.77-12.11 32.41c-19.95 15.75-4.55 24.74-0.01 35-11.64-10.5-20.19-19.75-14.46-28.36 8.42-12.64 31.73-18.76 26.58-39.05z" />
+            <path d="m33.71 122.49c22.13 1.42 56.11-0.79 56.92-11.26 0 0-1.55 3.97-18.29 7.12-18.89 3.55-42.18 3.14-56 0.86 0 0.01 2.83 2.35 17.37 3.28z" />
+        </g>
+    </svg>
+);
+
+/*==============================================
+            Languages Icon Block End
+===============================================*/
+
+
+/*==============================================
+    Coding Profile Icon Block Start
+===============================================*/
 
 export const LCIcon = () => (
     <svg
@@ -629,6 +643,108 @@ export const GFGIcon = () => (
     </svg>
 );
 
+/*==============================================
+    Coding Profile Icon Block End
+===============================================*/
+
+
+/*==============================================
+        CS Fundamentals Icon Block Start
+===============================================*/
+
+export const DBMSIcon = () => (
+    <svg
+        className="h-iconMobile sm:h-iconSmall md:h-iconMedium lg:h-iconLarge"
+        version="1.1"
+        viewBox="0 0 50 50"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <title>DBMS Icon</title>
+        <rect
+            x="5"
+            y="5"
+            width="40"
+            height="40"
+            rx="5"
+            fill="hsl(var(--color-primBlue-100))"
+        />
+        <text
+            x="25"
+            y="30"
+            fontSize="20"
+            textAnchor="middle"
+            fill="white"
+            fontWeight="bold"
+        >
+            DBMS
+        </text>
+    </svg>
+);
+
+
+export const OSIcon = () => (
+    <svg
+        className="h-iconMobile sm:h-iconSmall md:h-iconMedium lg:h-iconLarge"
+        version="1.1"
+        viewBox="0 0 50 50"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <title>OPerating System Icon</title>
+        <rect
+            x="5"
+            y="5"
+            width="40"
+            height="40"
+            rx="5"
+            fill="hsl(var(--color-primBlue-100))"
+        />
+        <text
+            x="25"
+            y="30"
+            fontSize="20"
+            textAnchor="middle"
+            fill="white"
+            fontWeight="bold"
+        >
+            OS
+        </text>
+    </svg>
+);
+
+
+export const OOPMIcon = () => (
+    <svg
+        className="h-iconMobile sm:h-iconSmall md:h-iconMedium lg:h-iconLarge"
+        version="1.1"
+        viewBox="0 0 50 50"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <title>OOPs Icon</title>
+        <rect
+            x="5"
+            y="5"
+            width="40"
+            height="40"
+            rx="5"
+            fill="hsl(var(--color-primBlue-100))"
+        />
+        <text
+            x="25"
+            y="30"
+            fontSize="20"
+            textAnchor="middle"
+            fill="white"
+            fontWeight="bold"
+        >
+            OOPS
+        </text>
+    </svg>
+);
+
+
+/*==============================================
+        CS Fundamentals Icon Block Start
+===============================================*/
 
 
 // width="46.9" height="50"
