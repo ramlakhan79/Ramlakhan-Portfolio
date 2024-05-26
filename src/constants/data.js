@@ -954,14 +954,14 @@ export const specialties = [
         title: 'Web Hosting and Deployment',
         Icon: Icons.DatabaseIcon,
     },
-    {
-        title: 'API Development and Integration',
-        Icon: Icons.APIIcon,
-    },
-    {
-        title: 'Custom Web Applications',
-        Icon: Icons.ProgrammingIcon,
-    },
+    // {
+    //     title: 'API Development and Integration',
+    //     Icon: Icons.APIIcon,
+    // },
+    // {
+    //     title: 'Custom Web Applications',
+    //     Icon: Icons.ProgrammingIcon,
+    // },
     {
         title: 'Portfolio Websites',
         Icon: Icons.PortfolioIcon,
