@@ -49,6 +49,36 @@ export const projects = [
   //   },
   // },
   {
+    title: "SISTec ERP Clone",
+    src: "/assets/images/projects/sistecerp.png",
+    altText: "Screenshot of SISTec ERP home page",
+    ariaLabel:
+      "Opens modal window with more information about the SISTec ERP project",
+    details: {
+      description:
+        "A SISTec ERP application  is used to students can track their records like attendance, fees, and class schedule.",
+      technologies: [
+        {
+          title: "HTML",
+          Icon: Icons.HtmlIcon,
+        },
+        {
+          title: "CSS",
+          Icon: Icons.CSSIcon,
+        },
+        {
+          title: "JavaScript",
+          Icon: Icons.JavascriptIcon,
+        },
+        
+      ],
+      url: null,
+      githubUrl: null,
+    },
+  },
+
+
+  {
     title: "3D Calculator",
     src: "/assets/images/projects/calculator.png",
     altText: "Screenshot of 3D Calculator home page",
@@ -159,18 +189,6 @@ export const projects = [
     },
   },
 ];
-
-// export const dailyQuotes = [
-//   {
-//     day: 1,
-//     quote: "Writing is its own reward.",
-//     name: "--Henry Miller ",
-//     title: "Executive Director of Web Technologies Organization",
-//     src: "/assets/images/testimonials/testimo.png",
-//     altText: "Profile of Lakhan L.",
-//   },
- 
-// ];
 
 export const quoteUpdate = [
   {
