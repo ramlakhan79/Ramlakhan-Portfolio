@@ -11,7 +11,7 @@ export default function Dailyquotes() {
         return <p>No quote available for today.</p>;
     }
     const update = dailyQuoteData.dailyquotes[0];
-    console.log(update,"update")
+    // console.log(update,"update")
 
     return (
         <>

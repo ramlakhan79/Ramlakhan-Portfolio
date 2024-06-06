@@ -8,9 +8,10 @@ import {
 } from "react";
 import PageStructure from './components/PageStructure';
 import Home from './pages/Home';
-import Services from './pages/Services';
 import About from './pages/About';
 import Resume from './pages/Resume';
+import Services from './pages/Services';
+import Coding from './pages/Coding';
 import ErrorPage from './pages/404';
 import ThankYou from './pages/ThankYou';
 
@@ -54,16 +55,20 @@ function App() {
                     element: <Home />,
                 },
                 {
-                    path: "services",
-                    element: <Services />,
-                },
-                {
                     path: "about",
                     element: <About />,
                 },
                 {
                     path: "resume",
                     element: <Resume />,
+                },
+                {
+                    path: "services",
+                    element: <Services />,
+                },
+                {
+                    path: "coding",
+                    element: <Coding />,
                 },
                 {
                     path: "thank-you",
