@@ -37,15 +37,15 @@ export default function Coding() {
     }
 
     return (
-        <section className="w-[100%] mt-9 sm:mt-10 md:mt-11 flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
+        <section className="w-[100%] mt-9 sm:mt-10 md:mt-11 flex flex-row flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
             <div className="bg-gray-900 p-4 rounded-md shadow-md">
+                <p><a href="https://leetcode.com/u/Ramlakhan_79/" title="Visit My Profile" rel="nofollow" className="hover:underline hover:text-blue-600 hover:bg-gray-100 transition duration-300 ease-in-out" >LeetCode</a></p>
                 <div className="flex justify-between items-center">
                     <div>
                         <div className="flex items-center">
                             <svg
                                 viewBox="0 0 150 150"
                                 className="w-34 h-34"
-                                // style={{ transform: 'scale(1.5)' }} 
                             >
                                 <circle
                                     cx="75"
@@ -115,6 +115,92 @@ export default function Coding() {
                                 <span className="text-sm font-medium text-red-400 mr-2">Hard</span>
                                 <span className="text-sm font-medium text-gray-400">{data.hardSolved}/{data.totalHard}</span>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* 
+/*=======================================
+        Geeks For Geeks
+=========================================*/ }
+            <div className="bg-gray-900 p-4 rounded-md shadow-md">
+                <p><a href="https://www.geeksforgeeks.org/user/ramlakhan79/" title="Visit My Profile" rel="nofollow" className="hover:underline hover:text-blue-600 hover:bg-gray-100 transition duration-300 ease-in-out">Geeks For Geeks</a></p>
+                <div className="flex gap-4">
+                    <div className="bg-gray-900 rounded-md shadow-md p-4 w-60">
+                        <div className="flex justify-center items-center mb-4">
+                            <div className="rounded-full bg-gray-200 p-2">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-6 w-6 text-gray-500"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div className="text-center">
+                            <h3 className="text-xl font-semibold text-gray-800">Overall</h3>
+                            <p className="text-lg font-medium text-gray-600">Coding Score</p>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">1569</h4>
+                        </div>
+                    </div>
+
+                    <div className="bg-gray-900 rounded-md shadow-md p-4 w-60">
+                        <div className="flex justify-center items-center mb-4">
+                            <div className="rounded-full bg-gray-200 p-2">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-6 w-6 text-gray-500"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div className="text-center">
+                            <h3 className="text-xl font-semibold text-gray-800">Total Problem</h3>
+                            <p className="text-lg font-medium text-gray-600">Solved</p>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">520</h4>
+                        </div>
+                    </div>
+
+                    <div className="bg-gray-900 rounded-md shadow-md p-4 w-60">
+                        <div className="flex justify-center items-center mb-4">
+                            <div className="rounded-full bg-gray-200 p-2">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-6 w-6 text-gray-500"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div className="text-center">
+                            <h3 className="text-xl font-semibold text-gray-800">Monthly</h3>
+                            <p className="text-lg font-medium text-gray-600">Coding Score</p>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">70</h4>
                         </div>
                     </div>
                 </div>
