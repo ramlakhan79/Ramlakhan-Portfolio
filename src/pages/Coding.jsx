@@ -10,7 +10,6 @@ import { useOutletContext } from "react-router-dom";
 
 export default function Coding() {
     const [isDarkMode] = useOutletContext();
-
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -39,7 +38,7 @@ export default function Coding() {
     return (
         <section className="w-[100%] mt-9 sm:mt-10 md:mt-11 flex flex-row flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
             <div className="bg-gray-900 p-4 rounded-md shadow-md">
-                <p><a href="https://leetcode.com/u/Ramlakhan_79/" title="Visit My Profile" rel="nofollow" className="hover:underline hover:text-blue-600 hover:bg-gray-100 transition duration-300 ease-in-out" >LeetCode</a></p>
+                <p><a href="https://leetcode.com/u/Ramlakhan_79/" title="Visit My Profile" rel="nofollow" target="_blank" className="hover:underline hover:text-blue-600 hover:bg-gray-100 transition duration-300 ease-in-out" >LeetCode</a></p>
                 <div className="flex justify-between items-center">
                     <div>
                         <div className="flex items-center">
@@ -124,7 +123,7 @@ export default function Coding() {
         Geeks For Geeks
 =========================================*/ }
             <div className="bg-gray-900 p-4 rounded-md shadow-md">
-                <p><a href="https://www.geeksforgeeks.org/user/ramlakhan79/" title="Visit My Profile" rel="nofollow" className="hover:underline hover:text-blue-600 hover:bg-gray-100 transition duration-300 ease-in-out">Geeks For Geeks</a></p>
+                <p><a href="https://www.geeksforgeeks.org/user/ramlakhan79/" title="Visit My Profile" rel="nofollow" target="_blank" className="hover:underline hover:text-blue-600 hover:bg-gray-100 transition duration-300 ease-in-out">Geeks For Geeks</a></p>
                 <div className="flex gap-4">
                     <div className="bg-gray-900 rounded-md shadow-md p-4 w-60">
                         <div className="flex justify-center items-center mb-4">
