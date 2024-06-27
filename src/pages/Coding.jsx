@@ -133,7 +133,8 @@ export default function Coding() {
                                     className="h-6 w-6 text-gray-500"
                                     fill="none"
                                     viewBox="0 0 24 24"
-                                    stroke="currentColor"
+                                    stroke="#F59E0B"
+                                    // stroke="currentColor"
                                 >
                                     <path
                                         strokeLinecap="round"
@@ -147,7 +148,7 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Overall</h3>
                             <p className="text-lg font-medium text-gray-600">Coding Score</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">1569</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">1579</h4>
                         </div>
                     </div>
 
@@ -159,7 +160,8 @@ export default function Coding() {
                                     className="h-6 w-6 text-gray-500"
                                     fill="none"
                                     viewBox="0 0 24 24"
-                                    stroke="currentColor"
+                                    stroke="#38B2AC"
+                                    // stroke="currentColor"
                                 >
                                     <path
                                         strokeLinecap="round"
@@ -173,7 +175,7 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Total Problem</h3>
                             <p className="text-lg font-medium text-gray-600">Solved</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">520</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">523</h4>
                         </div>
                     </div>
 
@@ -185,7 +187,8 @@ export default function Coding() {
                                     className="h-6 w-6 text-gray-500"
                                     fill="none"
                                     viewBox="0 0 24 24"
-                                    stroke="currentColor"
+                                    stroke="#E53E3E"
+                                    // stroke="currentColor"
                                 >
                                     <path
                                         strokeLinecap="round"
@@ -199,7 +202,7 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Monthly</h3>
                             <p className="text-lg font-medium text-gray-600">Coding Score</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">70</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">80</h4>
                         </div>
                     </div>
                 </div>
