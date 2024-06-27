@@ -11,6 +11,7 @@ import { useOutletContext } from "react-router-dom";
 export default function Coding() {
     const [isDarkMode] = useOutletContext();
     const [data, setData] = useState([]);
+    const [newData, setNewData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -27,6 +28,17 @@ export default function Coding() {
             });
     }, []);
 
+    useEffect(() => {
+        fetch('https://gfg-api-fefa.onrender.com/ramlakhan79')
+            .then(response => response.json())
+            .then(data => {
+                setNewData(data);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }, []);
+    console.log(newData)
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -148,7 +160,7 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Overall</h3>
                             <p className="text-lg font-medium text-gray-600">Coding Score</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">1579</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">{newData.overallScore}</h4>
                         </div>
                     </div>
 
@@ -175,7 +187,7 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Total Problem</h3>
                             <p className="text-lg font-medium text-gray-600">Solved</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">523</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">{newData.totalSolved}</h4>
                         </div>
                     </div>
 
@@ -202,7 +214,7 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Monthly</h3>
                             <p className="text-lg font-medium text-gray-600">Coding Score</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">80</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">{newData.monthlyScore}</h4>
                         </div>
                     </div>
                 </div>
