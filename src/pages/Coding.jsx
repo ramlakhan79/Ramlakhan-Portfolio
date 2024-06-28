@@ -29,16 +29,20 @@ export default function Coding() {
     }, []);
 
     useEffect(() => {
-        fetch('https://gfg-api-fefa.onrender.com/ramlakhan79')
+        fetch('https://geeks-for-geeks-api.vercel.app/ramlakhan79', {
+            mode: 'no-cors'
+        })
             .then(response => response.json())
             .then(data => {
-                setNewData(data);
+                setNewData(data.info);
             })
             .catch(error => {
-                console.error(error);
+                throw new Error("data not found")
             });
     }, []);
-    console.log(newData)
+
+    console.log(newData) 
+
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -48,7 +52,7 @@ export default function Coding() {
     }
 
     return (
-        <section className="w-[100%] mt-9 sm:mt-10 md:mt-11 flex flex-row flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
+        <section className="w-[100%] mt-9 sm:mt-10 md:mt-11 flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10 cl:flex-row">
             <div className="bg-gray-900 p-4 rounded-md shadow-md">
                 <p><a href="https://leetcode.com/u/Ramlakhan_79/" title="Visit My Profile" rel="nofollow" target="_blank" className="hover:underline hover:text-blue-600 hover:bg-gray-100 transition duration-300 ease-in-out" >LeetCode</a></p>
                 <div className="flex justify-between items-center">
@@ -134,9 +138,9 @@ export default function Coding() {
 /*=======================================
         Geeks For Geeks
 =========================================*/ }
-            <div className="bg-gray-900 p-4 rounded-md shadow-md">
+            <div className="bg-gray-900 p-4 rounded-md shadow-md ">
                 <p><a href="https://www.geeksforgeeks.org/user/ramlakhan79/" title="Visit My Profile" rel="nofollow" target="_blank" className="hover:underline hover:text-blue-600 hover:bg-gray-100 transition duration-300 ease-in-out">Geeks For Geeks</a></p>
-                <div className="flex gap-4">
+                <div className="flex gap-4 flex flex-col flex-nowrap cs:flex-row ">
                     <div className="bg-gray-900 rounded-md shadow-md p-4 w-60">
                         <div className="flex justify-center items-center mb-4">
                             <div className="rounded-full bg-gray-200 p-2">
@@ -146,7 +150,7 @@ export default function Coding() {
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="#F59E0B"
-                                    // stroke="currentColor"
+                                // stroke="currentColor"
                                 >
                                     <path
                                         strokeLinecap="round"
@@ -160,7 +164,7 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Overall</h3>
                             <p className="text-lg font-medium text-gray-600">Coding Score</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">{newData.overallScore}</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">1579</h4>
                         </div>
                     </div>
 
@@ -173,7 +177,7 @@ export default function Coding() {
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="#38B2AC"
-                                    // stroke="currentColor"
+                                // stroke="currentColor"
                                 >
                                     <path
                                         strokeLinecap="round"
@@ -187,7 +191,7 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Total Problem</h3>
                             <p className="text-lg font-medium text-gray-600">Solved</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">{newData.totalSolved}</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">523</h4>
                         </div>
                     </div>
 
@@ -200,7 +204,7 @@ export default function Coding() {
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="#E53E3E"
-                                    // stroke="currentColor"
+                                // stroke="currentColor"
                                 >
                                     <path
                                         strokeLinecap="round"
@@ -214,7 +218,7 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Monthly</h3>
                             <p className="text-lg font-medium text-gray-600">Coding Score</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">{newData.monthlyScore}</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">80</h4>
                         </div>
                     </div>
                 </div>
