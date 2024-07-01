@@ -1,11 +1,18 @@
 // import {
 //     Turnstile,
 // } from "@marsidev/react-turnstile";
-
 // const turnstileSiteKey = '0x4AAAAAAAKS1VVfqS6oXPTm';
+
 const useBasinFormId = '768f9cda9ef4';
 
+
 export default function ContactForm() {
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // form validation logic
+
+        window.location.href = '/thank-you';
+    };
     return (
         <>
             <p className="text-center">Fields marked with asterisk (*) cannot be left blank.</p>
@@ -14,6 +21,7 @@ export default function ContactForm() {
                 action={`https://usebasin.com/f/${useBasinFormId}`}
                 method="POST"
                 className="w-[100%] flex flex-col flex-nowrap items-center gap-7"
+                onSubmit={handleSubmit}
             >
                 <label className="max-w-[30em] w-[100%]">
                     Full Name *
@@ -47,8 +55,6 @@ export default function ContactForm() {
                         placeholder="Email"
                         required />
                 </label>
-
-                {/* <input type="hidden" name="_gotcha"></input> */}
 
                 <label className="max-w-[30em] w-[100%]">
                     Message *
