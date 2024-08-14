@@ -168,7 +168,7 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Overall</h3>
                             <p className="text-lg font-medium text-gray-600">Coding Score</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">1590</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">1748</h4>
                         </div>
                     </div>
 
@@ -195,7 +195,7 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Total Problem</h3>
                             <p className="text-lg font-medium text-gray-600">Solved</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">526</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">571</h4>
                         </div>
                     </div>
 
@@ -222,9 +222,36 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Monthly</h3>
                             <p className="text-lg font-medium text-gray-600">Coding Score</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">91</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">52</h4>
                         </div>
                     </div>
+
+                    {/* <div className="bg-gray-900 rounded-md shadow-md p-4 w-60">
+                        <div className="flex justify-center items-center mb-4">
+                            <div className="rounded-full bg-gray-200 p-2">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-6 w-6 text-gray-500"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="#E53E3E"
+                                // stroke="currentColor"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div className="text-center">
+                            <h3 className="text-xl font-semibold text-gray-800">Overall Article</h3>
+                            <p className="text-lg font-medium text-gray-600">Published</p>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">4</h4>
+                        </div>
+                    </div> */}
                 </div>
             </div>
             {/* 
