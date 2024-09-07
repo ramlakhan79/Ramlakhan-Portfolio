@@ -52,83 +52,86 @@ export const projects = [
   //     githubUrl: null,
   //   },
   // },
-  {
-    title: "SISTec ERP Clone",
-    src: "/assets/images/projects/sistecerp.png",
-    altText: "Screenshot of SISTec ERP home page",
-    ariaLabel:
-      "Opens modal window with more information about the SISTec ERP project",
-    details: {
-      description:
-        "A SISTec ERP application  is used to students can track their records like attendance, fees, and class schedule.",
-      technologies: [
-        {
-          title: "HTML",
-          Icon: Icons.HtmlIcon,
-        },
-        {
-          title: "CSS",
-          Icon: Icons.CSSIcon,
-        },
-        {
-          title: "JavaScript",
-          Icon: Icons.JavascriptIcon,
-        },
+
+  // {
+  //   title: "SISTec ERP Clone",
+  //   src: "/assets/images/projects/sistecerp.png",
+  //   altText: "Screenshot of SISTec ERP home page",
+  //   ariaLabel:
+  //     "Opens modal window with more information about the SISTec ERP project",
+  //   details: {
+  //     description:
+  //       "A SISTec ERP application  is used to students can track their records like attendance, fees, and class schedule.",
+  //     technologies: [
+  //       {
+  //         title: "HTML",
+  //         Icon: Icons.HtmlIcon,
+  //       },
+  //       {
+  //         title: "CSS",
+  //         Icon: Icons.CSSIcon,
+  //       },
+  //       {
+  //         title: "JavaScript",
+  //         Icon: Icons.JavascriptIcon,
+  //       },
         
-      ],
-      url: null,
-      githubUrl: null,
-    },
-  },
+  //     ],
+  //     url: null,
+  //     githubUrl: null,
+  //   },
+  // },
 
 
-  {
-    title: "3D Calculator",
-    src: "/assets/images/projects/calculator.png",
-    altText: "Screenshot of 3D Calculator home page",
-    ariaLabel:
-      "Opens modal window with more information about the 3D Calculator project",
-    details: {
-      description:
-        "A 3D Calculator application enables real-time calculation of addition, division, multiplication and subtraction etc. It typically includes features like addition, division, multiplication and subtraction.",
-      technologies: [
-        {
-          title: "HTML",
-          Icon: Icons.HtmlIcon,
-        },
-        {
-          title: "CSS",
-          Icon: Icons.CSSIcon,
-        },
-      ],
-      url: "https://3dcalculator130.netlify.app/",
-      githubUrl: null,
-    },
-  },
+  // {
+  //   title: "3D Calculator",
+  //   src: "/assets/images/projects/calculator.png",
+  //   altText: "Screenshot of 3D Calculator home page",
+  //   ariaLabel:
+  //     "Opens modal window with more information about the 3D Calculator project",
+  //   details: {
+  //     description:
+  //       "A 3D Calculator application enables real-time calculation of addition, division, multiplication and subtraction etc. It typically includes features like addition, division, multiplication and subtraction.",
+  //     technologies: [
+  //       {
+  //         title: "HTML",
+  //         Icon: Icons.HtmlIcon,
+  //       },
+  //       {
+  //         title: "CSS",
+  //         Icon: Icons.CSSIcon,
+  //       },
+  //     ],
+  //     url: "https://3dcalculator130.netlify.app/",
+  //     githubUrl: null,
+  //   },
+  // },
 
-  {
-    title: "Temperature Convertor",
-    src: "/assets/images/projects/temperature.png",
-    altText: "Screenshot of Temperature Convertor home page",
-    ariaLabel:
-      "Opens modal window with more information about the Temperature Convertor project",
-    details: {
-      description:
-        "A Temprature Convertor application  is convert the temperature.",
-      technologies: [
-        {
-          title: "HTML",
-          Icon: Icons.HtmlIcon,
-        },
-        {
-          title: "CSS",
-          Icon: Icons.CSSIcon,
-        },
-      ],
-      url: "https://temperature.netlify.app/",
-      githubUrl: null,
-    },
-  },
+
+  // {
+  //   title: "Temperature Convertor",
+  //   src: "/assets/images/projects/temperature.png",
+  //   altText: "Screenshot of Temperature Convertor home page",
+  //   ariaLabel:
+  //     "Opens modal window with more information about the Temperature Convertor project",
+  //   details: {
+  //     description:
+  //       "A Temprature Convertor application  is convert the temperature.",
+  //     technologies: [
+  //       {
+  //         title: "HTML",
+  //         Icon: Icons.HtmlIcon,
+  //       },
+  //       {
+  //         title: "CSS",
+  //         Icon: Icons.CSSIcon,
+  //       },
+  //     ],
+  //     url: "https://temperature.netlify.app/",
+  //     githubUrl: null,
+  //   },
+  // },
+
 
   {
     title: "Chat Web Application",
@@ -161,6 +164,8 @@ export const projects = [
       githubUrl: "https://github.com/ramlakhan79/Chat-Web-Application",
     },
   },
+
+  
   {
     title: "Quiz Web Application",
     src: "/assets/images/projects/quizweb.png",

@@ -168,7 +168,7 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Overall</h3>
                             <p className="text-lg font-medium text-gray-600">Coding Score</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">1748</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">1850</h4>
                         </div>
                     </div>
 
@@ -195,7 +195,7 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Total Problem</h3>
                             <p className="text-lg font-medium text-gray-600">Solved</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">571</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">596</h4>
                         </div>
                     </div>
 
@@ -220,9 +220,9 @@ export default function Coding() {
                             </div>
                         </div>
                         <div className="text-center">
-                            <h3 className="text-xl font-semibold text-gray-800">Monthly</h3>
-                            <p className="text-lg font-medium text-gray-600">Coding Score</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">52</h4>
+                            <h3 className="text-xl font-semibold text-gray-800">Contest</h3>
+                            <p className="text-lg font-medium text-gray-600">Rating</p>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">1608</h4>
                         </div>
                     </div>
 
