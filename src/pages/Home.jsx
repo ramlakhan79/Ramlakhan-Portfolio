@@ -32,7 +32,7 @@ export default function Home() {
             <section className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
                 <h2>Contact</h2>
                 <Socials />
-                <p className="text-center">Are you ready to unlock your dream website? Let&apos;s chat!</p>
+                <p className="text-center">Are you ready to connect me? Let&apos;s chat!</p>
                 <ContactForm />
             </section>
         </>

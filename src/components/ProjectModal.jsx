@@ -66,7 +66,7 @@ export default function ProjectModal({ projectId, projectData, }) {
                 aria-label={projectData.ariaLabel}
                 onClick={toggleDialog}
             >
-                <span className="inline-link max-w-[300px] font-heading font-bold text-6 sm:text-5 md:text-4 lg:text-3 max-w-read text-center mx-auto;">{projectData.title}</span>
+                <span className="inline-link max-w-[300px] font-heading font-bold text-6 sm:text-5 md:text-4 lg:text-3 text-center mx-auto;">{projectData.title}</span>
             </button>
             <div className="monitor-view">
                 <div className="monitor-box">
