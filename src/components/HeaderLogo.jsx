@@ -103,7 +103,7 @@ export default function HeaderLogo({ isDarkMode }) {
         //     </g> 
         // </svg>
         <>
-            <h3 className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">Ramlakhan</h3>
+            <h3 className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10 text-primBlue-900 bg-primBlue-200 font-bold rounded-">Ramlakhan</h3>
         </>
     );
 }

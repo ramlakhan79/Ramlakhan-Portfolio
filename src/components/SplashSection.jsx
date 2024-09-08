@@ -568,8 +568,10 @@ export default function SplashSection({ splashMessage, isDarkMode, isErrorMode }
     return (
         <div className="relative w-[100%] flex flex-col flex-nowrap items-center justify-center gap-0 sm:gap-8 md:gap-9 lg:gap-10">
             <div className="relative sm:absolute sm:top-0 sm:right-0 flex flex-col flex-nowrap items-center justify-center mx-mobileBound sm:mr-8 text-center">
-                <p id="canvas-prompt" className="opacity-0 transition-[opacity] duration-[1000ms]">Hover Over Letters</p>
-                <svg id="canvas-arrow" className="opacity-0 transition-[opacity] duration-[1000ms] absolute sm:relative top-8 sm:top-auto animate-hero-pointer-bounce-mobile sm:animate-hero-pointer-bounce sm:mt-0 h-9 sm:h-10 md:h-11 lg:h-[80px]" enableBackground="new 0 0 122.433 122.88" version="1.1" viewBox="0 0 52.513 52.695" xmlns="http://www.w3.org/2000/svg">
+                <p id="canvas-prompt" className="opacity-0 transition-[opacity] duration-[1000ms]"></p>
+                {/* Hover Over Letters */}
+                {/*"this is inside the svg" className="opacity-0 transition-[opacity] duration-[1000ms] absolute sm:relative top-8 sm:top-auto animate-hero-pointer-bounce-mobile sm:animate-hero-pointer-bounce sm:mt-0 h-9 sm:h-10 md:h-11 lg:h-[80px]" */}
+                <svg id="canvas-arrow"  enableBackground="new 0 0 122.433 122.88" version="1.1" viewBox="0 0 52.513 52.695" xmlns="http://www.w3.org/2000/svg">
                     <title>Arrow pointing to animation canvas</title>
                     <g transform="matrix(.4069 0 0 .4069 1.3475 1.3475)" fill="hsl(var(--color-primBlue-200))" style={{ mixBlendMode: 'normal' }}>
                         <polygon points="0 59.207 39.403 59.207 39.403 0 83.033 0 83.033 59.207 122.43 59.207 61.216 122.88" clipRule="evenodd" fill="hsl(var(--color-primBlue-200))" fillRule="evenodd" />

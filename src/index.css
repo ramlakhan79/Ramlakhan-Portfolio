@@ -842,8 +842,8 @@
         position: relative;
         -webkit-transform-style: preserve-3d;
                 transform-style: preserve-3d;
-        -webkit-transform: translateZ(-50px) rotateY(33deg) rotateX(10deg);
-                transform: translateZ(-50px) rotateY(33deg) rotateX(10deg);
+        /* -webkit-transform: translateZ(-50px) rotateY(33deg) rotateX(10deg);
+                transform: translateZ(-50px) rotateY(33deg) rotateX(10deg); */
         -webkit-transition: -webkit-transform 1s;
         transition: -webkit-transform 1s;
         -o-transition: transform 1s;
@@ -852,14 +852,14 @@
     }
 
     .project-collection:nth-child(2n) .monitor-box {
-        -webkit-transform: translateZ(-50px) rotateY(-33deg) rotateX(10deg);
-                transform: translateZ(-50px) rotateY(-33deg) rotateX(10deg);
+        /* -webkit-transform: translateZ(-50px) rotateY(-33deg) rotateX(10deg);
+                transform: translateZ(-50px) rotateY(-33deg) rotateX(10deg); */
     }
 
     .project-collection .monitor-box:hover,
     .project-collection .monitor-box:focus {
-        -webkit-transform: translateZ(-50px);
-                transform: translateZ(-50px);
+        -webkit-transform: translateZ(-25px);
+                transform: translateZ(-25px);
     }
 
     .monitor-face {
