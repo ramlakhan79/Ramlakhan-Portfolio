@@ -189,7 +189,7 @@ function UseHero({ message, isDarkMode, isErrorMode }) {
 
                 this.distance = 0;
                 this.friction = Math.random() * 0.60 + 0.10; //Math.random() * 0.6 + 0.15;
-                this.ease = 0.045;
+                this.ease = 0.095;
 
                 this.firstTime = true;
                 this.repeat = 0;
@@ -213,15 +213,21 @@ function UseHero({ message, isDarkMode, isErrorMode }) {
             }
 
             update() {
-                if (this.stage.getStage() > 3) {
+                if (this.stage.getStage() > 2) {
                     // Enable mouse interaction once grand intro is complete
                     this.interactPointer();
                 } else {
+                    // if (this.stage.getStage() === 1) {
+                    //     this.spawnGlobe();
+                    // }
+                    //  else
+         
                     if (this.stage.getStage() === 1) {
-                        this.spawnGlobe();
-                    } else if (this.stage.getStage() === 2) {
                         this.orbitGlobe();
-                    } else if (this.stage.getStage() === 3) {
+                    }
+                    //  else if (this.stage.getStage() === 3) {
+                    // }
+                    else{
                         this.formText();
                     }
                 }
@@ -271,7 +277,7 @@ function UseHero({ message, isDarkMode, isErrorMode }) {
                 this.currSize = size;
 
                 // Rotation duration
-                if (this.repeat > 110) {
+                if (this.repeat>=0) {
                     // Particle can be at any point record its current distance to final X and Y
                     const xDiff = (this.currX - this.finalX);
                     const yDiff = (this.currY - this.finalY);
@@ -351,6 +357,7 @@ function UseHero({ message, isDarkMode, isErrorMode }) {
 
             async setupText(isSkipGetFont) {
                 // const gradient = this.context.createLinearGradient(0, 0, canvas.width, canvas.height);
+                
                 const gradient = heroCanvas.ctx.createRadialGradient(heroCanvas.width / 2, heroCanvas.height / 2, 0,
                     heroCanvas.width / 2, heroCanvas.height / 2, heroCanvas.width / 2);
 

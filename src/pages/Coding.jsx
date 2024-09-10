@@ -114,7 +114,7 @@ export default function Coding() {
                                 </text>
                             </svg>
                         </div>
-                        <div className="text-sm font-medium text-gray-400 mt-2">10 Attempting</div>
+                        <div className="text-sm font-medium text-gray-400 mt-2">12 Attempting</div>
                     </div>
                     <div className="ml-8">
                         <div className="bg-gray-800 p-2 rounded-md mb-2">
@@ -168,7 +168,7 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Overall</h3>
                             <p className="text-lg font-medium text-gray-600">Coding Score</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">1850</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">1858</h4>
                         </div>
                     </div>
 
@@ -195,7 +195,7 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Total Problem</h3>
                             <p className="text-lg font-medium text-gray-600">Solved</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">596</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">599</h4>
                         </div>
                     </div>
 
