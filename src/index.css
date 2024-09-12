@@ -855,10 +855,10 @@
         transition: transform 1s, -webkit-transform 1s;
     }
 
-    .project-collection:nth-child(2n) .monitor-box {
-        /* -webkit-transform: translateZ(-50px) rotateY(-33deg) rotateX(10deg);
-                transform: translateZ(-50px) rotateY(-33deg) rotateX(10deg); */
-    }
+    /* .project-collection:nth-child(2n) .monitor-box {
+        -webkit-transform: translateZ(-50px) rotateY(-33deg) rotateX(10deg);
+                transform: translateZ(-50px) rotateY(-33deg) rotateX(10deg);
+    } */
 
     .project-collection .monitor-box:hover,
     .project-collection .monitor-box:focus {
