@@ -558,6 +558,9 @@
         -webkit-box-shadow: 0 0 5px 5px hsl(var(--color-primBlue-100) / 0.6);
                 box-shadow: 0 0 5px 5px hsl(var(--color-primBlue-100) / 0.6);
     }
+    /*=======================
+        Remove the background square
+    ===========================
 
     .ascending-squares {
         overflow: hidden;
@@ -712,6 +715,7 @@
             transition: none;
         }
     }
+    */
 }
 
 @layer components {

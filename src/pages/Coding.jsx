@@ -57,7 +57,7 @@ export default function Coding() {
     const loading = loadingLeetCode || loadingGeeksForGeeks;
     const error = errorLeetCode || errorGeeksForGeeks;
 
-    console.log(newData)
+    // console.log(newData)
 
     if (loading) {
         return <div>Loading...</div>;
