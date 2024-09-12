@@ -29,19 +29,27 @@ export default function Coding() {
     }, []);
 
     useEffect(() => {
-        fetch('https://geeks-for-geeks-api.vercel.app/ramlakhan79', {
-            mode: 'no-cors'
-        })
+        const proxyUrl = "https://api.allorigins.win/get?url=";
+        const targetUrl =
+            proxyUrl +
+            encodeURIComponent(
+                "https://geeks-for-geeks-api-five.vercel.app/api/user/ramlakhan79"
+            );
+
+        fetch(targetUrl)
             .then(response => response.json())
-            .then(data => {
-                setNewData(data.info);
+            .then(newData => {
+                const jsonData = JSON.parse(newData.contents);
+                setNewData(jsonData);
+                setLoading(false);
             })
             .catch(error => {
-                throw new Error("data not found")
+                setError(error);
+                setLoading(false);
             });
     }, []);
 
-    console.log(newData) 
+    // console.log(newData)
 
     if (loading) {
         return <div>Loading...</div>;
@@ -144,7 +152,7 @@ export default function Coding() {
 =========================================*/ }
             <div className="bg-gray-900 p-4 rounded-md shadow-md ">
                 <p><a href="https://www.geeksforgeeks.org/user/ramlakhan79/" title="Visit My Profile" rel="nofollow" target="_blank" className="hover:underline hover:text-blue-600 hover:bg-gray-100 transition duration-300 ease-in-out">Geeks For Geeks</a></p>
-                <div className="flex gap-4 flex flex-col flex-nowrap cs:flex-row ">
+                <div className="gap-4 flex flex-col flex-nowrap cs:flex-row ">
                     <div className="bg-gray-900 rounded-md shadow-md p-4 w-60">
                         <div className="flex justify-center items-center mb-4">
                             <div className="rounded-full bg-gray-200 p-2">
@@ -168,7 +176,7 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Overall</h3>
                             <p className="text-lg font-medium text-gray-600">Coding Score</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">1858</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">{newData.userDetails.codingScore}</h4>
                         </div>
                     </div>
 
@@ -195,7 +203,7 @@ export default function Coding() {
                         <div className="text-center">
                             <h3 className="text-xl font-semibold text-gray-800">Total Problem</h3>
                             <p className="text-lg font-medium text-gray-600">Solved</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">599</h4>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">{newData.userDetails.totalProblemsSolved}</h4>
                         </div>
                     </div>
 
@@ -220,9 +228,9 @@ export default function Coding() {
                             </div>
                         </div>
                         <div className="text-center">
-                            <h3 className="text-xl font-semibold text-gray-800">Contest</h3>
-                            <p className="text-lg font-medium text-gray-600">Rating</p>
-                            <h4 className="text-4xl font-bold text-gray-900 pt-6">1608</h4>
+                            <h3 className="text-xl font-semibold text-gray-800">Current</h3>
+                            <p className="text-lg font-medium text-gray-600">Streak</p>
+                            <h4 className="text-4xl font-bold text-gray-900 pt-6">{newData.userDetails.currentStreak}</h4>
                         </div>
                     </div>
 
