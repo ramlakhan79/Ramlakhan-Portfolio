@@ -12,23 +12,27 @@ export default function Coding() {
     const [isDarkMode] = useOutletContext();
     const [data, setData] = useState([]);
     const [newData, setNewData] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const [loadingLeetCode, setLoadingLeetCode] = useState(true);
+    const [loadingGeeksForGeeks, setLoadingGeeksForGeeks] = useState(true);
+    const [errorLeetCode, setErrorLeetCode] = useState(null);
+    const [errorGeeksForGeeks, setErrorGeeksForGeeks] = useState(null);
 
     useEffect(() => {
+        // Fetch data from LeetCode API
         fetch('https://leetcode-stats-api.herokuapp.com/ramlakhan_79')
             .then(response => response.json())
             .then(data => {
                 setData(data);
-                setLoading(false);
+                setLoadingLeetCode(false);
             })
             .catch(error => {
-                setError(error);
-                setLoading(false);
+                setErrorLeetCode(error);
+                setLoadingLeetCode(false);
             });
     }, []);
 
     useEffect(() => {
+        // Fetch data from GeeksforGeeks API
         const proxyUrl = "https://api.allorigins.win/get?url=";
         const targetUrl =
             proxyUrl +
@@ -41,15 +45,19 @@ export default function Coding() {
             .then(newData => {
                 const jsonData = JSON.parse(newData.contents);
                 setNewData(jsonData);
-                setLoading(false);
+                setLoadingGeeksForGeeks(false);
             })
             .catch(error => {
-                setError(error);
-                setLoading(false);
+                setErrorGeeksForGeeks(error);
+                setLoadingGeeksForGeeks(false);
             });
     }, []);
 
-    // console.log(newData)
+    // Combined loading state
+    const loading = loadingLeetCode || loadingGeeksForGeeks;
+    const error = errorLeetCode || errorGeeksForGeeks;
+
+    console.log(newData)
 
     if (loading) {
         return <div>Loading...</div>;
