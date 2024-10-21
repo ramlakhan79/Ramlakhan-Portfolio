@@ -2,6 +2,8 @@
 // import React from 'react';
 import React, { useState, useEffect } from 'react';
 import { useOutletContext } from "react-router-dom";
+import Skeleton from 'react-loading-skeleton';
+import "react-loading-skeleton/dist/skeleton.css"
 // import Box from '@mui/joy/Box';
 // import CircularProgress from '@mui/joy/CircularProgress';
 // import ReportIcon from '@mui/icons-material/Report';
@@ -60,7 +62,10 @@ export default function Coding() {
     // console.log(newData)
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <div>
+            <Skeleton count={3} height={20} width="100%" />________________________________________
+            {/* Loading... */}
+        </div>
     }
 
     if (error) {
