@@ -69,7 +69,27 @@ export default function Coding() {
     }
 
     if (error) {
-        return <div>Error: {error.message}</div>;
+        return (
+            <div style={{ textAlign: 'center', padding: '20px' }}>
+                <h2>Something went wrong!</h2>
+                <p>We couldn't retrieve the data at this moment.</p>
+                <p><strong>Error:</strong> {error.message}</p>
+                <p>Here are some things you can try:</p>
+                <div className="flex items-center justify-center mt-4">
+                    <p className="mr-2">Try refreshing the page:</p>
+                    <button
+                        onClick={() => window.location.reload()}
+                        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+                    >
+                        Refresh
+                    </button>
+                </div>
+                <ul>                   
+                    <li>Check your internet connection</li>
+                    <li>Come back later</li>
+                </ul>
+            </div>
+        );
     }
 
     return (
