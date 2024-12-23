@@ -19,7 +19,7 @@ Check out the live portfolio here: [Personal Portfolio Live](https://ramlakhan-p
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/ramlakhan79/personal-portfolio.git
+   git clone https://github.com/ramlakhan79/Ramlakhan-Portfolio.git
    ```
 
 2. Navigate to the project directory:
@@ -71,7 +71,6 @@ Check out the live portfolio here: [Personal Portfolio Live](https://ramlakhan-p
 ## Future Enhancements
 
 - Add a blog section to share articles and tutorials.
-- Implement dark mode for better accessibility.
 - Introduce animations to enhance user engagement.
 - Add an admin panel for dynamic content updates.
 
