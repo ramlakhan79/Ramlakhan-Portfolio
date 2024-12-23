@@ -60,7 +60,7 @@ export default function Coding() {
     const error = errorLeetCode || errorGeeksForGeeks;
 
     // console.log(newData)
-    
+
     const circleRadius = 65; // Radius of the circle
     const circleCircumference = 2 * Math.PI * circleRadius;
 
@@ -92,7 +92,7 @@ export default function Coding() {
                         Refresh
                     </button>
                 </div>
-                <ul>                   
+                <ul>
                     <li>Check your internet connection</li>
                     <li>Come back later</li>
                 </ul>
@@ -184,20 +184,41 @@ export default function Coding() {
                     <div className="ml-8">
                         <div className="bg-gray-800 p-2 rounded-md mb-2">
                             <div className="flex items-center">
-                                <span className="text-sm font-medium text-blue-400 mr-2">Easy</span>
-                                <span className="text-sm font-medium text-gray-400">{data.easySolved}/{data.totalEasy}</span>
+                                <span
+                                    className="text-sm font-medium mr-2"
+                                    style={{ color: "#38B2AC" }} // Easy color
+                                >
+                                    Easy
+                                </span>
+                                <span className="text-sm font-medium text-gray-400">
+                                    {data.easySolved}/{data.totalEasy}
+                                </span>
                             </div>
                         </div>
                         <div className="bg-gray-800 p-2 rounded-md mb-2">
                             <div className="flex items-center">
-                                <span className="text-sm font-medium text-yellow-400 mr-2">Med.</span>
-                                <span className="text-sm font-medium text-gray-400">{data.mediumSolved}/{data.totalMedium}</span>
+                                <span
+                                    className="text-sm font-medium mr-2"
+                                    style={{ color: "#F59E0B" }} // Medium color
+                                >
+                                    Med.
+                                </span>
+                                <span className="text-sm font-medium text-gray-400">
+                                    {data.mediumSolved}/{data.totalMedium}
+                                </span>
                             </div>
                         </div>
                         <div className="bg-gray-800 p-2 rounded-md">
                             <div className="flex items-center">
-                                <span className="text-sm font-medium text-red-400 mr-2">Hard</span>
-                                <span className="text-sm font-medium text-gray-400">{data.hardSolved}/{data.totalHard}</span>
+                                <span
+                                    className="text-sm font-medium mr-2"
+                                    style={{ color: "#E53E3E" }} // Hard color
+                                >
+                                    Hard
+                                </span>
+                                <span className="text-sm font-medium text-gray-400">
+                                    {data.hardSolved}/{data.totalHard}
+                                </span>
                             </div>
                         </div>
                     </div>
