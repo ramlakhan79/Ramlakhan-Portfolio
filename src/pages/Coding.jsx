@@ -60,6 +60,14 @@ export default function Coding() {
     const error = errorLeetCode || errorGeeksForGeeks;
 
     // console.log(newData)
+    
+    const circleRadius = 65; // Radius of the circle
+    const circleCircumference = 2 * Math.PI * circleRadius;
+
+    // Calculate dash values for each category
+    const calculateDashArray = (solved, total) => (solved / total) * circleCircumference;
+
+
 
     if (loading) {
         return <div>
@@ -110,30 +118,46 @@ export default function Coding() {
                                 <circle
                                     cx="75"
                                     cy="75"
-                                    r="65"
-                                    stroke="#F59E0B"
+                                    r={circleRadius}
+                                    stroke="#2D3748" // Dark gray background
                                     strokeWidth="8"
                                     fill="transparent"
                                 />
+                                {/* Easy Segment */}
                                 <circle
                                     cx="75"
                                     cy="75"
-                                    r="65"
-                                    stroke="#38B2AC"
+                                    r={circleRadius}
+                                    stroke="#38B2AC" // Easy color
                                     strokeWidth="8"
                                     fill="transparent"
-                                    strokeDasharray="232.7433388230814 282.7433388230814"
-                                    strokeDashoffset="204.16385182057517"
+                                    strokeDasharray={`${calculateDashArray(data.easySolved, data.totalEasy)} ${circleCircumference}`}
+                                    strokeDashoffset={0}
                                 />
+                                {/* Medium Segment */}
                                 <circle
                                     cx="75"
                                     cy="75"
-                                    r="65"
-                                    stroke="#E53E3E"
+                                    r={circleRadius}
+                                    stroke="#F59E0B" // Medium color
                                     strokeWidth="8"
                                     fill="transparent"
-                                    strokeDasharray="252.7433388230814 282.7433388230814"
-                                    strokeDashoffset="78.5794869925063"
+                                    strokeDasharray={`${calculateDashArray(data.mediumSolved, data.totalMedium)} ${circleCircumference}`}
+                                    strokeDashoffset={-calculateDashArray(data.easySolved, data.totalEasy)}
+                                />
+                                {/* Hard Segment */}
+                                <circle
+                                    cx="75"
+                                    cy="75"
+                                    r={circleRadius}
+                                    stroke="#E53E3E" // Hard color
+                                    strokeWidth="8"
+                                    fill="transparent"
+                                    strokeDasharray={`${calculateDashArray(data.hardSolved, data.totalHard)} ${circleCircumference}`}
+                                    strokeDashoffset={-(
+                                        calculateDashArray(data.easySolved, data.totalEasy) +
+                                        calculateDashArray(data.mediumSolved, data.totalMedium)
+                                    )}
                                 />
                                 <text
                                     x="75"
