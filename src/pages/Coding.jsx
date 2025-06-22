@@ -35,24 +35,51 @@ export default function Coding() {
 
     useEffect(() => {
         // Fetch data from GeeksforGeeks API
-        const proxyUrl = "https://api.allorigins.win/get?url=";
-        const targetUrl =
-            proxyUrl +
-            encodeURIComponent(
-                "https://geeks-for-geeks-api-five.vercel.app/api/user/ramlakhan79"
-            );
 
-        fetch(targetUrl)
+        /*=====================================
+            S.O.C Chnaged 22/06/2025 Old
+            =========================================*/
+        // const proxyUrl = "https://api.allorigins.win/get?url=";
+        // const targetUrl =
+        //     proxyUrl +
+        //     encodeURIComponent(
+        //         "https://geeks-for-geeks-api-five.vercel.app/api/user/ramlakhan79"
+        //     );
+
+        // fetch(targetUrl)
+        //     .then(response => response.json())
+        //     .then(newData => {
+        //         const jsonData = JSON.parse(newData.contents);
+        //         setNewData(jsonData);
+        //         setLoadingGeeksForGeeks(false);
+        //     })
+        //     .catch(error => {
+        //         setErrorGeeksForGeeks(error);
+        //         setLoadingGeeksForGeeks(false);
+        //     });
+        /*=====================================
+        E.O.C Chnaged 22/06/2025 Old
+        =========================================*/
+
+
+        /*=====================================
+        S.O.C Chnaged 22/06/2025 New
+        =========================================*/
+
+        fetch('https://cors-anywhere.herokuapp.com/https://geeks-for-geeks-api-five.vercel.app/api/user/ramlakhan79')
             .then(response => response.json())
             .then(newData => {
-                const jsonData = JSON.parse(newData.contents);
-                setNewData(jsonData);
+                setNewData(newData); // Use directly
                 setLoadingGeeksForGeeks(false);
             })
             .catch(error => {
                 setErrorGeeksForGeeks(error);
                 setLoadingGeeksForGeeks(false);
             });
+
+        /*=====================================
+        E.O.C Chnaged 22/06/2025 New
+        =========================================*/
     }, []);
 
     // Combined loading state
