@@ -77,6 +77,7 @@ export default function Coding() {
                 setLoadingGeeksForGeeks(false);
             });
 
+
         /*=====================================
         E.O.C Chnaged 22/06/2025 New
         =========================================*/
@@ -108,7 +109,7 @@ export default function Coding() {
             <div style={{ textAlign: 'center', padding: '20px' }}>
                 <h2>Something went wrong!</h2>
                 <p>We couldn't retrieve the data at this moment.</p>
-                <p><strong>Error:</strong> {error.message}</p>
+                {/* <p><strong>Error:</strong> {error.message}</p> */}
                 <p>Here are some things you can try:</p>
                 <div className="flex items-center justify-center mt-4">
                     <p className="mr-2">Try refreshing the page:</p>
