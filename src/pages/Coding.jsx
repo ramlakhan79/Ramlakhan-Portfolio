@@ -28,7 +28,9 @@ export default function Coding() {
             .then(response => response.json())
             .then(data => {
                 setData(data);
+                setNewData(gfgData[0]);
                 setLoadingLeetCode(false);
+                setLoadingGeeksForGeeks(false);
             })
             .catch(error => {
                 setErrorLeetCode(error);
@@ -36,7 +38,8 @@ export default function Coding() {
             });
     }, []);
 
-    useEffect(() => {
+    // useEffect(() => {
+
     // Fetch data from GeeksforGeeks API
 
     /*=====================================
@@ -69,35 +72,30 @@ export default function Coding() {
     S.O.C Chnaged 22/06/2025 New
     =========================================*/
 
-    fetch('https://cors-anywhere.herokuapp.com/https://geeks-for-geeks-api-five.vercel.app/api/user/ramlakhan79')
-        .then(response => response.json())
-        .then(newData => {
-            setNewData(newData); // Use directly
-            setLoadingGeeksForGeeks(false);
-        })
-        .catch(error => {
-            setErrorGeeksForGeeks(error);
-            setLoadingGeeksForGeeks(false);
-        });
-
-        if (loadingGeeksForGeeks) {
-            setNewData(gfgData);
-            setLoadingGeeksForGeeks(true);
-        }
+    // fetch('https://cors-anywhere.herokuapp.com/https://geeks-for-geeks-api-five.vercel.app/api/user/ramlakhan79')
+    //     .then(response => response.json())
+    //     .then(newData => {
+    //         setNewData(newData); // Use directly
+    //         setLoadingGeeksForGeeks(false);
+    //     })
+    //     .catch(error => {
+    //         setErrorGeeksForGeeks(error);
+    //         setLoadingGeeksForGeeks(false);
+    //     });   
 
     /*=====================================
     E.O.C Chnaged 22/06/2025 New
     =========================================*/
-    }, []);
+    // }, []);
 
 
 
     // Combined loading state
 
-   
+
     const loading = loadingLeetCode || loadingGeeksForGeeks;
     const error = errorLeetCode || errorGeeksForGeeks;
-    // console.log(gfgData[0]);
+
     // console.log(newData)
 
 

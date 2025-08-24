@@ -849,6 +849,23 @@ export const workExp = [
     location: "Bhopal, India",
     positions: [
       {
+        title: "SAP ABAP Associate Consultant",
+        startDate: new Date(2025, 6),
+        endDate: "Present",
+      },
+    ],
+    tasks: [
+      "Collaborate directly with clients to gather project requirements, provide regular updates, and deliver solutions that tailored to their specific needs",
+      "Conduct competitor analysis to identify clients' opportunities for differentiation and growth",
+      "Setup API calls and database structures for streamlining clients' business requirements",
+      // "Demonstrate expertise in designing custom WordPress themes and plugins in PHP, enhancing website functionality and user interactivity",
+    ],
+  },
+  {
+    company: "Maventic",
+    location: "Bhopal, India",
+    positions: [
+      {
         title: "Trainee Developer",
         startDate: new Date(2025, 0),
         endDate: new Date(2025, 5),
@@ -863,23 +880,6 @@ export const workExp = [
       // "Collaborate directly with clients to gather project requirements, provide regular updates, and deliver solutions that tailored to their specific needs",
       // "Conduct competitor analysis to identify clients' opportunities for differentiation and growth",
       // "Setup API calls and database structures for streamlining clients' business requirements",
-      // "Demonstrate expertise in designing custom WordPress themes and plugins in PHP, enhancing website functionality and user interactivity",
-    ],
-  },
-  {
-    company: "Maventic",
-    location: "Bhopal, India",
-    positions: [
-      {
-        title: "SAP ABAP Associate Consultant",
-        startDate: new Date(2025, 6),
-        endDate: "Present",
-      },
-    ],
-    tasks: [
-      "Collaborate directly with clients to gather project requirements, provide regular updates, and deliver solutions that tailored to their specific needs",
-      "Conduct competitor analysis to identify clients' opportunities for differentiation and growth",
-      "Setup API calls and database structures for streamlining clients' business requirements",
       // "Demonstrate expertise in designing custom WordPress themes and plugins in PHP, enhancing website functionality and user interactivity",
     ],
   },
