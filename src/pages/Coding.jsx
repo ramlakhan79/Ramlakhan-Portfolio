@@ -9,6 +9,9 @@ import "react-loading-skeleton/dist/skeleton.css"
 // import ReportIcon from '@mui/icons-material/Report';
 // import WarningIcon from '@mui/icons-material/Warning';
 
+import {
+    gfgData,
+} from "../constants/gfg";
 
 export default function Coding() {
     const [isDarkMode] = useOutletContext();
@@ -34,60 +37,69 @@ export default function Coding() {
     }, []);
 
     useEffect(() => {
-        // Fetch data from GeeksforGeeks API
+    // Fetch data from GeeksforGeeks API
 
-        /*=====================================
-            S.O.C Chnaged 22/06/2025 Old
-            =========================================*/
-        // const proxyUrl = "https://api.allorigins.win/get?url=";
-        // const targetUrl =
-        //     proxyUrl +
-        //     encodeURIComponent(
-        //         "https://geeks-for-geeks-api-five.vercel.app/api/user/ramlakhan79"
-        //     );
-
-        // fetch(targetUrl)
-        //     .then(response => response.json())
-        //     .then(newData => {
-        //         const jsonData = JSON.parse(newData.contents);
-        //         setNewData(jsonData);
-        //         setLoadingGeeksForGeeks(false);
-        //     })
-        //     .catch(error => {
-        //         setErrorGeeksForGeeks(error);
-        //         setLoadingGeeksForGeeks(false);
-        //     });
-        /*=====================================
-        E.O.C Chnaged 22/06/2025 Old
+    /*=====================================
+        S.O.C Chnaged 22/06/2025 Old
         =========================================*/
+    // const proxyUrl = "https://api.allorigins.win/get?url=";
+    // const targetUrl =
+    //     proxyUrl +
+    //     encodeURIComponent(
+    //         "https://geeks-for-geeks-api-five.vercel.app/api/user/ramlakhan79"
+    //     );
+
+    // fetch(targetUrl)
+    //     .then(response => response.json())
+    //     .then(newData => {
+    //         const jsonData = JSON.parse(newData.contents);
+    //         setNewData(jsonData);
+    //         setLoadingGeeksForGeeks(false);
+    //     })
+    //     .catch(error => {
+    //         setErrorGeeksForGeeks(error);
+    //         setLoadingGeeksForGeeks(false);
+    //     });
+    /*=====================================
+    E.O.C Chnaged 22/06/2025 Old
+    =========================================*/
 
 
-        /*=====================================
-        S.O.C Chnaged 22/06/2025 New
-        =========================================*/
+    /*=====================================
+    S.O.C Chnaged 22/06/2025 New
+    =========================================*/
 
-        fetch('https://cors-anywhere.herokuapp.com/https://geeks-for-geeks-api-five.vercel.app/api/user/ramlakhan79')
-            .then(response => response.json())
-            .then(newData => {
-                setNewData(newData); // Use directly
-                setLoadingGeeksForGeeks(false);
-            })
-            .catch(error => {
-                setErrorGeeksForGeeks(error);
-                setLoadingGeeksForGeeks(false);
-            });
+    fetch('https://cors-anywhere.herokuapp.com/https://geeks-for-geeks-api-five.vercel.app/api/user/ramlakhan79')
+        .then(response => response.json())
+        .then(newData => {
+            setNewData(newData); // Use directly
+            setLoadingGeeksForGeeks(false);
+        })
+        .catch(error => {
+            setErrorGeeksForGeeks(error);
+            setLoadingGeeksForGeeks(false);
+        });
 
+        if (loadingGeeksForGeeks) {
+            setNewData(gfgData);
+            setLoadingGeeksForGeeks(true);
+        }
 
-        /*=====================================
-        E.O.C Chnaged 22/06/2025 New
-        =========================================*/
+    /*=====================================
+    E.O.C Chnaged 22/06/2025 New
+    =========================================*/
     }, []);
 
+
+
     // Combined loading state
+
+   
     const loading = loadingLeetCode || loadingGeeksForGeeks;
     const error = errorLeetCode || errorGeeksForGeeks;
-
+    // console.log(gfgData[0]);
     // console.log(newData)
+
 
     const circleRadius = 65; // Radius of the circle
     const circleCircumference = 2 * Math.PI * circleRadius;

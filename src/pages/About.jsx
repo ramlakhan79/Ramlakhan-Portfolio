@@ -8,7 +8,10 @@ export default function About() {
             <h1 className="text-center max-w-[18em]">About Ramlakhan</h1>
             <img className="w-[300px] profile-border " src="/assets/images/ramlakhan1.png" alt="Profile of Ramlakhan" />
             <p className="text-justify">Hello! My name is Ramlakhan, and I currently living in Bhopal , India..</p>
-            <p className="text-justify">I hold a BTech in Computer Science and Engineering from the Sagar Institute of Science and Technology Bhopal. Additionally, I successfully managed a Frontend data in a database. My interest Competitive Programming and Data Structure and Algorithm.</p>
+
+            {/* <p className="text-justify">Currently I am working in Maventic as a SAP ABAP Associate Consultant.</p> */}
+
+            <p className="text-justify">I have completed a BTech in Computer Science and Engineering from the Sagar Institute of Science and Technology Bhopal. Additionally, I successfully managed a Frontend data in a database. My interest Competitive Programming and Data Structure and Algorithm.</p>
             {/* <p className="text-justify">Beyond coding and interacting with clients, I find joy in giving back to the community. Volunteering at the East Area Library allows me to troubleshoot technical issues and teach computer skills to eager learners. In my spare time, I take a picture of a moments</p> */}
 
 

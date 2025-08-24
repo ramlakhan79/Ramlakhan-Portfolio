@@ -75,13 +75,12 @@ export const projects = [
   //         title: "JavaScript",
   //         Icon: Icons.JavascriptIcon,
   //       },
-        
+
   //     ],
   //     url: null,
   //     githubUrl: null,
   //   },
   // },
-
 
   // {
   //   title: "3D Calculator",
@@ -107,7 +106,6 @@ export const projects = [
   //   },
   // },
 
-
   // {
   //   title: "Temperature Convertor",
   //   src: "/assets/images/projects/temperature.png",
@@ -131,7 +129,6 @@ export const projects = [
   //     githubUrl: null,
   //   },
   // },
-
 
   {
     title: "Chat Web Application",
@@ -165,7 +162,6 @@ export const projects = [
     },
   },
 
-  
   {
     title: "Quiz Web Application",
     src: "/assets/images/projects/quizweb.png",
@@ -586,7 +582,6 @@ export const quoteUpdate = [
   },
 ];
 
-
 export const testimonials = [
   {
     quote:
@@ -597,7 +592,6 @@ export const testimonials = [
     altText: "Profile of Lakhan L.",
   },
 ];
-
 
 export const socialMedias = [
   {
@@ -644,6 +638,11 @@ export const techSkills = [
       {
         title: "Java",
         Icon: Icons.JavaIcon,
+        url: null,
+      },
+      {
+        title: "ABAP",
+        Icon: Icons.AbapIcon,
         url: null,
       },
     ],
@@ -697,6 +696,11 @@ export const techSkills = [
       {
         title: "React",
         Icon: Icons.ReactIcon,
+        url: null,
+      },
+      {
+        title: "SAP UI5",
+        Icon: Icons.Ui5Icon,
         url: null,
       },
     ],
@@ -825,57 +829,79 @@ export const techSkills = [
 ];
 
 export const softSkills = [
-    {
-        title: 'Creativity',
-        Icon: Icons.BrightIdeaIcon,
-    },
-    {
-        title: 'Teamwork',
-        Icon: Icons.TeamworkIcon,
-    },
-    {
-        title: 'Time Management',
-        Icon: Icons.ScheduleIcon,
-    },
+  {
+    title: "Creativity",
+    Icon: Icons.BrightIdeaIcon,
+  },
+  {
+    title: "Teamwork",
+    Icon: Icons.TeamworkIcon,
+  },
+  {
+    title: "Time Management",
+    Icon: Icons.ScheduleIcon,
+  },
 ];
 
 export const workExp = [
-    // {
-    //     company: 'Ramlakhan',
-    //     location: 'Bhopal, India',
-    //     positions: [
-    //         {
-    //             title: 'Frontend Developer',
-    //             startDate: new Date(2023, 1),
-    //             endDate: new Date(2023,2),
-    //         },
-    //     ],
-    //     tasks: [
-    //         "Collaborate directly with clients to gather project requirements, provide regular updates, and deliver solutions that tailored to their specific needs",
-    //         "Conduct competitor analysis to identify clients' opportunities for differentiation and growth",
-    //         "Setup API calls and database structures for streamlining clients' business requirements",
-    //         "Demonstrate expertise in designing custom WordPress themes and plugins in PHP, enhancing website functionality and user interactivity",
-    //     ],
-    // },
+  {
+    company: "Maventic",
+    location: "Bhopal, India",
+    positions: [
+      {
+        title: "Trainee Developer",
+        startDate: new Date(2025, 0),
+        endDate: new Date(2025, 5),
+      },
+    ],
+    tasks: [
+      "Designed and developed a responsive Taxi Booking web application using SAP UI5, enhancing user experience across devices.",
+      "Implemented booking and ride history features by integrating SAP backend using ABAP and OData services, ensuring smooth data flow and improved user engagement.",
+      "Built user dashboards for customers and drivers to manage profiles, view ride history, and track current bookings with intuitive UI components.",
+      "Incorporated dark mode toggle and other UI enhancements to improve accessibility and user satisfaction.",
+      "Tech Stack: ABAP, OData, SAP UI5.",
+      // "Collaborate directly with clients to gather project requirements, provide regular updates, and deliver solutions that tailored to their specific needs",
+      // "Conduct competitor analysis to identify clients' opportunities for differentiation and growth",
+      // "Setup API calls and database structures for streamlining clients' business requirements",
+      // "Demonstrate expertise in designing custom WordPress themes and plugins in PHP, enhancing website functionality and user interactivity",
+    ],
+  },
+  {
+    company: "Maventic",
+    location: "Bhopal, India",
+    positions: [
+      {
+        title: "SAP ABAP Associate Consultant",
+        startDate: new Date(2025, 6),
+        endDate: "Present",
+      },
+    ],
+    tasks: [
+      "Collaborate directly with clients to gather project requirements, provide regular updates, and deliver solutions that tailored to their specific needs",
+      "Conduct competitor analysis to identify clients' opportunities for differentiation and growth",
+      "Setup API calls and database structures for streamlining clients' business requirements",
+      // "Demonstrate expertise in designing custom WordPress themes and plugins in PHP, enhancing website functionality and user interactivity",
+    ],
+  },
 ];
 
 export const extracurriculars = [
-    // {
-    //     company: 'Literacy Bhopal',
-    //     location: 'East Bhopal, India',
-    //     positions: [
-    //         {
-    //             title: 'Digital Volunteer',
-    //             startDate: new Date(2022, 3),
-    //             endDate: new Date(2023, 9),
-    //         },
-    //     ],
-    //     tasks: [
-    //         "Diagnose and troubleshoot technical problems",
-    //         "Demonstrate strong communication skills by explaining technical concepts in a clear and understandable manner",
-    //         "Recognized for outstanding problem-solving capabilities",
-    //     ],
-    // },
+  // {
+  //     company: 'Literacy Bhopal',
+  //     location: 'East Bhopal, India',
+  //     positions: [
+  //         {
+  //             title: 'Digital Volunteer',
+  //             startDate: new Date(2022, 3),
+  //             endDate: new Date(2023, 9),
+  //         },
+  //     ],
+  //     tasks: [
+  //         "Diagnose and troubleshoot technical problems",
+  //         "Demonstrate strong communication skills by explaining technical concepts in a clear and understandable manner",
+  //         "Recognized for outstanding problem-solving capabilities",
+  //     ],
+  // },
 ];
 
 export const educations = [
@@ -900,8 +926,6 @@ export const educations = [
     endDate: new Date(2019, 4),
     location: "Guna, India",
   },
-  
-  
 ];
 
 export const dessertImages = [
@@ -944,69 +968,69 @@ export const dessertImages = [
 ];
 
 export const generalServices = [
-    // {
-    //     title: 'Consulting and Strategy',
-    //     description: "I work closely alongside you to understand your goals, target audience, and business objectives. Using this insight, I develop a strategic plan designed to seamlessly transform your goals into a captivating digital presence.",
-    //     Icon: Icons.HandshakeIcon,
-    // },
-    // {
-    //     title: 'Branding',
-    //     description: "Let's craft a distinctive visual identity that resonates with your brand. An identity that not only establishes a strong visual presence, but also forges a profound connection with your audience, fostering a sense of trust and authenticity.",
-    //     Icon: Icons.BrightIdeaIcon,
-    // },
-    // {
-    //     title: 'Competitor Analysis',
-    //     description: "Through my competitor analysis service, I delve deep into the strategies employed within your industry or niche. Armed with this insight, you gain a distinct advantage, positioning yourself uniquely from others.",
-    //     Icon: Icons.TargetIcon,
-    // },
-    {
-        title: 'Front-End Development',
-        description: "",
-        Icon: Icons.WebDesignIcon,
-    },
-    {
-        title: 'Back-End Development',
-        description: "",
-        Icon: Icons.ServerIcon,
-    },
-    {
-        title: 'Responsive Design',
-        description: "",
-        Icon: Icons.DesktopMobileIcon,
-    },
+  // {
+  //     title: 'Consulting and Strategy',
+  //     description: "I work closely alongside you to understand your goals, target audience, and business objectives. Using this insight, I develop a strategic plan designed to seamlessly transform your goals into a captivating digital presence.",
+  //     Icon: Icons.HandshakeIcon,
+  // },
+  // {
+  //     title: 'Branding',
+  //     description: "Let's craft a distinctive visual identity that resonates with your brand. An identity that not only establishes a strong visual presence, but also forges a profound connection with your audience, fostering a sense of trust and authenticity.",
+  //     Icon: Icons.BrightIdeaIcon,
+  // },
+  // {
+  //     title: 'Competitor Analysis',
+  //     description: "Through my competitor analysis service, I delve deep into the strategies employed within your industry or niche. Armed with this insight, you gain a distinct advantage, positioning yourself uniquely from others.",
+  //     Icon: Icons.TargetIcon,
+  // },
+  {
+    title: "Front-End Development",
+    description: "",
+    Icon: Icons.WebDesignIcon,
+  },
+  {
+    title: "Back-End Development",
+    description: "",
+    Icon: Icons.ServerIcon,
+  },
+  {
+    title: "Responsive Design",
+    description: "",
+    Icon: Icons.DesktopMobileIcon,
+  },
 ];
 
 export const specialties = [
-    {
-        title: 'Web Hosting and Deployment',
-        Icon: Icons.DatabaseIcon,
-    },
-    // {
-    //     title: 'API Development and Integration',
-    //     Icon: Icons.APIIcon,
-    // },
-    // {
-    //     title: 'Custom Web Applications',
-    //     Icon: Icons.ProgrammingIcon,
-    // },
-    {
-        title: 'Portfolio Websites',
-        Icon: Icons.PortfolioIcon,
-    },
-    // {
-    //     title: 'CMS Development and Customization',
-    //     Icon: Icons.WebContentIcon,
-    // },
-    // {
-    //     title: 'Web Performance Optimization',
-    //     Icon: Icons.RocketIcon,
-    // },
-    // {
-    //     title: 'Website Maintenance',
-    //     Icon: Icons.ToolsIcon,
-    // },
-    // {
-    //     title: 'Website Migration',
-    //     Icon: Icons.LeftRightArrowsIcon,
-    // },
+  {
+    title: "Web Hosting and Deployment",
+    Icon: Icons.DatabaseIcon,
+  },
+  // {
+  //     title: 'API Development and Integration',
+  //     Icon: Icons.APIIcon,
+  // },
+  // {
+  //     title: 'Custom Web Applications',
+  //     Icon: Icons.ProgrammingIcon,
+  // },
+  {
+    title: "Portfolio Websites",
+    Icon: Icons.PortfolioIcon,
+  },
+  // {
+  //     title: 'CMS Development and Customization',
+  //     Icon: Icons.WebContentIcon,
+  // },
+  // {
+  //     title: 'Web Performance Optimization',
+  //     Icon: Icons.RocketIcon,
+  // },
+  // {
+  //     title: 'Website Maintenance',
+  //     Icon: Icons.ToolsIcon,
+  // },
+  // {
+  //     title: 'Website Migration',
+  //     Icon: Icons.LeftRightArrowsIcon,
+  // },
 ];

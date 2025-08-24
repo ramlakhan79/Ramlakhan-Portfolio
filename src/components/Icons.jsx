@@ -489,6 +489,35 @@ export const ExcelIcon = () => (
 //     </svg>
 // );
 
+
+export const Ui5Icon = () => (
+    <svg
+        className="h-iconMobile sm:h-iconSmall md:h-iconMedium lg:h-iconLarge"
+        version="1.1"
+        viewBox="0 0 100 50"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <title>UI5 icon</title>
+        <g fill="hsl(var(--color-primBlue-100))">
+            {/* Trapezoid base similar to SAP logo shape */}
+            <polygon points="0,50 75,50 90,0 15,0" />
+
+            {/* UI5 text */}
+            <text
+                x="50"
+                y="34"
+                textAnchor="middle"
+                fontFamily="Arial, sans-serif"
+                fontWeight="bold"
+                fontSize="28"
+                fill="white"
+            >
+                UI5
+            </text>
+        </g>
+    </svg>
+);
+
 /*==============================================
              Languages Icon Block Start
 ===============================================*/
@@ -545,6 +574,32 @@ export const JavaIcon = () => (
             <path d="m71.51 90.03c23.05-11.98 12.39-23.49 4.95-21.94-1.82 0.38-2.64 0.71-2.64 0.71s0.68-1.06 1.97-1.52c14.72-5.17 26.04 15.26-4.75 23.36 0.01 0 0.36-0.32 0.47-0.61z" />
             <path d="m57.61 0s12.77 12.77-12.11 32.41c-19.95 15.75-4.55 24.74-0.01 35-11.64-10.5-20.19-19.75-14.46-28.36 8.42-12.64 31.73-18.76 26.58-39.05z" />
             <path d="m33.71 122.49c22.13 1.42 56.11-0.79 56.92-11.26 0 0-1.55 3.97-18.29 7.12-18.89 3.55-42.18 3.14-56 0.86 0 0.01 2.83 2.35 17.37 3.28z" />
+        </g>
+    </svg>
+);
+
+
+export const AbapIcon = () => (
+    <svg
+        className="h-iconMobile sm:h-iconSmall md:h-iconMedium lg:h-iconLarge"
+        version="1.1"
+        viewBox="0 0 100 50"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <title>ABAP icon</title>
+        <g fill="hsl(var(--color-primBlue-100))">
+            <polygon points="0,50 75,50 90,0 15,0" />
+            <text
+                x="50"
+                y="35"
+                textAnchor="middle"
+                fontFamily="Arial, sans-serif"
+                fontWeight="bold"
+                fontSize="28"
+                fill="white"
+            >
+                ABAP
+            </text>
         </g>
     </svg>
 );
