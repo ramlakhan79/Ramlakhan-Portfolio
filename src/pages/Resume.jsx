@@ -28,7 +28,7 @@ export default function Resume() {
 
                 <div className="mt-mobileBound sm:mt-6 md:mt-7 lg:mt-8 w-[100%] glassy-screen flex flex-col flex-nowrap items-center justify-center gap-7 p-7 sm:p-8 sm:gap-8 md:p-9 md:gap-9 lg:p-10 lg:gap-10">
                     <span className="text-center font-bold text-4 sm:text-3 md:text-2 lg:text-1">Ramlakhan Lodhi</span>
-                    <span className="text-center font-bold text-6 sm:text-5 md:text-4 lg:text-3">MERN-Stack Aspiring Software Engineer</span>
+                    <span className="text-center font-bold text-6 sm:text-5 md:text-4 lg:text-3">SAP ABAP Associate Consultant</span>
                     <address className="italic flex flex-row flex-wrap gap-8 justify-center items-center">
                         <span>Bhopal, India</span>
                     </address>

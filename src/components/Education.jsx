@@ -3,7 +3,13 @@ import DateTimeStamp from "./DateTimeStamp";
 
 export default function Education() {
     return (
-        <ul className='ml-mobileBound sm:ml-0 gap-8 sm:gap-11 w-[100%] grid grid-cols-timeline sm:grid-cols-wide-timeline auto-cols-[max-content] before:row-mobile-education-marker sm:before:row-education-marker mobile-marker-time-item sm:before:col-marker-time-item before:bg-primBlue-200'>
+
+        /*===================
+        did experience instead of education in ul 
+        || Change for break vertical line to connect all education level       || Date 25.08.2025
+        =====================*/
+
+        <ul className='ml-mobileBound sm:ml-0 gap-8 sm:gap-11 w-[100%] grid grid-cols-timeline sm:grid-cols-wide-timeline auto-cols-[max-content] before:row-mobile-experience-marker sm:before:row-experience-marker mobile-marker-time-item sm:before:col-marker-time-item before:bg-primBlue-200'>
             {
                 educations.map((education, id) => (
                     <li key={id} className='max-w-[28em] w-[100%] group time-item col-mobile-time-item mobile-time-item sm:odd:col-odd-time-item sm:even:col-even-time-item sm:[&:nth-child(2)]:row-second-time-item sm:odd:justify-self-end flex flex-col flex-nowrap'>
@@ -16,6 +22,6 @@ export default function Education() {
                     </li>
                 ))
             }
-        </ ul>
+        </ ul>       
     );
 }
