@@ -267,7 +267,12 @@ export default function Coding() {
             Geeks For Geeks
 =========================================*/ }
             <div className="bg-gray-900 p-4 rounded-md shadow-md ">
-                <p><a href="https://www.geeksforgeeks.org/user/ramlakhan79/" title="Visit My Profile" rel="nofollow" target="_blank" className="hover:underline hover:text-blue-600 hover:bg-gray-100 transition duration-300 ease-in-out">Geeks For Geeks</a></p>
+                {/* S.O.C Commented || URL hide Profile link Issue GFG API not working || Date: 29.08.2025  */}
+                {/* url: https://www.geeksforgeeks.org/user/ramlakhan79/ 
+                target="_blank" 
+                */}
+                <p><a href="#" title="Visit My Profile" rel="nofollow" className="hover:underline hover:text-blue-600 hover:bg-gray-100 transition duration-300 ease-in-out">Geeks For Geeks</a></p>
+                {/* E.O.C Commented || URL hide Profile link Issue GFG API not working || Date: 29.08.2025  */}
                 <div className="gap-4 flex flex-col flex-nowrap cs:flex-row ">
                     <div className="bg-gray-900 rounded-md shadow-md p-4 w-60">
                         <div className="flex justify-center items-center mb-4">
