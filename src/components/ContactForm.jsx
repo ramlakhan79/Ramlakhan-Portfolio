@@ -27,16 +27,15 @@ export default function ContactForm() {
         if (!formData.get("contact-message")?.trim()) {
             newErrors.message = "Message cannot be empty";
         }
-
+        if (!token) {
+            newErrors.token = "Please complete the verification before submitting.";           
+        }
         return newErrors;
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        if (!token) {
-            newErrors.token = "Please complete the verification before submitting.";
-            return newErrors;
-        }
+       
         const formData = new FormData(event.target);
 
         const validationErrors = validate(formData);
