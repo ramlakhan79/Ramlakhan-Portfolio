@@ -8,6 +8,7 @@ const useBasinFormId = '768f9cda9ef4';
 
 
 export default function ContactForm() {
+    const [token, setToken] = useState("");
     const [errors, setErrors] = useState({});
     const [submitting, setSubmitting] = useState(false);
 
@@ -32,6 +33,10 @@ export default function ContactForm() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        if (!token) {
+            newErrors.token = "Please complete the verification before submitting.";
+            return newErrors;
+        }
         const formData = new FormData(event.target);
 
         const validationErrors = validate(formData);
@@ -63,7 +68,7 @@ export default function ContactForm() {
                 name="contact-form"
                 action={`https://usebasin.com/f/${useBasinFormId}`}
                 method="POST"
-                enctype="multipart/form-data"
+                encType="multipart/form-data"
                 className="w-[100%] flex flex-col flex-nowrap items-center gap-7"
                 onSubmit={handleSubmit}
             >
@@ -128,7 +133,10 @@ export default function ContactForm() {
                 </label>
                 <Turnstile
                     siteKey={turnstileSiteKey}
-                />
+                    onSuccess={(newToken) => setToken(newToken)}
+                    onError={() => setToken("")}
+                    onExpire={() => setToken("")}
+                />{errors.token && (<p className="text-suppRed-500 text-sm">{errors.token}</p>)}
 
                 <button
                     type="submit"
