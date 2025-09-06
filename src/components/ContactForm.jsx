@@ -2,7 +2,7 @@ import {
     Turnstile,
 } from "@marsidev/react-turnstile";
 import { useState } from "react";
-const turnstileSiteKey = '0x4AAAAAAAiY4K7-G-R2XN1oc03pNxykxIc';
+const turnstileSiteKey = '0x4AAAAAABzsHb0oW1jrht7C';
 
 const useBasinFormId = '768f9cda9ef4';
 
