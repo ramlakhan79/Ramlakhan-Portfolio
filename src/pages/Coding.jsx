@@ -24,7 +24,7 @@ export default function Coding() {
 
     useEffect(() => {
         // Fetch data from LeetCode API
-        fetch('https://leetcode-stats-api.herokuapp.com/ramlakhan_79')
+        fetch('https://leetcode-stats-api.herokuapp.com/Ramlakhan_79')
             .then(response => response.json())
             .then(data => {
                 setData(data);

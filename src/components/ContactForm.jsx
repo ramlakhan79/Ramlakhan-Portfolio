@@ -16,7 +16,7 @@ export default function ContactForm() {
         let newErrors = {};
 
         if (!formData.get("contact-name")?.trim()) {
-            newErrors.name = "Full name is requisuppRed";
+            newErrors.name = "Enter Full Name";
         }
         if (!/^\d{10}$/.test(formData.get("contact-phone"))) {
             newErrors.phone = "Enter a valid 10-digit phone number";
@@ -28,14 +28,14 @@ export default function ContactForm() {
             newErrors.message = "Message cannot be empty";
         }
         if (!token) {
-            newErrors.token = "Please complete the verification before submitting.";           
+            newErrors.token = "Please complete the verification before submitting.";
         }
         return newErrors;
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-       
+
         const formData = new FormData(event.target);
 
         const validationErrors = validate(formData);
@@ -80,7 +80,7 @@ export default function ContactForm() {
                         name="contact-name"
                         className="mt-3 px-5 py-4 bg-transparent border-2 border-solid border-neutGray-500 rounded-[5px] max-w-[30em] w-[100%] backdrop-blur-[5px]"
                         placeholder="Name"
-                        requisuppRed />
+                        required />
                     {errors.name && <p className="text-suppRed-500 text-sm">{errors.name}</p>}
                 </label>
 
@@ -92,7 +92,7 @@ export default function ContactForm() {
                         name="contact-phone"
                         className="mt-3 px-5 py-4 bg-transparent border-2 border-solid border-neutGray-500 rounded-[5px] max-w-[30em] w-[100%] backdrop-blur-[5px]"
                         placeholder="phone number"
-                        requisuppRed />
+                        required />
                     {errors.phone && <p className="text-suppRed-500 text-sm">{errors.phone}</p>}
                 </label>
 
@@ -104,7 +104,7 @@ export default function ContactForm() {
                         name="contact-email"
                         className="mt-3 px-5 py-4 bg-transparent border-2 border-solid border-neutGray-500 rounded-[5px] max-w-[30em] w-[100%] backdrop-blur-[5px]"
                         placeholder="Email"
-                        requisuppRed />
+                        required />
                     {errors.email && <p className="text-suppRed-500 text-sm">{errors.email}</p>}
                 </label>
 
@@ -116,7 +116,7 @@ export default function ContactForm() {
                         rows="4"
                         className="mt-3 px-5 py-4 bg-transparent border-2 border-solid border-neutGray-500 rounded-[5px] max-w-[30em] w-[100%] backdrop-blur-[5px]"
                         placeholder="Your message here..."
-                        requisuppRed
+                        required
                     />
                     {errors.message && (
                         <p className="text-suppRed-500 text-sm">{errors.message}</p>
