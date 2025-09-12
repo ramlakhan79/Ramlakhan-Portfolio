@@ -113,7 +113,7 @@ export default function SubmissionHeatmap() {
                 if (!res.ok) throw new Error("Network response was not ok");
                 const data = await res.json();
 
-                if (data?.message && data.message.includes("Too many request")) {
+                if (true) {
                     throw new Error("Rate limit exceeded");
                 }
 
