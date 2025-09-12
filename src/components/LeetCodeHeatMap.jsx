@@ -15,7 +15,6 @@ export default function SubmissionHeatmap() {
 
     useEffect(() => {
         const fetchData = async () => {
-
             try {
 
                 // const res = await fetch(
@@ -27,6 +26,7 @@ export default function SubmissionHeatmap() {
                 //                 if (data?.message && data.message.includes("Too many request")) {
                 //                     throw new Error("Rate limit exceeded. Please try again later.");
                 //                 }
+
                 if (true) {
                     throw new Error("Rate limit exceeded");
                 }
