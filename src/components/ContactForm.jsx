@@ -137,10 +137,18 @@ export default function ContactForm() {
                     onExpire={() => setToken("")}
                 />{errors.token && (<p className="text-suppRed-500 text-sm">{errors.token}</p>)}
 
-                <button
+                {/* <button
                     type="submit"
                     disabled={submitting}
-                    className="mt-8 glassy-icon px-6">{submitting ? "Submitting..." : "Submit Message"}</button>
+                    className="mt-8 glassy-icon px-6">{submitting ? "Submitting..." : "Submit Message"}</button> */}
+
+                <button
+                    type="submit"
+                    disabled={submitting || !token}
+                    className={`mt-8 glassy-icon px-6 ${(!token || submitting) ? "opacity-50 cursor-not-allowed" : ""}`}
+                >
+                    {submitting ? "Submitting..." : "Submit Message"}
+                </button>
             </form>
         </>
     );
