@@ -440,7 +440,7 @@
     }
     
     p, figcaption, dd, span, li {
-        @apply max-w-read font-medium;
+        @apply max-w-read font-thin;
     }
 
     h1 {
