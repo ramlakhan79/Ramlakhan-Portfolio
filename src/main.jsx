@@ -16,7 +16,7 @@ import App from './App.jsx';
 import './index.css';
 
 const WorkStatus = () => {
-    const wstatus=false
+    const wstatus=true
     return wstatus ? (
         <App />
     ) : (
