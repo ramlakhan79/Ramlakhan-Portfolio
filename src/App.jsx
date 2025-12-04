@@ -12,6 +12,7 @@ import About from './pages/About';
 import Resume from './pages/Resume';
 import Services from './pages/Services';
 import Blogs from './pages/Blogs';
+import BlogsPages from './components/BlogsPages';
 import Coding from './pages/Coding';
 import ErrorPage from './pages/404';
 import ThankYou from './pages/ThankYou';
@@ -70,6 +71,10 @@ function App() {
                 {
                     path: "blogs",
                     element: <Blogs />,
+                },
+                {
+                    path: "blogs/*",
+                    element: <BlogsPages />,
                 },
                 {
                     path: "coding",
