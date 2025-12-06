@@ -44,7 +44,7 @@ export default function BlogDetails() {
                 </button>
             </div>
 
-            <h4 className="text-3xl font-semibold mb-4">{blog.title}</h4>
+            <h4 className="text-3xl font-semibold mb-4">Title: {blog.title}</h4>
 
             {/* <img
                 src={blog.image}
@@ -52,9 +52,16 @@ export default function BlogDetails() {
                 className="w-full rounded-xl mb-6"
             /> */}
 
-            <p className="text-gray-700 leading-relaxed text-sm">
+            {/* <p className="text-gray-700 leading-relaxed text-sm">
                 {blog.desc}
-            </p>
+            </p> */}
+
+            <div className="text-gray-700 leading-relaxed text-base space-y-4">
+                {blog.desc.split("\n\n").map((para, index) => (
+                    <p key={index}>{para}</p>
+                ))}
+            </div>
+
             <div className="px-5 py-4 border-t flex items-center justify-between text-xs text-gray-500">
                 <span>{blog.date}</span>
                 <span className="flex items-center gap-1">
