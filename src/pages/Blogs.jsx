@@ -9,7 +9,11 @@ export default function Blogs() {
     const categories = ["All", "React", "JavaScript", "Build Tools"];
     const [activeCat, setActiveCat] = useState("All");
     const [search, setSearch] = useState("");
+    const [visibleCount, setVisibleCount] = useState(2);
 
+    const loadMore = () => {
+        setVisibleCount(prev => prev + 2);
+    };
     const filtered = allBlogs.filter((b) => {
         const matchCat = activeCat === "All" || b.category === activeCat;
         const matchSearch =
@@ -53,7 +57,7 @@ export default function Blogs() {
                 {/* Blog Cards grid */}
                 <div className="w-full max-w-[1280px] flex flex-col gap-8">
                     <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 mx-auto">
-                        {filtered.map((blog) => {
+                        {filtered.slice(0, visibleCount).map((blog) => {
                             const isLongDesc = blog.desc.length > 100;
                             return (
                                 <article
@@ -71,10 +75,10 @@ export default function Blogs() {
 
                                     <div className="p-5">
                                         <h4 className="text-sm md:text-sm lg:text-sm font-semibold text-gray-900 leading-snug mb-2 break-words">
-                                            {blog.title}
+                                            Title: {blog.title}
                                         </h4>
                                         <p className="text-gray-600 text-xs leading-relaxed">
-                                            {isLongDesc ? blog.desc.slice(0, 100) + "..." : blog.desc}
+                                            Description: {isLongDesc ? blog.desc.slice(0, 100) + "..." : blog.desc}
                                         </p>
 
                                         {/* ✔ Read More Button */}
@@ -109,6 +113,17 @@ export default function Blogs() {
                                 </article>
                             )
                         })}
+                    </div>
+                    <div className="flex justify-center mt-4">
+                        {/* Load More button */}
+                        {visibleCount < filtered.length && (
+                            <button
+                                onClick={loadMore}
+                                className="glassy-icon px-6 shrink-0 border rounded-lg"
+                            >
+                                Load More
+                            </button>
+                        )}
                     </div>
                 </div>
 

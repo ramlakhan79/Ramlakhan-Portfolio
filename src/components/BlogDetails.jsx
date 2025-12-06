@@ -23,10 +23,10 @@ export default function BlogDetails() {
         <div className="max-w-3xl mx-auto py-10 px-4">
 
             {/* Back + Next buttons */}
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex justify-between items-center gap-3 mb-6">
                 <button
                     onClick={() => navigate(-1)}
-                    className="text-sm px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg hover:bg-gray-200 transition"
+                    className="glassy-icon px-6 shrink-0 border rounded-lg"
                 >
                     ← Back
                 </button>
@@ -34,7 +34,7 @@ export default function BlogDetails() {
                 <button
                     onClick={handleNext}
                     disabled={currentIndex === blogs.length - 1}
-                    className={`text-sm px-4 py-2 border rounded-lg transition
+                    className={`glassy-icon px-6 shrink-0 border rounded-lg
                         ${currentIndex === blogs.length - 1
                             ? "bg-gray-200 text-gray-400 cursor-not-allowed"
                             : "bg-gray-100 border-gray-300 hover:bg-gray-200"}
