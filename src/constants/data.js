@@ -199,6 +199,59 @@ export const projects = [
   },
 ];
 
+export const blogs = [
+  {
+    id: 1,
+    image: "https://via.placeholder.com/1200x800",
+    title: "Understanding React Server Components",
+    desc: "A simple explanation of how RSC works and why it matters. Includes examples. code snippets. and best practices. for getting started.",
+    date: "Dec 04, 2025",
+    category: "React",
+    read: "5 min",
+    tags: ["React", "Performance"],
+  },
+  {
+    id: 2,
+    image: "https://via.placeholder.com/1200x800/ddd",
+    title: "Migrating From Webpack to Vite — Tips & Pitfalls",
+    desc: "A full breakdown of the migration process with real examples and gotchas.",
+    date: "Nov 20, 2025",
+    category: "Build Tools",
+    read: "7 min",
+    tags: ["Vite", "Webpack"],
+  },
+  {
+    id: 3,
+    image: "https://via.placeholder.com/1200x800/eee",
+    title: "State Management: What to Pick in 2025",
+    desc: "Context, Redux, Zustand, Jotai. When to choose what. examples and code snippets included. you'll learn the pros and cons of each library.",
+    date: "Oct 18, 2025",
+    category: "JavaScript",
+    read: "6 min",
+    tags: ["JavaScript", "State"],
+  },
+  {
+    id: 4,
+    image: "https://via.placeholder.com/1200x800/eee",
+    title: "State Management: What to Pick in 2025",
+    desc: "Context, Redux, Zustand, Jotai. When to choose what.",
+    date: "Oct 18, 2025",
+    category: "JavaScript",
+    read: "6 min",
+    tags: ["JavaScript", "State"],
+  },
+  {
+    id: 5,
+    image: "https://via.placeholder.com/1200x800/eee",
+    title: "State Management: What to Pick in 2025",
+    desc: "Context, Redux, Zustand, Jotai. When to choose what.",
+    date: "Oct 18, 2025",
+    category: "JavaScript",
+    read: "6 min",
+    tags: ["JavaScript", "State"],
+  },
+];
+
 export const quoteUpdate = [
   {
     dayq: 1,
