@@ -20,7 +20,7 @@ export default function BlogDetails() {
     };
 
     return (
-        <div className="max-w-3xl mx-auto py-10 px-4">
+        <div className="max-w-full mx-auto py-5 px-4">
 
             {/* Back + Next buttons */}
             <div className="flex justify-between items-center gap-3 mb-6">
