@@ -24,19 +24,21 @@ export default function Coding() {
 
     useEffect(() => {
         // Fetch data from LeetCode API
-        fetch('https://leetcode-stats-api.herokuapp.com/Ramlakhan_79')
-            .then(response => response.json())
-            .then(data => {
+        // fetch('https://leetcode-stats-api.herokuapp.com/Ramlakhan_79')
+        //     .then(response => response.json())
+        //     .then(data => {
                 setData(data);
                 setNewData(gfgData[0]);
                 setLoadingLeetCode(false);
                 setLoadingGeeksForGeeks(false);
-            })
-            .catch(error => {
-                setErrorLeetCode(error);
-                setLoadingLeetCode(false);
-            });
+            // })
+            // .catch(error => {
+            //     setErrorLeetCode(error);
+            //     setLoadingLeetCode(false);
+            // });
     }, []);
+
+
 
     // useEffect(() => {
 
@@ -96,7 +98,7 @@ export default function Coding() {
     const loading = loadingLeetCode || loadingGeeksForGeeks;
     const error = errorLeetCode || errorGeeksForGeeks;
 
-    // console.log(newData)
+    console.log(loading );
 
 
     const circleRadius = 65; // Radius of the circle
@@ -108,9 +110,10 @@ export default function Coding() {
 
 
     if (loading) {
-        return <div>
-            <Skeleton count={3} height={20} width="100%" />________________________________________
-            {/* Loading... */}
+        return <div className="loader-container">
+            {/* <Skeleton count={3} height={20} width="100%" />________________________________________ */}
+            {/* Loading... */}           
+                <div className="custom-loader"></div>
         </div>
     }
 
@@ -169,7 +172,7 @@ export default function Coding() {
                                     stroke="#38B2AC" // Easy color
                                     strokeWidth="8"
                                     fill="transparent"
-                                    strokeDasharray={`${calculateDashArray(data.easySolved, data.totalEasy)} ${circleCircumference}`}
+                                    strokeDasharray={`${calculateDashArray(data.easySolved || 314, data.totalEasy || 962)} ${circleCircumference}`}
                                     strokeDashoffset={0}
                                 />
                                 {/* Medium Segment */}
@@ -180,8 +183,8 @@ export default function Coding() {
                                     stroke="#F59E0B" // Medium color
                                     strokeWidth="8"
                                     fill="transparent"
-                                    strokeDasharray={`${calculateDashArray(data.mediumSolved, data.totalMedium)} ${circleCircumference}`}
-                                    strokeDashoffset={-calculateDashArray(data.easySolved, data.totalEasy)}
+                                    strokeDasharray={`${calculateDashArray(data.mediumSolved || 567, data.totalMedium || 2109)} ${circleCircumference}`}
+                                    strokeDashoffset={-calculateDashArray(data.easySolved || 314, data.totalEasy || 962)}
                                 />
                                 {/* Hard Segment */}
                                 <circle
@@ -191,10 +194,10 @@ export default function Coding() {
                                     stroke="#E53E3E" // Hard color
                                     strokeWidth="8"
                                     fill="transparent"
-                                    strokeDasharray={`${calculateDashArray(data.hardSolved, data.totalHard)} ${circleCircumference}`}
+                                    strokeDasharray={`${calculateDashArray(data.hardSolved || 163, data.totalHard || 971)} ${circleCircumference}`}
                                     strokeDashoffset={-(
-                                        calculateDashArray(data.easySolved, data.totalEasy) +
-                                        calculateDashArray(data.mediumSolved, data.totalMedium)
+                                        calculateDashArray(data.easySolved || 314, data.totalEasy || 962) +
+                                        calculateDashArray(data.mediumSolved || 567, data.totalMedium || 2109)
                                     )}
                                 />
                                 <text
@@ -204,7 +207,7 @@ export default function Coding() {
                                     fontSize="12"
                                     fill={isDarkMode ? '#fff' : '#000'}
                                 >
-                                    {data.totalSolved}/{data.totalQuestions}
+                                    {data.totalSolved || 1044}/{data.totalQuestions || 4042}
                                 </text>
                                 <text
                                     x="75"
@@ -229,7 +232,7 @@ export default function Coding() {
                                     Easy
                                 </span>
                                 <span className="text-sm font-medium text-gray-400">
-                                    {data.easySolved}/{data.totalEasy}
+                                    {data.easySolved || 314}/{data.totalEasy || 962}
                                 </span>
                             </div>
                         </div>
@@ -242,7 +245,7 @@ export default function Coding() {
                                     Med.
                                 </span>
                                 <span className="text-sm font-medium text-gray-400">
-                                    {data.mediumSolved}/{data.totalMedium}
+                                    {data.mediumSolved || 567}/{data.totalMedium || 2109}
                                 </span>
                             </div>
                         </div>
@@ -255,7 +258,7 @@ export default function Coding() {
                                     Hard
                                 </span>
                                 <span className="text-sm font-medium text-gray-400">
-                                    {data.hardSolved}/{data.totalHard}
+                                    {data.hardSolved || 163}/{data.totalHard || 971}
                                 </span>
                             </div>
                         </div>
