@@ -22,10 +22,10 @@ export default function Home() {
                 <h2>My Projects</h2>
                 <Projects />
             </section>
-            <section className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
+            {/* <section className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
                 <h2>My Leetcode Graph</h2>
                 <LeetCodeHeatMap />                
-            </section>
+            </section> */}
             <section className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
                 <h2>Daily Quote</h2>
                 <Dailyquotes />
