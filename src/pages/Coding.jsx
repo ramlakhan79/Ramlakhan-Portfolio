@@ -12,6 +12,7 @@ import "react-loading-skeleton/dist/skeleton.css"
 import {
     gfgData,
 } from "../constants/gfg";
+import { fetchLeetCodeData } from "../constants/leetcodecache";
 
 export default function Coding() {
     const [isDarkMode] = useOutletContext();
@@ -24,18 +25,36 @@ export default function Coding() {
 
     useEffect(() => {
         // Fetch data from LeetCode API
-        // fetch('https://leetcode-stats-api.herokuapp.com/Ramlakhan_79')
+        // fetch('https://leetcode-stats-api.herokuapp.com/Ramlakhan_79') 
+        // fetch('http://localhost:5000/api/leetcode/Ramlakhan_79') 
         //     .then(response => response.json())
         //     .then(data => {
+        //         setData(data);
+        //         setNewData(gfgData[0]);
+        //         setLoadingLeetCode(false);
+        //         setLoadingGeeksForGeeks(false);
+                // console.log("✅ API RESPONSE:", data);
+        //     })
+        //     .catch(error => {
+        //         setErrorLeetCode(error);
+        //         setLoadingLeetCode(false);
+                // console.error("❌ API ERROR:", error);
+        //     });
+        fetchLeetCodeData()
+            .then(data => {
+                // console.log("LeetCode data:", data);
                 setData(data);
-                setNewData(gfgData[0]);
+                        setNewData(gfgData[0]);
+                        setLoadingLeetCode(false);
+                        setLoadingGeeksForGeeks(false);
+            })
+            .catch(error => {
+                console.error(error);
+            })
+            .finally(() => {
+                setErrorLeetCode(error);
                 setLoadingLeetCode(false);
-                setLoadingGeeksForGeeks(false);
-            // })
-            // .catch(error => {
-            //     setErrorLeetCode(error);
-            //     setLoadingLeetCode(false);
-            // });
+            });
     }, []);
 
 
@@ -98,7 +117,7 @@ export default function Coding() {
     const loading = loadingLeetCode || loadingGeeksForGeeks;
     const error = errorLeetCode || errorGeeksForGeeks;
 
-    console.log(loading );
+    // console.log(data );
 
 
     const circleRadius = 65; // Radius of the circle
@@ -107,7 +126,23 @@ export default function Coding() {
     // Calculate dash values for each category
     const calculateDashArray = (solved, total) => (solved / total) * circleCircumference;
 
+    const leetCodeUser = data?.data?.matchedUser;
 
+    const solvedStats =
+        leetCodeUser?.submitStatsGlobal?.acSubmissionNum || [];
+
+    const easySolved =
+        solvedStats.find(item => item.difficulty === "Easy")?.count || 0;
+
+    const mediumSolved =
+        solvedStats.find(item => item.difficulty === "Medium")?.count || 0;
+
+    const hardSolved =
+        solvedStats.find(item => item.difficulty === "Hard")?.count || 0;
+
+    const totalSolved =
+        solvedStats.find(item => item.difficulty === "All")?.count ||
+        easySolved + mediumSolved + hardSolved;
 
     if (loading) {
         return <div className="loader-container">
@@ -172,7 +207,8 @@ export default function Coding() {
                                     stroke="#38B2AC" // Easy color
                                     strokeWidth="8"
                                     fill="transparent"
-                                    strokeDasharray={`${calculateDashArray(data.easySolved || 314, data.totalEasy || 962)} ${circleCircumference}`}
+                                    // strokeDasharray={`${calculateDashArray(data.easySolved || 314, data.totalEasy || 962)} ${circleCircumference}`}
+                                    strokeDasharray={`${calculateDashArray(easySolved, 859)} ${circleCircumference}`}
                                     strokeDashoffset={0}
                                 />
                                 {/* Medium Segment */}
@@ -183,8 +219,10 @@ export default function Coding() {
                                     stroke="#F59E0B" // Medium color
                                     strokeWidth="8"
                                     fill="transparent"
-                                    strokeDasharray={`${calculateDashArray(data.mediumSolved || 567, data.totalMedium || 2109)} ${circleCircumference}`}
-                                    strokeDashoffset={-calculateDashArray(data.easySolved || 314, data.totalEasy || 962)}
+                                    // strokeDasharray={`${calculateDashArray(data.mediumSolved || 567, data.totalMedium || 2109)} ${circleCircumference}`}
+                                    // strokeDashoffset={-calculateDashArray(data.easySolved || 314, data.totalEasy || 962)}
+                                    strokeDasharray={`${calculateDashArray(mediumSolved, 1965)} ${circleCircumference}`}
+                                    strokeDashoffset={-calculateDashArray(easySolved, 859)}
                                 />
                                 {/* Hard Segment */}
                                 <circle
@@ -194,11 +232,16 @@ export default function Coding() {
                                     stroke="#E53E3E" // Hard color
                                     strokeWidth="8"
                                     fill="transparent"
-                                    strokeDasharray={`${calculateDashArray(data.hardSolved || 163, data.totalHard || 971)} ${circleCircumference}`}
+                                    // strokeDasharray={`${calculateDashArray(data.hardSolved || 163, data.totalHard || 971)} ${circleCircumference}`}
+                                    // strokeDashoffset={-(
+                                    //     calculateDashArray(data.easySolved || 314, data.totalEasy || 962) +
+                                    //     calculateDashArray(data.mediumSolved || 567, data.totalMedium || 2109))}
+                                    strokeDasharray={`${calculateDashArray(hardSolved, 897)} ${circleCircumference}`}
                                     strokeDashoffset={-(
-                                        calculateDashArray(data.easySolved || 314, data.totalEasy || 962) +
-                                        calculateDashArray(data.mediumSolved || 567, data.totalMedium || 2109)
+                                        calculateDashArray(easySolved, 859) +
+                                        calculateDashArray(mediumSolved, 1965)
                                     )}
+                                    
                                 />
                                 <text
                                     x="75"
@@ -207,7 +250,8 @@ export default function Coding() {
                                     fontSize="12"
                                     fill={isDarkMode ? '#fff' : '#000'}
                                 >
-                                    {data.totalSolved || 1044}/{data.totalQuestions || 4042}
+                                    {/* {data.totalSolved || 1044}/{data.totalQuestions || 4042} */}
+                                    {totalSolved}/3821
                                 </text>
                                 <text
                                     x="75"
@@ -232,7 +276,8 @@ export default function Coding() {
                                     Easy
                                 </span>
                                 <span className="text-sm font-medium text-gray-400">
-                                    {data.easySolved || 314}/{data.totalEasy || 962}
+                                    {/* {data.easySolved || 314}/{data.totalEasy || 962} */}
+                                    {easySolved}/859
                                 </span>
                             </div>
                         </div>
@@ -245,7 +290,8 @@ export default function Coding() {
                                     Med.
                                 </span>
                                 <span className="text-sm font-medium text-gray-400">
-                                    {data.mediumSolved || 567}/{data.totalMedium || 2109}
+                                    {/* {data.mediumSolved || 567}/{data.totalMedium || 2109} */}
+                                    {mediumSolved}/1965
                                 </span>
                             </div>
                         </div>
@@ -258,7 +304,8 @@ export default function Coding() {
                                     Hard
                                 </span>
                                 <span className="text-sm font-medium text-gray-400">
-                                    {data.hardSolved || 163}/{data.totalHard || 971}
+                                    {/* {data.hardSolved || 163}/{data.totalHard || 971} */}
+                                    {hardSolved}/897
                                 </span>
                             </div>
                         </div>

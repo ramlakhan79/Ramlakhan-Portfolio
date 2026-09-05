@@ -27,7 +27,5 @@ const WorkStatus = () => {
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
         <WorkStatus />
-    </React.StrictMode>,
 );
