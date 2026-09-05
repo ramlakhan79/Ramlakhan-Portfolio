@@ -127,6 +127,19 @@ export default function Coding() {
     const calculateDashArray = (solved, total) => (solved / total) * circleCircumference;
 
     const leetCodeUser = data?.data?.matchedUser;
+    const questionStats = data?.data?.allQuestionsCount || [];
+
+    const totalEasy =
+        questionStats.find(item => item.difficulty === "Easy")?.count || 0;
+
+    const totalMedium =
+        questionStats.find(item => item.difficulty === "Medium")?.count || 0;
+
+    const totalHard =
+        questionStats.find(item => item.difficulty === "Hard")?.count || 0;
+
+    const totalQuestions =
+        questionStats.find(item => item.difficulty === "All")?.count || 0;
 
     const solvedStats =
         leetCodeUser?.submitStatsGlobal?.acSubmissionNum || [];
@@ -143,6 +156,32 @@ export default function Coding() {
     const totalSolved =
         solvedStats.find(item => item.difficulty === "All")?.count ||
         easySolved + mediumSolved + hardSolved;
+
+    const progress =
+        data?.data?.userProfileUserQuestionProgressV2;
+
+    const failedQuestions =
+        progress?.numFailedQuestions || [];
+
+    const easyAttempting =
+        failedQuestions.find(
+            item => item.difficulty === "EASY"
+        )?.count || 0;
+
+    const mediumAttempting =
+        failedQuestions.find(
+            item => item.difficulty === "MEDIUM"
+        )?.count || 0;
+
+    const hardAttempting =
+        failedQuestions.find(
+            item => item.difficulty === "HARD"
+        )?.count || 0;
+
+    const totalAttempting =
+        easyAttempting +
+        mediumAttempting +
+        hardAttempting;
 
     if (loading) {
         return <div className="loader-container">
@@ -221,8 +260,8 @@ export default function Coding() {
                                     fill="transparent"
                                     // strokeDasharray={`${calculateDashArray(data.mediumSolved || 567, data.totalMedium || 2109)} ${circleCircumference}`}
                                     // strokeDashoffset={-calculateDashArray(data.easySolved || 314, data.totalEasy || 962)}
-                                    strokeDasharray={`${calculateDashArray(mediumSolved)} ${circleCircumference}`}
-                                    strokeDashoffset={-calculateDashArray(easySolved)}
+                                    strokeDasharray={`${calculateDashArray(mediumSolved, totalMedium)} ${circleCircumference}`}
+                                    strokeDashoffset={-calculateDashArray(easySolved, totalEasy)}
                                 />
                                 {/* Hard Segment */}
                                 <circle
@@ -236,10 +275,10 @@ export default function Coding() {
                                     // strokeDashoffset={-(
                                     //     calculateDashArray(data.easySolved || 314, data.totalEasy || 962) +
                                     //     calculateDashArray(data.mediumSolved || 567, data.totalMedium || 2109))}
-                                    strokeDasharray={`${calculateDashArray(hardSolved)} ${circleCircumference}`}
+                                    strokeDasharray={`${calculateDashArray(hardSolved, totalHard)} ${circleCircumference}`}
                                     strokeDashoffset={-(
-                                        calculateDashArray(easySolved) +
-                                        calculateDashArray(mediumSolved)
+                                        calculateDashArray(easySolved, totalEasy) +
+                                        calculateDashArray(mediumSolved, totalMedium)
                                     )}
                                     
                                 />
@@ -251,7 +290,7 @@ export default function Coding() {
                                     fill={isDarkMode ? '#fff' : '#000'}
                                 >
                                     {/* {data.totalSolved || 1044}/{data.totalQuestions || 4042} */}
-                                    {totalSolved}/3821
+                                    {totalSolved}/{totalQuestions}
                                 </text>
                                 <text
                                     x="75"
@@ -264,7 +303,9 @@ export default function Coding() {
                                 </text>
                             </svg>
                         </div>
-                        <div className="text-sm font-medium text-gray-400 mt-2">12 Attempting</div>
+                        <div className="text-sm font-medium text-gray-400 mt-2">
+                            {totalAttempting} Attempting
+                        </div>
                     </div>
                     <div className="ml-8">
                         <div className="bg-gray-800 p-2 rounded-md mb-2">
@@ -277,7 +318,7 @@ export default function Coding() {
                                 </span>
                                 <span className="text-sm font-medium text-gray-400">
                                     {/* {data.easySolved || 314}/{data.totalEasy || 962} */}
-                                    {easySolved}
+                                    {easySolved}/{totalEasy}
                                 </span>
                             </div>
                         </div>
@@ -291,7 +332,7 @@ export default function Coding() {
                                 </span>
                                 <span className="text-sm font-medium text-gray-400">
                                     {/* {data.mediumSolved || 567}/{data.totalMedium || 2109} */}
-                                    {mediumSolved}/1965
+                                    {mediumSolved}/{totalMedium}
                                 </span>
                             </div>
                         </div>
@@ -305,7 +346,7 @@ export default function Coding() {
                                 </span>
                                 <span className="text-sm font-medium text-gray-400">
                                     {/* {data.hardSolved || 163}/{data.totalHard || 971} */}
-                                    {hardSolved}/897
+                                    {hardSolved}/{totalHard}
                                 </span>
                             </div>
                         </div>
