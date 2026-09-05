@@ -12,7 +12,7 @@ import "react-loading-skeleton/dist/skeleton.css"
 import {
     gfgData,
 } from "../constants/gfg";
-import { fetchLeetCodeData } from "../constants/leetcodecache";
+import { fetchLeetCodeData } from "../constants/leetcodeCache";
 
 export default function Coding() {
     const [isDarkMode] = useOutletContext();
@@ -208,7 +208,7 @@ export default function Coding() {
                                     strokeWidth="8"
                                     fill="transparent"
                                     // strokeDasharray={`${calculateDashArray(data.easySolved || 314, data.totalEasy || 962)} ${circleCircumference}`}
-                                    strokeDasharray={`${calculateDashArray(easySolved, 859)} ${circleCircumference}`}
+                                    strokeDasharray={`${calculateDashArray(easySolved)} ${circleCircumference}`}
                                     strokeDashoffset={0}
                                 />
                                 {/* Medium Segment */}
@@ -221,8 +221,8 @@ export default function Coding() {
                                     fill="transparent"
                                     // strokeDasharray={`${calculateDashArray(data.mediumSolved || 567, data.totalMedium || 2109)} ${circleCircumference}`}
                                     // strokeDashoffset={-calculateDashArray(data.easySolved || 314, data.totalEasy || 962)}
-                                    strokeDasharray={`${calculateDashArray(mediumSolved, 1965)} ${circleCircumference}`}
-                                    strokeDashoffset={-calculateDashArray(easySolved, 859)}
+                                    strokeDasharray={`${calculateDashArray(mediumSolved)} ${circleCircumference}`}
+                                    strokeDashoffset={-calculateDashArray(easySolved)}
                                 />
                                 {/* Hard Segment */}
                                 <circle
@@ -236,10 +236,10 @@ export default function Coding() {
                                     // strokeDashoffset={-(
                                     //     calculateDashArray(data.easySolved || 314, data.totalEasy || 962) +
                                     //     calculateDashArray(data.mediumSolved || 567, data.totalMedium || 2109))}
-                                    strokeDasharray={`${calculateDashArray(hardSolved, 897)} ${circleCircumference}`}
+                                    strokeDasharray={`${calculateDashArray(hardSolved)} ${circleCircumference}`}
                                     strokeDashoffset={-(
-                                        calculateDashArray(easySolved, 859) +
-                                        calculateDashArray(mediumSolved, 1965)
+                                        calculateDashArray(easySolved) +
+                                        calculateDashArray(mediumSolved)
                                     )}
                                     
                                 />
@@ -277,7 +277,7 @@ export default function Coding() {
                                 </span>
                                 <span className="text-sm font-medium text-gray-400">
                                     {/* {data.easySolved || 314}/{data.totalEasy || 962} */}
-                                    {easySolved}/859
+                                    {easySolved}
                                 </span>
                             </div>
                         </div>
