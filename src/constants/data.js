@@ -944,7 +944,7 @@ export const workExp = [
     location: "Bhopal, India",
     positions: [
       {
-        title: "SAP ABAP Associate Consultant",
+        title: "Associate Software Engineer",
         startDate: new Date(2025, 6),
         endDate: "Present",
       },
