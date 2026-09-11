@@ -21,7 +21,10 @@ export default function Blogs() {
         const fetchBlogs = async () => {
             try {
                 const data = await getArticles();
-                setBlogs(data);
+                const publishedBlogs = data.filter(
+                    blog => blog.published && !blog.archived
+                );
+                setBlogs(publishedBlogs);
             } catch (error) {
                 console.error("Failed to fetch blogs:", error);
                 setError("Failed to load blogs.");
