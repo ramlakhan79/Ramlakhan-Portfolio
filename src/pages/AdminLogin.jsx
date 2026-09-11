@@ -31,10 +31,10 @@ const AdminLogin = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-950 px-4">
-            <div className="w-full max-w-md bg-gray-900 border border-gray-800 rounded-2xl p-8">
+            <div className="w-full max-w bg-gray-900 border border-gray-800 rounded-2xl p-8">
 
                 <div className="mb-8">
-                    <h1 className="text-3xl font-bold text-white">
+                    <h1 className="text-suppBlue-200 text-3 font-bold text-white border-b border-gray-800 pb-2">
                         Admin Login
                     </h1>
 
@@ -84,7 +84,7 @@ const AdminLogin = () => {
                     <button
                         type="submit"
                         disabled={loading}
-                        className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white font-medium py-3 rounded-lg transition"
+                        className="glassy-icon px-3 shrink-0 border rounded-lg w-full py-3 text-white font-semibold disabled:opacity-50"
                     >
                         {loading ? "Logging in..." : "Login"}
                     </button>

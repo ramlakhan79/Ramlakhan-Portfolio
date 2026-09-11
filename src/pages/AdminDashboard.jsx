@@ -81,7 +81,7 @@ const AdminDashboard = () => {
                 <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
 
                     <div>
-                        <h1 className="text-2xl font-bold">
+                        <h1 className="text-suppBlue-200 text-3 font-bold text-white">
                             Admin Dashboard
                         </h1>
 
@@ -188,7 +188,7 @@ const AdminDashboard = () => {
 
                                                 <button
                                                     onClick={() => navigate(`/admin/articles/edit/${article._id}`)}
-                                                    className="glassy-icon px-3 shrink-0 border rounded-sm"
+                                                    className="text-8 font-normal glassy-icon px-1 py-0 shrink-0 border rounded-lg"
                                                 >
                                                     Edit
                                                 </button>
@@ -196,14 +196,14 @@ const AdminDashboard = () => {
                                                 {article.archived ? (
                                                     <button
                                                         onClick={() => handleRestore(article._id)}
-                                                        className="glassy-icon px-3 shrink-0 border rounded-sm"
+                                                        className="text-8 glassy-icon px-1 py-0 shrink-0 border rounded-sm"
                                                     >
                                                         Restore
                                                     </button>
                                                 ) : (
                                                     <button
                                                         onClick={() => handleArchive(article._id)}
-                                                            className="glassy-icon px-3 shrink-0 border rounded-sm"
+                                                            className="text-8 glassy-icon px-1 py-0 shrink-0 border rounded-sm"
                                                     >
                                                         Archive
                                                     </button>
@@ -211,7 +211,7 @@ const AdminDashboard = () => {
 
                                                 <button
                                                     onClick={() => handleDelete(article._id)}
-                                                    className="glassy-icon px-3 shrink-0 border rounded-sm"
+                                                    className="text-suppRed-200 text-8 glassy-icon px-1 py-0 shrink-0 border rounded-sm"
                                                 >
                                                     Delete
                                                 </button>
