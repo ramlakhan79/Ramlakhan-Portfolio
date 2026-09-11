@@ -1,29 +1,83 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { blogs } from "../constants/data.js";
-import { Search, Clock, Tag } from "lucide-react";
+import { Clock } from "lucide-react";
+import { useEffect, useState } from "react";
+
+import {
+    getArticle,
+    getNextArticle,
+    getPreviousArticle
+} from "../utils/api.js";
 
 export default function BlogDetails() {
     const { id } = useParams();
     const navigate = useNavigate();
 
-    const currentIndex = blogs.findIndex(b => String(b.id) === String(id));
-    const blog = blogs[currentIndex];
-    // console.log(blog);
+    const [blog, setBlog] = useState(null);
+    const [loading, setLoading] = useState(true);
 
-    if (!blog) return <h2 className="text-center mt-10">Blog not found</h2>;
+    useEffect(() => {
+        const fetchArticle = async () => {
+            try {
+                setLoading(true);
 
-    const handleNext = () => {
-        if (currentIndex < blogs.length - 1) {
-            const nextId = blogs[currentIndex + 1].id;
-            navigate(`/blogs/${nextId}`);
+                const data = await getArticle(id);
+
+                setBlog(data.article || data);
+            } catch (error) {
+                console.error("Error fetching article:", error);
+                setBlog(null);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchArticle();
+    }, [id]);
+
+    const handleNext = async () => {
+        try {
+            const data = await getNextArticle(id);
+
+            const nextArticle = data.article || data;
+
+            if (nextArticle?._id) {
+                navigate(`/blogs/${ nextArticle._id } `);
+            }
+        } catch (error) {
+            console.error("Error fetching next article:", error);
         }
     };
+
+    const handlePrevious = async () => {
+        try {
+            const data = await getPreviousArticle(id);
+
+            const previousArticle = data.article || data;
+
+            if (previousArticle?._id) {
+                navigate(`/blogs/${ previousArticle._id } `);
+            }
+        } catch (error) {
+            console.error("Error fetching previous article:", error);
+        }
+    };
+
+    if (loading) {
+        return <div className="loader-container">
+            <div className="custom-loader"></div>
+        </div>
+    }
+
+    if (!blog) {
+        return <h2 className="text-center mt-10">Blog not found</h2>;
+    }
 
     return (
         <div className="max-w-full mx-auto py-5 px-4">
 
             {/* Back + Next buttons */}
             <div className="flex justify-between items-center gap-3 mb-6">
+
                 <button
                     onClick={() => navigate(-1)}
                     className="glassy-icon px-6 shrink-0 border rounded-lg"
@@ -33,42 +87,44 @@ export default function BlogDetails() {
 
                 <button
                     onClick={handleNext}
-                    disabled={currentIndex === blogs.length - 1}
-                    className={`glassy-icon px-6 shrink-0 border rounded-lg
-                        ${currentIndex === blogs.length - 1
-                            ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                            : "bg-gray-100 border-gray-300 hover:bg-gray-200"}
-                    `}
+                    className="glassy-icon px-6 shrink-0 border rounded-lg"
                 >
                     Next →
                 </button>
+
             </div>
 
-            <h4 className="text-3xl font-semibold mb-4">Title: {blog.title}</h4>
+            <h4 className="text-3xl font-semibold mb-4">
+                Title: {blog.title}
+            </h4>
 
-            {/* <img
-                src={blog.image}
-                alt={blog.title}
-                className="w-full rounded-xl mb-6"
-            /> */}
-
-            {/* <p className="text-gray-700 leading-relaxed text-sm">
-                {blog.desc}
-            </p> */}
+            {blog.image && (
+                <img
+                    src={blog.image}
+                    alt={blog.title}
+                    className="w-full rounded-xl mb-6"
+                />
+            )}
 
             <div className="text-gray-700 leading-relaxed text-base space-y-4">
-                {blog.desc.split("\n\n").map((para, index) => (
+                {blog.content.split("\n\n").map((para, index) => (
                     <p key={index}>{para}</p>
                 ))}
             </div>
 
             <div className="px-5 py-4 border-t flex items-center justify-between text-xs text-gray-500">
-                <span>{blog.date}</span>
+                <span>
+                    {blog.createdAt
+                        ? new Date(blog.createdAt).toLocaleDateString()
+                        : ""}
+                </span>
+
                 <span className="flex items-center gap-1">
                     <Clock size={13} />
                     {blog.read}
                 </span>
             </div>
+
         </div>
     );
 }
