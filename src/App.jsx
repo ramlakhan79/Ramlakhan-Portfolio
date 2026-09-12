@@ -15,16 +15,45 @@ import Coding from "./pages/Coding";
 import ErrorPage from "./pages/404";
 import ThankYou from "./pages/ThankYou";
 
-import AdminLogin from "./pages/AdminLogin";
+// import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
+import Users from "./pages/Users";
+import CreateUser from "./pages/CreateUser";
+import EditUser from "./pages/EditUser";
+import AdminArticles from "./pages/AdminArticles";
+
+import Profile from "./pages/Profile";
+
+import ContributorDashboard from "./pages/ContributorDashboard";
+import ContributorArticles from "./pages/ContributorArticles";
+
 import CreateArticle from "./pages/CreateArticle";
 import EditArticle from "./pages/EditArticle";
 
-function ProtectedAdmin({ children }) {
-  const token = localStorage.getItem("adminToken");
-  if (!token) {
-    return <Navigate to="/admin/login" replace />;
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+
+
+function ProtectedRoute({ children, allowedRoles }) {
+  const token = localStorage.getItem("token");
+  const user = JSON.parse(localStorage.getItem("user") || "null");
+
+  if (!token || !user) {
+    return <Navigate to="/login" replace />;
   }
+
+  if (!allowedRoles.includes(user.role)) {
+    if (user.role === "admin") {
+      return <Navigate to="/admin" replace />;
+    }
+
+    if (user.role === "contributor") {
+      return <Navigate to="/dashboard" replace />;
+    }
+
+    return <Navigate to="/" replace />;
+  }
+
   return children;
 }
 
@@ -98,33 +127,114 @@ function App() {
           path: "coding",
           element: <Coding />,
         },
-        // ========================= // ADMIN ROUTES // =========================
-        { path: "/admin/login", element: <AdminLogin /> },
+        
+        // Authentication
         {
-          path: "/admin",
-          element: (
-            <ProtectedAdmin>
-              {" "}
-              <AdminDashboard />{" "}
-            </ProtectedAdmin>
-          ),
+          path: "register",
+          element: <Register />,
         },
         {
-          path: "/admin/articles/create",
+          path: "login",
+          element: <Login />,
+        },
+
+        // =========================
+        // ADMIN ROUTES
+        // =========================
+
+        {
+          path: "admin",
           element: (
-            <ProtectedAdmin>
-              {" "}
-              <CreateArticle />{" "}
-            </ProtectedAdmin>
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <AdminDashboard />
+            </ProtectedRoute>
           ),
         },
+
         {
-          path: "/admin/articles/edit/:id",
+          path: "admin/users",
           element: (
-            <ProtectedAdmin>
-              {" "}
-              <EditArticle />{" "}
-            </ProtectedAdmin>
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <Users />
+            </ProtectedRoute>
+          ),
+        },
+
+        {
+          path: "admin/users/create",
+          element: (
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <CreateUser />
+            </ProtectedRoute>
+          ),
+        },
+
+        {
+          path: "admin/users/edit/:id",
+          element: (
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <EditUser />
+            </ProtectedRoute>
+          ),
+        },
+
+        {
+          path: "admin/articles",
+          element: (
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <AdminArticles />
+            </ProtectedRoute>
+          ),
+        },
+
+        // =========================
+        // CONTRIBUTOR ROUTES
+        // =========================
+
+        {
+          path: "dashboard",
+          element: (
+            <ProtectedRoute allowedRoles={["contributor"]}>
+              <ContributorDashboard />
+            </ProtectedRoute>
+          ),
+        },
+
+        {
+          path: "dashboard/articles",
+          element: (
+            <ProtectedRoute allowedRoles={["contributor"]}>
+              <ContributorArticles />
+            </ProtectedRoute>
+          ),
+        },
+
+        {
+          path: "dashboard/articles/create",
+          element: (
+            <ProtectedRoute allowedRoles={["contributor"]}>
+              <CreateArticle />
+            </ProtectedRoute>
+          ),
+        },
+
+        {
+          path: "dashboard/articles/edit/:id",
+          element: (
+            <ProtectedRoute allowedRoles={["contributor"]}>
+              <EditArticle />
+            </ProtectedRoute>
+          ),
+        },
+      
+        {
+          path: "/profile",
+          element: (
+            <ProtectedRoute
+              allowedRoles={["admin", "contributor", "viewer"]}
+            >
+              <Profile />
+            </ProtectedRoute>
           ),
         },
         {

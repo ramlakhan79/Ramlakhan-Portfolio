@@ -27,7 +27,7 @@ const AdminDashboard = () => {
 
       if (error.message.toLowerCase().includes("token")) {
         logoutAdmin();
-        navigate("/admin/login");
+        navigate("/login");
       }
     } finally {
       setLoading(false);
@@ -71,7 +71,7 @@ const AdminDashboard = () => {
 
   const handleLogout = () => {
     logoutAdmin();
-    navigate("/admin/login");
+    navigate("/login");
   };
 
   return (
