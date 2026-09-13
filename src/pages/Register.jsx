@@ -166,7 +166,7 @@ const Register = () => {
                             {checkingUsername && (
                                 <span className="text-gray-400">
                                     {/* Checking username... */}
-                                    <div class="custom-loader-username"></div>
+                                    <div className="custom-loader-username"></div>
                                 </span>
                             )}
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const CreateUser = () => {
@@ -12,8 +12,53 @@ const CreateUser = () => {
     role: "viewer",
   });
 
+  const [usernameStatus, setUsernameStatus] = useState("");
+  const [checkingUsername, setCheckingUsername] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    const username = form.username.trim().toLowerCase();
+
+    setUsernameStatus("");
+
+    if (username.length < 3) {
+      setCheckingUsername(false);
+      return;
+    }
+
+    if (!/^[a-z0-9_]+$/.test(username)) {
+      setUsernameStatus(
+        "Only lowercase letters, numbers and underscores are allowed"
+      );
+      setCheckingUsername(false);
+      return;
+    }
+
+    const timer = setTimeout(async () => {
+      try {
+        setCheckingUsername(true);
+
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/auth/check-username?username=${encodeURIComponent(username)}`
+        );
+
+        const data = await response.json();
+
+        if (data.available) {
+          setUsernameStatus("available");
+        } else {
+          setUsernameStatus(data.message);
+        }
+      } catch {
+        setUsernameStatus("Unable to check username");
+      } finally {
+        setCheckingUsername(false);
+      }
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, [form.username]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -63,9 +108,22 @@ const CreateUser = () => {
     <div className="min-h-screen bg-gray-950 text-white px-4 py-8">
       <div className="max-w-xl mx-auto">
 
-        <h1 className="text-3xl font-bold">
-          Create User
-        </h1>
+        <header className="border-b border-gray-800 bg-gray-900">
+          <div className="max-w-4xl mx-auto px-6 py-5 flex justify-between items-center">
+
+            <h1 className="text-2xl font-bold">
+              Create User
+            </h1>
+
+            <button
+              onClick={() => navigate("/admin/users")}
+              className="glassy-icon px-6 shrink-0 border rounded-lg"
+            >
+              ← Back
+            </button>
+
+          </div>
+        </header>      
 
         <p className="text-gray-400 mt-1 mb-8">
           Create a new account and assign a role
@@ -99,6 +157,29 @@ const CreateUser = () => {
             placeholder="Username"
             className="input-style"
           />
+          <div className="mt-2 text-sm">
+            {checkingUsername && (
+              <span className="text-gray-400">
+                {/* Checking username... */}
+                <div className="custom-loader-username"></div>
+              </span>
+            )}
+
+            {!checkingUsername &&
+              usernameStatus === "available" && (
+                <span className="text-suppGreen-500">
+                  ✓ Username is available
+                </span>
+              )}
+
+            {!checkingUsername &&
+              usernameStatus &&
+              usernameStatus !== "available" && (
+                <span className="flex flex-wrap text-suppRed-500">
+                  {usernameStatus}
+                </span>
+              )}
+          </div>
 
           <input
             type="email"
@@ -134,7 +215,9 @@ const CreateUser = () => {
 
           <button
             type="submit"
-            disabled={loading}
+            disabled={loading ||
+              checkingUsername ||
+              usernameStatus !== "available"}
             className="glassy-icon w-full border rounded-lg py-3 font-semibold disabled:opacity-50"
           >
             {loading ? "Creating..." : "Create User"}

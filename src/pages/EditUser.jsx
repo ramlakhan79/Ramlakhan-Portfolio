@@ -110,10 +110,22 @@ const EditUser = () => {
   return (
     <div className="min-h-screen bg-gray-950 text-white px-4 py-8">
       <div className="max-w-xl mx-auto">
+        <header className="border-b border-gray-800 bg-gray-900">
+          <div className="max-w-4xl mx-auto px-6 py-5 flex justify-between items-center">
 
-        <h1 className="text-3xl font-bold">
-          Edit User
-        </h1>
+            <h1 className="text-2xl font-bold">
+              Edit User
+            </h1>
+
+            <button
+              onClick={() => navigate("/admin/users")}
+              className="glassy-icon px-6 shrink-0 border rounded-lg"
+            >
+              ← Back
+            </button>
+
+          </div>
+        </header>        
 
         <p className="text-gray-400 mt-1 mb-8">
           Update user details and role

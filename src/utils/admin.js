@@ -118,6 +118,31 @@ export const deleteArticle = async (id) => {
   });
 };
 
+export const getUsers = async () => {
+  const token = localStorage.getItem("token");
+
+  const response = await fetch(
+    `${API_URL}/api/users`,
+    {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || "Failed to load users");
+  }
+
+  return data;
+};
+
+
+
 export const logoutAdmin = () => {
   localStorage.removeItem("token");
   localStorage.removeItem("user");
