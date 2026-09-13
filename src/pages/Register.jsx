@@ -99,7 +99,7 @@ const Register = () => {
 
             localStorage.setItem("token", data.token);
 
-            navigate("/");
+            navigate("/blogs");
         } catch (error) {
             setError(error.message || "Registration failed");
         } finally {
@@ -165,7 +165,8 @@ const Register = () => {
                         <div className="mt-2 text-sm">
                             {checkingUsername && (
                                 <span className="text-gray-400">
-                                    Checking username...
+                                    {/* Checking username... */}
+                                    <div class="custom-loader-username"></div>
                                 </span>
                             )}
 
@@ -179,7 +180,7 @@ const Register = () => {
                             {!checkingUsername &&
                                 usernameStatus &&
                                 usernameStatus !== "available" && (
-                                <span className="text-suppRed-500">
+                                <span className="flex flex-wrap text-suppRed-500">
                                         {usernameStatus}
                                     </span>
                                 )}

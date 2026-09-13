@@ -212,7 +212,7 @@ function App() {
         {
           path: "dashboard/articles/create",
           element: (
-            <ProtectedRoute allowedRoles={["contributor"]}>
+            <ProtectedRoute allowedRoles={["contributor", "admin"]}>
               <CreateArticle />
             </ProtectedRoute>
           ),
@@ -221,7 +221,7 @@ function App() {
         {
           path: "dashboard/articles/edit/:id",
           element: (
-            <ProtectedRoute allowedRoles={["contributor"]}>
+            <ProtectedRoute allowedRoles={["contributor", "admin"]}>
               <EditArticle />
             </ProtectedRoute>
           ),

@@ -93,7 +93,7 @@ const AdminDashboard = () => {
             {/* Actions */}
             <div className="flex flex-col xs:flex-row sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
               <button
-                onClick={() => navigate("/admin/articles/create")}
+                onClick={() => navigate("/dashboard/articles/create")}
                 className="glassy-icon px-1 py-2.5 border rounded-lg"
               >
                 + Create Article
@@ -248,7 +248,7 @@ const AdminDashboard = () => {
                   <div className="flex items-center gap-2 mt-5 pt-4 border-t border-gray-800">
                     <button
                       onClick={() =>
-                        navigate(`/admin/articles/edit/${article._id}`)
+                        navigate(`/dashboard/articles/edit/${article._id}`)
                       }
                       className="
                                     flex-1

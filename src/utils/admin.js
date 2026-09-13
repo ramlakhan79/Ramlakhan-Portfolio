@@ -1,7 +1,7 @@
 const API_URL = import.meta.env.VITE_API_URL;
 
 const getToken = () => {
-  return localStorage.getItem("adminToken");
+  return localStorage.getItem("token");
 };
 
 const request = async (url, options = {}) => {
@@ -85,6 +85,10 @@ export const getArticle = async (id) => {
 export const createArticle = async (article) => {
   return request("/api/articles", {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${getToken()}`,
+    },
     body: JSON.stringify(article),
   });
 };
@@ -115,5 +119,6 @@ export const deleteArticle = async (id) => {
 };
 
 export const logoutAdmin = () => {
-  localStorage.removeItem("adminToken");
+  localStorage.removeItem("token");
+  localStorage.removeItem("user");
 };
