@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ContributorArticles = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -12,7 +14,7 @@ const ContributorArticles = () => {
         const token = localStorage.getItem("token");
 
         const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/articles/my`,
+          `${import.meta.env.VITE_API_URL}/api/articles/`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -60,6 +62,12 @@ const ContributorArticles = () => {
           >
             Create Article
           </Link>
+          <button
+            onClick={() => navigate("/dashboard")}
+            className="glassy-icon px-6 shrink-0 border rounded-lg"
+          >
+            ← Back
+          </button>
         </div>
 
         {error && (

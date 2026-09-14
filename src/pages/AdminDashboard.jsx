@@ -373,7 +373,6 @@ const AdminDashboard = () => {
       setUsersLoading(true);
 
       const data = await getUsers();
-
       setUsers(data.users || []);
       setUsersError("");
     } catch (error) {

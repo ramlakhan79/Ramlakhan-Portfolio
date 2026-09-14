@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
-  useEffect(() => {
+  useEffect(() => {    
     const storedUser = localStorage.getItem("user");
 
     if (storedUser) {
@@ -22,7 +24,14 @@ const Profile = () => {
   return (
     <div className="min-h-screen bg-gray-950 text-white px-4 py-10">
       <div className="max-w-2xl mx-auto">
-
+        <div>
+          <button
+            onClick={() => navigate("/dashboard")}
+            className="glassy-icon px-6 shrink-0 border rounded-lg"
+          >
+            ← Back
+          </button>
+        </div>
         <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8">
 
           <div className="flex items-center gap-5 mb-8">

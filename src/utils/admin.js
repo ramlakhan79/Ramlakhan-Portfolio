@@ -3,7 +3,6 @@ const API_URL = import.meta.env.VITE_API_URL;
 const getToken = () => {
   return localStorage.getItem("token");
 };
-
 const request = async (url, options = {}) => {
   const token = getToken();
 
@@ -101,27 +100,27 @@ export const googleLogin = async (credential) => {
 };
 
 export const loginUser = async (identifier, password) => {
-    const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/auth/login`,
-        {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                identifier,
-                password,
-            }),
-        }
-    );
+  const response = await fetch(
+    `${import.meta.env.VITE_API_URL}/api/auth/login`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        identifier,
+        password,
+      }),
+    },
+  );
 
-    const data = await response.json();
+  const data = await response.json();
 
-    if (!response.ok) {
-        throw new Error(data.message || "Login failed");
-    }
+  if (!response.ok) {
+    throw new Error(data.message || "Login failed");
+  }
 
-    return data;
+  return data;
 };
 
 export const getArticles = async () => {
@@ -171,16 +170,13 @@ export const deleteArticle = async (id) => {
 export const getUsers = async () => {
   const token = localStorage.getItem("token");
 
-  const response = await fetch(
-    `${API_URL}/api/users`,
-    {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-    }
-  );
+  const response = await fetch(`${API_URL}/api/users`, {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+  });
 
   const data = await response.json();
 
@@ -190,8 +186,6 @@ export const getUsers = async () => {
 
   return data;
 };
-
-
 
 export const logoutAdmin = () => {
   localStorage.removeItem("token");

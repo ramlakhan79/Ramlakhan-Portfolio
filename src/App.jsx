@@ -46,7 +46,6 @@ function ProtectedRoute({ children, allowedRoles }) {
     if (user.role === "admin") {
       return <Navigate to="/admin" replace />;
     }
-
     if (user.role === "contributor") {
       return <Navigate to="/dashboard" replace />;
     }

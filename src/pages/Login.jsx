@@ -164,7 +164,7 @@ const Login = () => {
       } else if (
         data.user.role === "contributor"
       ) {
-        navigate("/contributor");
+        navigate("/dashboard");
       } else {
         navigate("/blogs");
       }
@@ -184,7 +184,7 @@ const Login = () => {
     } else if (
       user.role === "contributor"
     ) {
-      navigate("/contributor");
+      navigate("/dashboard");
     } else {
       navigate("/blogs");
     }
@@ -293,6 +293,11 @@ const Login = () => {
             handleGoogleSuccess
           }
         />
+        <p className="text-xs text-gray-500 text-center mt-3">
+          OTP Login: <span className="font-medium text-gray-400">1-Day Session</span>
+          <span className="mx-2">|</span>
+          Google Login: <span className="font-medium text-gray-400">30-Day Session</span>
+        </p>
 
         <p className="text-center text-gray-400 text-sm mt-6">
 
