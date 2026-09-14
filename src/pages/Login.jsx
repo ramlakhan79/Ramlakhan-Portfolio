@@ -197,7 +197,7 @@ const Login = () => {
 
         <div className="mb-8">
 
-          <h1 className="text-2xl sm:text-3xl font-bold text-white border-b border-gray-800 pb-2">
+          <h1 className="text-4 sm:text-3xl font-bold text-white border-b border-gray-800 pb-2">
             Login
           </h1>
 
