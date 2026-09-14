@@ -24,6 +24,43 @@ const request = async (url, options = {}) => {
   return data;
 };
 
+export const sendRegistrationOTP = async (
+  name,
+  username,
+  email,
+  password,
+  confirmPassword,
+) => {
+  const response = await fetch(`${API_URL}/api/auth/send-registration-otp`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, username, email, password, confirmPassword }),
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data.message || "Failed to send OTP");
+  }
+  return data;
+};
+export const verifyRegistrationOTP = async (
+  name,
+  username,
+  email,
+  password,
+  otp,
+) => {
+  const response = await fetch(`${API_URL}/api/auth/verify-registration-otp`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, username, email, password, otp }),
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data.message || "OTP verification failed");
+  }
+  return data;
+};
+
 export const registerUser = async (name, username, email, password) => {
   const response = await fetch(
     `${import.meta.env.VITE_API_URL}/api/auth/register`,
@@ -47,6 +84,19 @@ export const registerUser = async (name, username, email, password) => {
     throw new Error(data.message || "Registration failed");
   }
 
+  return data;
+};
+
+export const googleLogin = async (credential) => {
+  const response = await fetch(`${API_URL}/api/auth/google-login`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ credential }),
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data.message || "Google login failed");
+  }
   return data;
 };
 
