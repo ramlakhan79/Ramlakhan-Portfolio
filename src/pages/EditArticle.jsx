@@ -66,7 +66,7 @@ const EditArticle = () => {
                     </h1>
 
                     <button
-                        onClick={() => navigate("/admin")}
+                        onClick={() => navigate("/dashboard/articles")}
                         className="glassy-icon px-6 shrink-0 border rounded-lg"
                     >
                         ← Back

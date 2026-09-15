@@ -41,6 +41,12 @@ const Users = () => {
     fetchUsers();
   }, []);
 
+  const currentUser = JSON.parse(localStorage.getItem("user"));
+
+  const myUsers = users.filter(
+    (user) => user.role !== currentUser?.role
+  );
+
   const deleteUser = async (id) => {
     if (!window.confirm("Are you sure you want to delete this user?")) {
       return;
@@ -164,7 +170,7 @@ const Users = () => {
               <div className="custom-loader"></div>
             </div>
           </div>
-        ) : users.length === 0 ? (
+        ) : myUsers.length === 0 ? (
           <div
             className="
             text-center
@@ -209,7 +215,7 @@ const Users = () => {
                 </thead>
 
                 <tbody>
-                  {users.map((user) => (
+                      {myUsers.map((user) => (
                     <tr
                       key={user._id}
                       className="

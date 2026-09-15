@@ -69,9 +69,9 @@ const AdminArticles = () => {
         )}
 
         {loading ? (
-          <p className="text-gray-400">
-            Loading articles...
-          </p>
+          <div className="loader-container">
+            <div className="custom-loader"></div>
+          </div>
         ) : (
           <div className="space-y-4">
             {articles.map((article) => (

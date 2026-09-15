@@ -41,6 +41,12 @@ const ContributorArticles = () => {
     fetchArticles();
   }, []);
 
+  const currentUser = JSON.parse(localStorage.getItem("user"));
+
+  const myArticles = articles.filter(
+    (article) => article.createdBy === currentUser?.username
+  );
+
   return (
     <div className="min-h-screen bg-gray-950 text-white px-4 py-8">
       <div className="max-w-6xl mx-auto">
@@ -77,10 +83,10 @@ const ContributorArticles = () => {
         )}
 
         {loading ? (
-          <p className="text-gray-400">
-            Loading articles...
-          </p>
-        ) : articles.length === 0 ? (
+          <div className="loader-container">
+            <div className="custom-loader"></div>
+          </div>
+        ) : myArticles.length === 0 ? (
           <div className="bg-gray-900 border border-gray-800 rounded-xl p-8 text-center">
             <p className="text-gray-400">
               You haven't created any articles yet.
@@ -95,7 +101,7 @@ const ContributorArticles = () => {
           </div>
         ) : (
           <div className="space-y-4">
-            {articles.map((article) => (
+                {myArticles.map((article) => (
               <div
                 key={article._id}
                 className="bg-gray-900 border border-gray-800 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"

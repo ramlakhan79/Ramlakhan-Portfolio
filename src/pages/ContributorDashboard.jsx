@@ -1,7 +1,17 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { logoutAdmin } from "../utils/admin";
 
 const ContributorDashboard = () => {
+  const navigate = useNavigate();
+
   const user = JSON.parse(localStorage.getItem("user") || "null");
+
+   const handleLogout = () => {
+      logoutAdmin();
+      navigate("/login");
+    };
 
   return (
     <div className="min-h-screen bg-gray-950 text-white px-4 py-10">
@@ -15,6 +25,12 @@ const ContributorDashboard = () => {
           <p className="text-gray-400 mt-2">
             Manage your articles and contributions.
           </p>
+          <button
+            onClick={handleLogout}
+            className="glassy-icon px-4 py-2.5 border rounded-lg"
+          >
+            Logout
+          </button>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
