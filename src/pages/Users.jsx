@@ -166,7 +166,7 @@ const Users = () => {
         {/* Header */}
         <div className="flex flex-col gap-5 mb-8">
           <div>
-            <h1 className="text-2xl sm:text-3xl font-bold">Users</h1>
+            <h1 className="text-4 sm:text-3xl font-bold">Users</h1>
 
             <p className="text-gray-400 text-sm sm:text-base mt-1">
               Manage users and their roles
@@ -331,8 +331,8 @@ capitalize
                         <span
                           className={`inline-flex items-center px-3 py-1 rounded-full border text-xs font-medium ${
                             user.emailVerified
-                              ? "text-green-400 bg-green-500/10 border-green-500/20"
-                              : "text-yellow-400 bg-yellow-500/10 border-yellow-500/20"
+                              ? "text-suppGreen-400 bg-green-500/10 border-green-500/20"
+                              : "text-suppRed-400 bg-yellow-500/10 border-yellow-500/20"
                           }`}
                         >
                           {user.emailVerified ? "Verified" : "N/V"}
@@ -617,6 +617,14 @@ capitalize
                     >
                       {user.role}
                     </span>
+                    <span
+                      className={`inline-flex items-center px-3 py-1 rounded-full border text-xs font-medium ${user.emailVerified
+                          ? "text-suppGreen-400 bg-green-500/10 border-green-500/20"
+                          : "text-suppRed-400 bg-yellow-500/10 border-yellow-500/20"
+                        }`}
+                    >
+                      {user.emailVerified ? "Verified" : "N/V"}
+                    </span>
                   </div>
 
                   {/* User details */}
@@ -651,40 +659,7 @@ capitalize
                     border-gray-800
                   "
                   >
-                    {/* <Link
-                      to={`/admin/users/edit/${user._id}`}
-                      className="
-                        flex-1
-                        text-center
-                        glassy-icon
-                        border
-                        border-gray-700
-                        rounded-lg
-                        px-4
-                        py-2.5
-                        text-sm
-                        text-blue-400
-                      "
-                    >
-                      Edit
-                    </Link>
-
-                    <button
-                      onClick={() => deleteUser(user._id)}
-                      className="
-                        flex-1
-                        glassy-icon
-                        border
-                        border-gray-700
-                        rounded-lg
-                        px-4
-                        py-2.5
-                        text-sm
-                        text-red-400
-                      "
-                    >
-                      Delete
-                    </button> */}
+                   
                         <Link
                           to={`/admin/users/edit/${user._id} `}
                           className="
