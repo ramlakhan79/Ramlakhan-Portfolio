@@ -43,9 +43,7 @@ const Users = () => {
 
   const currentUser = JSON.parse(localStorage.getItem("user"));
 
-  const myUsers = users.filter(
-    (user) => user.role !== currentUser?.role
-  );
+  const myUsers = users.filter((user) => user.role !== currentUser?.role);
 
   const deleteUser = async (id) => {
     if (!window.confirm("Are you sure you want to delete this user?")) {
@@ -72,6 +70,74 @@ const Users = () => {
       }
 
       setUsers((prev) => prev.filter((user) => user._id !== id));
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
+  const sendResetPassword = async (email) => {
+    if (!window.confirm(`Send a password reset link to ${email}?`)) {
+      return;
+    }
+
+    try {
+      const token = localStorage.getItem("token");
+
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/auth/forgot-password`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            email,
+          }),
+        },
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to send password reset email");
+      }
+
+      alert(data.message || "Password reset email sent successfully.");
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
+  const sendVerificationEmail = async (email) => {
+    if (!window.confirm(`Send a verification email to ${email}?`)) {
+      return;
+    }
+
+    try {
+      const token = localStorage.getItem("token");
+
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/auth/resend-verification`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            email,
+          }),
+        },
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to send verification email");
+      }
+
+      alert(data.message || "Verification email sent successfully.");
     } catch (error) {
       alert(error.message);
     }
@@ -209,13 +275,17 @@ const Users = () => {
                     </th>
 
                     <th className="px-5 py-4 text-sm font-medium text-gray-300">
+                      Email Status
+                    </th>
+
+                    <th className="px-5 py-4 text-sm font-medium text-gray-300">
                       Actions
                     </th>
                   </tr>
                 </thead>
 
                 <tbody>
-                      {myUsers.map((user) => (
+                  {myUsers.map((user) => (
                     <tr
                       key={user._id}
                       className="
@@ -256,7 +326,17 @@ capitalize
                           {user.role}
                         </span>
                       </td>
-
+                      <td className="px-5 py-4">
+                        <span
+                          className={`inline-flex items-center px-3 py-1 rounded-full border text-xs font-medium ${
+                            user.emailVerified
+                              ? "text-green-400 bg-green-500/10 border-green-500/20"
+                              : "text-yellow-400 bg-yellow-500/10 border-yellow-500/20"
+                          }`}
+                        >
+                          {user.emailVerified ? "Verified" : "N/V"}
+                        </span>
+                      </td>
                       <td className="px-5 py-4">
                         <div className="flex items-center gap-4">
                           <Link
@@ -292,6 +372,41 @@ capitalize
                           >
                             Delete
                           </button>
+                          <button
+                            onClick={() => sendResetPassword(user.email)}
+                            className="
+            glassy-icon
+            border
+            border-gray-700
+            rounded-lg
+            px-4
+            py-2.5
+            text-sm
+            text-yellow-400
+            transition
+        "
+                          >
+                           Reset Password
+                          </button>
+
+                          {!user.emailVerified && (
+                            <button
+                              onClick={() => sendVerificationEmail(user.email)}
+                              className="
+                glassy-icon
+                border
+                border-gray-700
+                rounded-lg
+                px-4
+                py-2.5
+                text-sm
+                text-green-400
+                transition
+            "
+                            >
+                              Verify Email
+                            </button>
+                          )}
                         </div>
                       </td>
                     </tr>

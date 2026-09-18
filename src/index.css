@@ -1507,3 +1507,7 @@
         transform: rotate(1turn)
     }
 }
+
+.custom-height-option{    
+    height: 40px;
+}

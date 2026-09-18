@@ -33,6 +33,9 @@ import EditArticle from "./pages/EditArticle";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 
+import ResetPassword from "./pages/ResetPassword";
+import VerifyEmail from "./pages/VerifyEmail";
+
 
 function ProtectedRoute({ children, allowedRoles }) {
   const token = localStorage.getItem("token");
@@ -137,6 +140,15 @@ function App() {
           element: <Login />,
         },
 
+        {
+          path: "reset-password/:token",       
+          element: <ResetPassword/>,
+        },
+        {
+          path: "verify-email/:token",
+          element: <VerifyEmail />,
+        },      
+
         // =========================
         // ADMIN ROUTES
         // =========================
@@ -236,6 +248,7 @@ function App() {
             </ProtectedRoute>
           ),
         },
+        
         {
           path: "thank-you",
           element: <ThankYou isDarkMode={isDarkMode} />,

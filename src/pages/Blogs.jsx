@@ -15,8 +15,6 @@ export default function Blogs() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
 
-    const categories = ["All", "React", "JavaScript", "Build Tools"];
-
     useEffect(() => {
         const fetchBlogs = async () => {
             try {
@@ -36,13 +34,29 @@ export default function Blogs() {
         fetchBlogs();
     }, []);
 
+    /************** 
+     * Show tag based on category selection and search input
+     * 
+     * 1. Filter blogs based on active category and search input
+     * 2. Display filtered blogs with a "Load More" button to show more blogs
+     * 3. Handle loading and error states
+     **************
+     */
 
-    const loadMore = () => {
-        setVisibleCount(prev => prev + 2);
-    };
-    // console.log("Blogs:", blogs);
+    const categories = ["All", ...new Set(blogs.map((b) => b.category).flat())];
+    const tags = [...new Set(blogs.map((b) => b.tags).flat())];
+
+     categories.sort((a, b) => {
+        if (a === "All") return -1;
+        if (b === "All") return 1;
+        return a.localeCompare(b);
+    });
+
+    // add selection for category and search input to filter blogs
+
+
     const filtered = blogs.filter((b) => {
-        const matchCat = activeCat === "All" || b.category === activeCat;
+        const matchCat = activeCat === "All" || b.tags.includes(activeCat) || b.category === activeCat;
 
         const matchSearch =
             b.title.toLowerCase().includes(search.toLowerCase()) ||
@@ -51,15 +65,20 @@ export default function Blogs() {
         return matchCat && matchSearch;
     });
 
+    const loadMore = () => {
+        setVisibleCount(prev => prev + 2);
+    };
+    
+   
     return (
         <section className="w-full mt-10 px-mobileBound sm:px-8">
 
             <div className="mx-auto w-full max-w-6xl flex flex-col gap-8">
 
-                <div className="flex flex-wrap justify-center">
+                <div className="flex items-center justify-center content-center gap-4">
 
                     <div className="relative w-full max-w-xl">
-
+                        
                         <input
                             type="text"
                             placeholder="Search blogs..."
@@ -70,6 +89,24 @@ export default function Blogs() {
 
                         <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" />
 
+                    </div>
+                   
+                    <div className="relative w-full max-w-xl">
+                        <select
+                            value={activeCat}
+                            onChange={(e) => setActiveCat(e.target.value)}
+                            className="custom-height-option border rounded-xl outline-none bg-black text-primBlue-400"
+                        >
+                            {tags.map((category) => (
+                                <option
+                                    key={category}
+                                    value={category}
+                                    className="bg-black text-primBlue-400"
+                                >
+                                    {category}
+                                </option>
+                            ))}
+                        </select>
                     </div>
 
                 </div>
