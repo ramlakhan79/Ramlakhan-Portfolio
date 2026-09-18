@@ -191,7 +191,7 @@ const AdminDashboard = () => {
               </button>
 
               <span className="text-sm text-gray-500">
-                Total Users: {users.length - 1} users
+                Total Users: {users.length} users
               </span>
             </div>
           </div>

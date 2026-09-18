@@ -94,6 +94,7 @@ export default function Blogs() {
                     <div className="relative w-full max-w-xl">
                         <select
                             value={activeCat}
+                            defaultValue={'SAP ABAP'}
                             onChange={(e) => setActiveCat(e.target.value)}
                             className="custom-height-option border rounded-xl outline-none bg-black text-primBlue-400"
                         >
