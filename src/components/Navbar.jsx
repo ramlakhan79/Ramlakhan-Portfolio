@@ -175,7 +175,7 @@ export default function Navbar({ isDarkMode, toggleDarkMode }) {
                 (
                     <dialog
                         id="main-mobile-menu"
-                        className={`m-0 collapsible-container transition-[transform] pointer-events-none translate-x-[100vw] [&[open]]:translate-x-0 [&[open]]:pointer-events-auto duration-[250ms] ease-linear flex flex-col flex-nowrap justify-start gap-6 fixed top-[0%] bottom-[0%] bg-neutGray-900 dark:bg-neutGray-1050 max-w-[100vw] w-[100%] max-h-[100%] h-[100vh] px-mobileBound py-[40px] z-[999] md:gap-9 lg:gap-11`}
+                        className={`m-0 collapsible-container transition-[transform] pointer-events-none translate-x-[100vw] [&[open]]:translate-x-0 [&[open]]:pointer-events-auto duration-[250ms] ease-linear flex flex-col flex-nowrap justify-start gap-6 fixed top-[0%] bottom-[0%] bg-neutGray-900 dark:bg-neutGray-1050 max-w-[100vw] w-[100%] max-h-[100%] h-[100vh] px-mobileBound py-[0px] z-[999] md:gap-9 lg:gap-11`}
                     >
                         <NavMenu />
                     </dialog >
@@ -184,7 +184,7 @@ export default function Navbar({ isDarkMode, toggleDarkMode }) {
                 (
                     <div
                         id="main-mobile-menu"
-                        className={`flex flex-row flex-nowrap justify-start gap-6 sm:relative bg-transparent dark:bg-transparent sm:w-auto sm:h-auto px-mobileBound py-[40px] z-[999] md:gap-9 lg:gap-11`}
+                        className={`flex flex-row flex-nowrap justify-start gap-6 sm:relative bg-transparent dark:bg-transparent sm:w-auto sm:h-auto px-mobileBound py-[0px] z-[999] md:gap-9 lg:gap-11`}
                     >
                         <NavMenu />
                     </div >
