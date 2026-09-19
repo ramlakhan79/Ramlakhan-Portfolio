@@ -36,7 +36,7 @@ const GoogleLoginButton = ({ onSuccess }) => {
       window.google.accounts.id.renderButton(buttonRef.current, {
         theme: "outline",
         size: "large",
-        width: 200,
+        width: 230,
         text: "continue_with",
         shape: "square",
         logo_alignment: "center",

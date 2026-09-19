@@ -36,6 +36,8 @@ import Login from "./pages/Login";
 import ResetPassword from "./pages/ResetPassword";
 import VerifyEmail from "./pages/VerifyEmail";
 
+import GitHubCallback from "./components/GitHubCallback";
+
 
 function ProtectedRoute({ children, allowedRoles }) {
   const token = localStorage.getItem("token");
@@ -148,7 +150,10 @@ function App() {
           path: "verify-email/:token",
           element: <VerifyEmail />,
         },      
-
+        {
+          path: "github/callback",
+          element: <GitHubCallback/>,
+        },   
         // =========================
         // ADMIN ROUTES
         // =========================
