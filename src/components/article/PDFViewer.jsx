@@ -200,7 +200,7 @@ const PDFViewer = ({ pdfUrl }) => {
     }
 
     return (
-        <div className="pdf-reader w-full overflow-hidden rounded-xl bg-[#111827]">
+        <div className="pdf-reader w-full overflow-hidden rounded-xl bg-suppRed-400">
 
             {/* TOP BAR */}
 
@@ -337,7 +337,7 @@ const PDFViewer = ({ pdfUrl }) => {
                         type="button"
                         onClick={previousPage}
                         disabled={currentPage === 0}
-                        className="rounded-lg border border-gray-700 px-4 py-2 text-sm text-white transition hover:bg-gray-800 disabled:cursor-not-allowed disabled:opacity-30"
+                        className="rounded-lg bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-neutGray-400 disabled:cursor-not-allowed disabled:opacity-30"
                     >
                         Previous
                     </button>
@@ -360,7 +360,7 @@ const PDFViewer = ({ pdfUrl }) => {
                         type="button"
                         onClick={nextPage}
                         disabled={currentPage >= pages.length - 1}
-                        className="rounded-lg bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-30"
+                        className="rounded-lg bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-neutGray-400 disabled:cursor-not-allowed disabled:opacity-30"
                     >
                         Next
                     </button>
