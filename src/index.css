@@ -1511,3 +1511,24 @@
 .custom-height-option{    
     height: 40px;
 }
+
+.stf__parent {
+    margin: 0 auto;
+}
+
+.stf__block {
+    margin: 0 auto;
+}
+
+canvas {
+    image-rendering: auto;
+}
+.pdf-book {
+    perspective: 2000px;
+}
+@media (max-width: 640px) {
+    .stf__parent {
+        width: 100% !important;
+        height: auto !important;
+    }
+}

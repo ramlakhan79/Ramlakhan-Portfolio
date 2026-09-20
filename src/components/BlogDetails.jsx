@@ -19,6 +19,7 @@ import {
     getPreviousArticle
 } from "../utils/api.js";
 
+import ArticlePDF from "../components/article/ArticlePDF";
 
 const createSlugId = text => {
     return text
@@ -223,7 +224,7 @@ const BlogDetails = () => {
             </div>
         );
     }
-    console.log(blog);
+    // console.log(blog);
 
     if (!blog) {
 
@@ -320,7 +321,17 @@ const BlogDetails = () => {
                         {blog.title}
                     </h1>
 
+                    <div
+                        className="article-content"
+                        dangerouslySetInnerHTML={{
+                            __html: blog.content,
+                        }}
+                    />
 
+                    <ArticlePDF
+                        articleId={blog._id}
+                        isLoggedIn={!!User}
+                    />
                     {(blog.excerpt || blog.desc) && (
 
                         <p

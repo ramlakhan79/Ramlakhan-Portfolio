@@ -6,6 +6,9 @@ import {
     updateArticle
 } from "../utils/admin";
 
+import PDFUpload from "../components/article/PDFUpload";
+import { getArticlePDF } from "../utils/articlePdfApi";
+
 const EditArticle = () => {
     const { id } = useParams();
     const navigate = useNavigate();
@@ -15,6 +18,23 @@ const EditArticle = () => {
     const [saving, setSaving] = useState(false);
     const [error, setError] = useState("");
     const [submitting, setSubmitting] = useState(false);
+
+    const [articlePDF, setArticlePDF] = useState(null);
+
+    useEffect(() => {
+        if (!article?._id) return;
+
+        const loadPDF = async () => {
+            try {
+                const data = await getArticlePDF(article._id);
+                setArticlePDF(data);
+            } catch {
+                setArticlePDF(null);
+            }
+        };
+
+        loadPDF();
+    }, [article?._id]);
 
     useEffect(() => {
         const loadArticle = async () => {
@@ -71,7 +91,11 @@ const EditArticle = () => {
                     >
                         ← Back
                     </button>
-
+                    <PDFUpload
+                        articleId={article._id}
+                        existingPDF={articlePDF}
+                        onUploaded={setArticlePDF}
+                    />
                 </div>
             </header>
 
