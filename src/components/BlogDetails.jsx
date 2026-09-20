@@ -319,19 +319,8 @@ const BlogDetails = () => {
                         "
                     >
                         {blog.title}
-                    </h1>
+                    </h1>            
 
-                    <div
-                        className="article-content"
-                        dangerouslySetInnerHTML={{
-                            __html: blog.content,
-                        }}
-                    />
-
-                    <ArticlePDF
-                        articleId={blog._id}
-                        isLoggedIn={!!User}
-                    />
                     {(blog.excerpt || blog.desc) && (
 
                         <p
@@ -576,6 +565,11 @@ const BlogDetails = () => {
                     />
 
 
+                    <ArticlePDF
+                        articleId={blog._id}
+                        isLoggedIn={!!User}
+                    />
+                    
                     {/* Tags */}
 
                     {blog.tags?.length > 0 && (

@@ -1512,7 +1512,7 @@
     height: 40px;
 }
 
-.stf__parent {
+/* .stf__parent {
     margin: 0 auto;
 }
 
@@ -1530,5 +1530,48 @@ canvas {
     .stf__parent {
         width: 100% !important;
         height: auto !important;
+    }
+} */
+
+.pdf-reader {
+    isolation: isolate;
+}
+
+.pdf-book-shadow {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pdf-book-shadow::before {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 30px;
+    bottom: -20px;
+    left: 12.5%;
+    background: rgba(0, 0, 0, 0.45);
+    filter: blur(25px);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.pdf-book-shadow .stf__parent {
+    position: relative;
+    z-index: 1;
+}
+
+.pdf-book-shadow .stf__block {
+    background: transparent !important;
+}
+
+.pdf-book-shadow canvas {
+    display: block;
+}
+
+@media (max-width: 640px) {
+    .pdf-reader .stf__parent {
+        margin: 0 auto;
     }
 }
