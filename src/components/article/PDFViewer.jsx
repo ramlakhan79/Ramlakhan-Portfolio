@@ -16,8 +16,10 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
     import.meta.url
 ).toString();
 
+
 const PDFViewer = ({ pdfUrl }) => {
     const bookRef = useRef(null);
+    const flipSound = useRef(null);
 
     const [pdf, setPdf] = useState(null);
     const [pages, setPages] = useState([]);
@@ -25,11 +27,27 @@ const PDFViewer = ({ pdfUrl }) => {
 
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
+    const [soundEnabled, setSoundEnabled] = useState(true);
 
     const [bookSize, setBookSize] = useState({
         width: 550,
         height: 780,
     });
+    useEffect(() => {
+        flipSound.current = new Audio(
+            "../sounds/page-flip.mp3"
+        );
+
+        flipSound.current.preload = "auto";
+        flipSound.current.volume = .35;
+
+        return () => {
+            if (flipSound.current) {
+                flipSound.current.pause();
+                flipSound.current = null;
+            }
+        };
+    }, []);
 
     useEffect(() => {
         const updateSize = () => {
@@ -165,8 +183,25 @@ const PDFViewer = ({ pdfUrl }) => {
         }
     };
 
+    // const handleFlip = (event) => {
+    //     setCurrentPage(event.data);
+    // };
     const handleFlip = (event) => {
         setCurrentPage(event.data);
+
+        if (!soundEnabled) {
+            return;
+        }
+
+        if (!flipSound.current) {
+            return;
+        }
+
+        flipSound.current.currentTime = 0;
+
+        flipSound.current
+            .play()
+            .catch(() => { });
     };
 
     if (loading) {
@@ -223,7 +258,13 @@ const PDFViewer = ({ pdfUrl }) => {
                     </div>
 
                 </div>
-
+                <button
+                    type="button"
+                    onClick={() => setSoundEnabled((prev) => !prev)}
+                    className="rounded-lg border border-gray-700 px-3 py-2 text-sm text-white transition hover:bg-gray-800"
+                >
+                    {soundEnabled ? "🔊" : "🔇"}
+                </button>
                 <div className="flex items-center gap-2">
 
                     <button
@@ -380,6 +421,7 @@ const PDFViewer = ({ pdfUrl }) => {
 const PDFPage = forwardRef(
     ({ pdf, pageNumber }, ref) => {
         const canvasRef = useRef(null);
+        const renderTaskRef = useRef(null);
 
         const [pageWidth, setPageWidth] = useState(550);
 
@@ -410,6 +452,17 @@ const PDFPage = forwardRef(
 
             const renderPage = async () => {
                 try {
+                    // Cancel any previous render
+                    if (renderTaskRef.current) {
+                        try {
+                            renderTaskRef.current.cancel();
+                        } catch (error) {
+                            // Ignore cancellation errors
+                        }
+
+                        renderTaskRef.current = null;
+                    }
+
                     const pdfPage =
                         await pdf.getPage(pageNumber);
 
@@ -421,7 +474,8 @@ const PDFPage = forwardRef(
                         });
 
                     const scale =
-                        pageWidth / originalViewport.width;
+                        pageWidth /
+                        originalViewport.width;
 
                     const viewport =
                         pdfPage.getViewport({
@@ -431,10 +485,12 @@ const PDFPage = forwardRef(
                     const canvas =
                         canvasRef.current;
 
-                    if (!canvas) return;
+                    if (!canvas || cancelled) return;
 
                     const context =
                         canvas.getContext("2d");
+
+                    if (!context) return;
 
                     const devicePixelRatio =
                         window.devicePixelRatio || 1;
@@ -462,15 +518,39 @@ const PDFPage = forwardRef(
                         0
                     );
 
-                    await pdfPage.render({
-                        canvasContext: context,
-                        viewport,
-                    }).promise;
+                    if (cancelled) return;
+
+                    const renderTask =
+                        pdfPage.render({
+                            canvasContext: context,
+                            viewport,
+                        });
+
+                    renderTaskRef.current =
+                        renderTask;
+
+                    await renderTask.promise;
+
+                    if (
+                        renderTaskRef.current ===
+                        renderTask
+                    ) {
+                        renderTaskRef.current = null;
+                    }
                 } catch (error) {
-                    console.error(
-                        `PDF page ${pageNumber} render error:`,
-                        error
-                    );
+                    if (
+                        error?.name ===
+                        "RenderingCancelledException"
+                    ) {
+                        return;
+                    }
+
+                    if (!cancelled) {
+                        console.error(
+                            `PDF page ${pageNumber} render error:`,
+                            error
+                        );
+                    }
                 }
             };
 
@@ -478,6 +558,16 @@ const PDFPage = forwardRef(
 
             return () => {
                 cancelled = true;
+
+                if (renderTaskRef.current) {
+                    try {
+                        renderTaskRef.current.cancel();
+                    } catch (error) {
+                        // Ignore cancellation errors
+                    }
+
+                    renderTaskRef.current = null;
+                }
             };
         }, [pdf, pageNumber, pageWidth]);
 
