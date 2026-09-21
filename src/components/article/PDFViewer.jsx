@@ -204,11 +204,11 @@ const PDFViewer = ({ pdfUrl }) => {
 
             {/* TOP BAR */}
 
-            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-gray-700 bg-[#0b1220] px-4 py-3">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-gray-700 bg-neutGray-800 px-4 py-3">
 
                 <div className="flex items-center gap-3">
 
-                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white text-sm font-bold text-black">
+                    <div className="flex h-9 w-10 items-center justify-center rounded-lg bg-white text-sm font-bold text-black">
                         PDF
                     </div>
 
@@ -240,7 +240,7 @@ const PDFViewer = ({ pdfUrl }) => {
                         onChange={(e) =>
                             goToPage(e.target.value)
                         }
-                        className="rounded-lg border border-gray-700 bg-gray-900 px-3 py-2 text-sm text-white outline-none"
+                        className="rounded-lg border border-gray-700 bg-gray-900 px-3 py-2 text-sm text-suppBlue-600 outline-none"
                     >
                         {pages.map((pageNumber) => (
                             <option
@@ -267,7 +267,7 @@ const PDFViewer = ({ pdfUrl }) => {
 
             {/* BOOK */}
 
-            <div className="relative flex min-h-[650px] items-center justify-center overflow-hidden bg-[#1a2332] px-3 py-8 sm:px-8">
+            <div className="relative flex min-h-[650px] items-center justify-center overflow-hidden bg-suppYellow-900 px-3 py-8 sm:px-8">
 
                 <div className="pdf-book-shadow">
 
@@ -329,7 +329,7 @@ const PDFViewer = ({ pdfUrl }) => {
 
             {/* BOTTOM CONTROLS */}
 
-            <div className="border-t border-gray-700 bg-[#0b1220] px-4 py-4">
+            <div className="border-t border-gray-700 bg-neutGray-800 px-4 py-4">
 
                 <div className="mx-auto flex max-w-xl items-center justify-between gap-3">
 
