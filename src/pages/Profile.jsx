@@ -1,107 +1,9 @@
-// import { useEffect, useState } from "react";
-// import { useNavigate } from "react-router-dom";
-
-// const Profile = () => {
-//   const [user, setUser] = useState(null);
-//   const navigate = useNavigate();
-
-//   useEffect(() => {    
-//     const storedUser = localStorage.getItem("user");
-
-//     if (storedUser) {
-//       setUser(JSON.parse(storedUser));
-//     }
-//   }, []);
-
-//   if (!user) {
-//     return (
-//       <div className="min-h-screen bg-gray-950 text-gray-400 flex items-center justify-center">
-//         Loading profile...
-//       </div>
-//     );
-//   }
-
-//   return (
-//     <div className="min-h-screen bg-gray-950 text-white px-4 py-10">
-//       <div className="max-w-2xl mx-auto">
-//         <div>
-//           <button
-//             onClick={() => navigate("/dashboard")}
-//             className="glassy-icon px-6 shrink-0 border rounded-lg"
-//           >
-//             ← Back
-//           </button>
-//         </div>
-//         <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8">
-
-//           <div className="flex items-center gap-5 mb-8">
-//             <div className="w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center text-2xl font-bold">
-//               {user.name?.charAt(0).toUpperCase()}
-//             </div>
-
-//             <div>
-//               <h1 className="text-2xl font-bold">
-//                 {user.name}
-//               </h1>
-
-//               <p className="text-gray-400">
-//                 @{user.username}
-//               </p>
-//             </div>
-//           </div>
-
-//           <div className="space-y-5">
-
-//             <div>
-//               <p className="text-gray-500 text-sm">
-//                 Name
-//               </p>
-//               <p className="mt-1">
-//                 {user.name}
-//               </p>
-//             </div>
-
-//             <div>
-//               <p className="text-gray-500 text-sm">
-//                 Username
-//               </p>
-//               <p className="mt-1">
-//                 @{user.username}
-//               </p>
-//             </div>
-
-//             <div>
-//               <p className="text-gray-500 text-sm">
-//                 Email
-//               </p>
-//               <p className="mt-1">
-//                 {user.email}
-//               </p>
-//             </div>
-
-//             <div>
-//               <p className="text-gray-500 text-sm">
-//                 Role
-//               </p>
-
-//               <span className="inline-block mt-1 capitalize bg-gray-800 px-3 py-1 rounded-full text-sm">
-//                 {user.role}
-//               </span>
-//             </div>
-
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Profile;
-
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 const Profile = () => {
+  const { id } = useParams();
+   const navigate = useNavigate();
   const [user, setUser] = useState(null);
 
   const [formData, setFormData] = useState({
@@ -116,7 +18,6 @@ const Profile = () => {
 
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
-
     if (storedUser) {
       const parsedUser = JSON.parse(storedUser);
 
@@ -142,37 +43,55 @@ const Profile = () => {
 
     setSaving(true);
     setMessage("");
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      const userD = JSON.parse(storedUser);
 
-    try {
-      /*
-       * Replace this section with your API request.
-       *
-       * Example:
-       *
-       * const response = await updateProfile(formData);
-       *
-       * const updatedUser = response.data.user;
-       */
+      const userID = userD._id;
+      try {
+        const token = localStorage.getItem("token");
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/users/${userID}`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify({
+              name: formData.name,
+              username: formData.username,
+              email: formData.email,
+            }),
+          },
+        );
 
-      const updatedUser = {
-        ...user,
-        ...formData,
-      };
+        const data = await response.json();
 
-      localStorage.setItem("user", JSON.stringify(updatedUser));
+        if (!response.ok) {
+          throw new Error(data.message || "Failed to update user");
+        }
+        navigate("/profile");
+        const updatedUser = {
+          ...user,
+          ...formData,
+        };
 
-      setUser(updatedUser);
-      setEditing(false);
-      setMessage("Profile updated successfully.");
+        localStorage.setItem("user", JSON.stringify(updatedUser));
 
-      setTimeout(() => {
-        setMessage("");
-      }, 3000);
-    } catch (error) {
-      console.error(error);
-      setMessage("Failed to update profile.");
-    } finally {
-      setSaving(false);
+        setUser(updatedUser);
+        setEditing(false);
+        setMessage("Profile updated successfully.");
+
+        setTimeout(() => {
+          setMessage("");
+        }, 3000);
+      } catch (error) {
+        console.error(error);
+        setMessage("Failed to update profile.");
+      } finally {
+        setSaving(false);
+      }
     }
   };
 
@@ -265,12 +184,10 @@ const Profile = () => {
       {/* Main */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-
           {/* Sidebar */}
           <aside className="lg:col-span-1">
             <div className="bg-gray-900 border border-gray-800 rounded-xl p-3">
               <nav className="space-y-1">
-
                 <a
                   href="#profile"
                   className="
@@ -294,7 +211,6 @@ const Profile = () => {
                       d="M5.121 17.804A13.937 13.937 0 0112 16c2.574 0 4.966.69 7.029 1.893M15 10a3 3 0 11-6 0 3 3 0 016 0z"
                     />
                   </svg>
-
                   Profile
                 </a>
 
@@ -323,7 +239,6 @@ const Profile = () => {
                       d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
                     />
                   </svg>
-
                   Security
                 </a>
 
@@ -353,7 +268,6 @@ const Profile = () => {
                       d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                     />
                   </svg>
-
                   Account
                 </a>
               </nav>
@@ -362,7 +276,6 @@ const Profile = () => {
 
           {/* Content */}
           <div className="lg:col-span-3 space-y-6">
-
             {/* Profile Header */}
             <section
               id="profile"
@@ -378,7 +291,6 @@ const Profile = () => {
 
               <div className="px-5 sm:px-8 pb-6">
                 <div className="flex flex-col sm:flex-row sm:items-end gap-4 -mt-10">
-
                   {/* Avatar */}
                   <div className="relative">
                     <div
@@ -460,9 +372,7 @@ const Profile = () => {
                       @{user.username}
                     </p>
 
-                    <p className="text-sm text-gray-500 mt-1">
-                      {user.email}
-                    </p>
+                    <p className="text-sm text-gray-500 mt-1">{user.email}</p>
                   </div>
                 </div>
               </div>
@@ -502,9 +412,7 @@ const Profile = () => {
             {/* Profile Information */}
             <section className="bg-gray-900 border border-gray-800 rounded-xl">
               <div className="px-5 sm:px-8 py-5 border-b border-gray-800">
-                <h2 className="text-lg font-semibold">
-                  Profile information
-                </h2>
+                <h2 className="text-lg font-semibold">Profile information</h2>
 
                 <p className="text-sm text-gray-400 mt-1">
                   Update your personal information and account details.
@@ -513,7 +421,6 @@ const Profile = () => {
 
               <form onSubmit={handleSave}>
                 <div className="p-5 sm:p-8 space-y-6">
-
                   {/* Name */}
                   <div>
                     <label
@@ -638,22 +545,13 @@ const Profile = () => {
                   </div>
 
                   {/* Buttons */}
-                  <div className="flex flex-col-reverse sm:flex-row sm:justify-end gap-3 pt-2">
-
+                  <div className="flex  sm:flex-row sm:justify-end gap-3 pt-2">
                     {!editing ? (
                       <button
                         type="button"
                         onClick={() => setEditing(true)}
                         className="
-                          w-full sm:w-auto
-                          px-5 py-2.5
-                          rounded-lg
-                          bg-blue-600
-                          hover:bg-blue-700
-                          text-white
-                          text-sm
-                          font-medium
-                          transition
+                         glassy-icon px-6 shrink-0 border rounded-lg
                         "
                       >
                         Edit profile
@@ -664,16 +562,7 @@ const Profile = () => {
                           type="button"
                           onClick={handleCancel}
                           className="
-                            w-full sm:w-auto
-                            px-5 py-2.5
-                            rounded-lg
-                            border border-gray-700
-                            bg-gray-800
-                            hover:bg-gray-700
-                            text-gray-300
-                            text-sm
-                            font-medium
-                            transition
+                           glassy-icon px-6 shrink-0 border rounded-lg
                           "
                         >
                           Cancel
@@ -682,18 +571,8 @@ const Profile = () => {
                         <button
                           type="submit"
                           disabled={saving}
-                          className="
-                            w-full sm:w-auto
-                            px-5 py-2.5
-                            rounded-lg
-                            bg-blue-600
-                            hover:bg-blue-700
-                            disabled:opacity-50
-                            disabled:cursor-not-allowed
-                            text-white
-                            text-sm
-                            font-medium
-                            transition
+                          className="                           
+                           glassy-icon px-6 shrink-0 border rounded-lg
                           "
                         >
                           {saving ? "Saving..." : "Save changes"}
@@ -711,9 +590,7 @@ const Profile = () => {
               className="bg-gray-900 border border-gray-800 rounded-xl"
             >
               <div className="px-5 sm:px-8 py-5 border-b border-gray-800">
-                <h2 className="text-lg font-semibold">
-                  Security
-                </h2>
+                <h2 className="text-lg font-semibold">Security</h2>
 
                 <p className="text-sm text-gray-400 mt-1">
                   Manage your password and authentication settings.
@@ -721,13 +598,9 @@ const Profile = () => {
               </div>
 
               <div className="p-5 sm:p-8">
-
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-
                   <div>
-                    <h3 className="font-medium">
-                      Password
-                    </h3>
+                    <h3 className="font-medium">Password</h3>
 
                     <p className="text-sm text-gray-500 mt-1">
                       Change your account password.
@@ -757,11 +630,8 @@ const Profile = () => {
                 <div className="border-t border-gray-800 my-6" />
 
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-
                   <div>
-                    <h3 className="font-medium">
-                      Email verification
-                    </h3>
+                    <h3 className="font-medium">Email verification</h3>
 
                     <p className="text-sm text-gray-500 mt-1">
                       Keep your email address verified to secure your account.
@@ -811,9 +681,7 @@ const Profile = () => {
               className="bg-gray-900 border border-gray-800 rounded-xl"
             >
               <div className="px-5 sm:px-8 py-5 border-b border-gray-800">
-                <h2 className="text-lg font-semibold">
-                  Account information
-                </h2>
+                <h2 className="text-lg font-semibold">Account information</h2>
 
                 <p className="text-sm text-gray-400 mt-1">
                   Information about your account and access.
@@ -822,7 +690,6 @@ const Profile = () => {
 
               <div className="p-5 sm:p-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-
                   <div className="p-4 rounded-lg bg-gray-800/60 border border-gray-700">
                     <p className="text-xs uppercase tracking-wide text-gray-500">
                       Account role
@@ -861,15 +728,14 @@ const Profile = () => {
 
                     <p
                       className={`mt - 2 text - sm font - medium ${
-  user.emailVerified
-    ? "text-green-400"
-    : "text-yellow-400"
-} `}
+                        user.emailVerified
+                          ? "text-green-400"
+                          : "text-yellow-400"
+                      } `}
                     >
                       {user.emailVerified ? "Verified" : "Not verified"}
                     </p>
                   </div>
-
                 </div>
               </div>
             </section>
@@ -888,11 +754,8 @@ const Profile = () => {
 
               <div className="p-5 sm:p-8">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-
                   <div>
-                    <h3 className="font-medium">
-                      Delete account
-                    </h3>
+                    <h3 className="font-medium">Delete account</h3>
 
                     <p className="text-sm text-gray-500 mt-1">
                       Permanently delete your account and associated data.
@@ -918,7 +781,6 @@ const Profile = () => {
                 </div>
               </div>
             </section>
-
           </div>
         </div>
       </main>
@@ -927,4 +789,3 @@ const Profile = () => {
 };
 
 export default Profile;
-
