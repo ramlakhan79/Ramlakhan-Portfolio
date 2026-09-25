@@ -8,6 +8,7 @@ import {
     workExp,
     extracurriculars,
 } from "../constants/data";
+import { Link } from "react-router-dom";
 
 export default function Resume() {
     return (
@@ -34,6 +35,16 @@ export default function Resume() {
                     </address>
                     <Socials />
                 </div>
+            </section>
+
+            <section className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
+                <a
+                    href="https://code-with-ram.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Visit Code With Ram
+                </a>
             </section>
 
             <section className="w-[100%] flex flex-col flex-nowrap items-center justify-center gap-7 px-mobileBound sm:px-8 sm:gap-8 md:gap-9 lg:gap-10">
