@@ -119,140 +119,140 @@ function App() {
           path: "services",
           element: <Services />,
         },
-        {
-          path: "blogs",
-          element: <Blogs />,
-        },
-        {
-          path: "blogs/:id",
-          element: <BlogDetails />,
-        },
+        // {
+        //   path: "blogs",
+        //   element: <Blogs />,
+        // },
+        // {
+        //   path: "blogs/:id",
+        //   element: <BlogDetails />,
+        // },
         {
           path: "coding",
           element: <Coding />,
         },
         
         // Authentication
-        {
-          path: "register",
-          element: <Register />,
-        },
-        {
-          path: "login",
-          element: <Login />,
-        },
+        // {
+        //   path: "register",
+        //   element: <Register />,
+        // },
+        // {
+        //   path: "login",
+        //   element: <Login />,
+        // },
 
-        {
-          path: "reset-password/:token",       
-          element: <ResetPassword/>,
-        },
-        {
-          path: "verify-email/:token",
-          element: <VerifyEmail />,
-        },      
-        {
-          path: "github/callback",
-          element: <GitHubCallback/>,
-        },   
-        // =========================
-        // ADMIN ROUTES
-        // =========================
+        // {
+        //   path: "reset-password/:token",       
+        //   element: <ResetPassword/>,
+        // },
+        // {
+        //   path: "verify-email/:token",
+        //   element: <VerifyEmail />,
+        // },      
+        // {
+        //   path: "github/callback",
+        //   element: <GitHubCallback/>,
+        // },   
+        // // =========================
+        // // ADMIN ROUTES
+        // // =========================
 
-        {
-          path: "admin",
-          element: (
-            <ProtectedRoute allowedRoles={["admin"]}>
-              <AdminDashboard />
-            </ProtectedRoute>
-          ),
-        },
+        // {
+        //   path: "admin",
+        //   element: (
+        //     <ProtectedRoute allowedRoles={["admin"]}>
+        //       <AdminDashboard />
+        //     </ProtectedRoute>
+        //   ),
+        // },
 
-        {
-          path: "admin/users",
-          element: (
-            <ProtectedRoute allowedRoles={["admin"]}>
-              <Users />
-            </ProtectedRoute>
-          ),
-        },
+        // {
+        //   path: "admin/users",
+        //   element: (
+        //     <ProtectedRoute allowedRoles={["admin"]}>
+        //       <Users />
+        //     </ProtectedRoute>
+        //   ),
+        // },
 
-        {
-          path: "admin/users/create",
-          element: (
-            <ProtectedRoute allowedRoles={["admin"]}>
-              <CreateUser />
-            </ProtectedRoute>
-          ),
-        },
+        // {
+        //   path: "admin/users/create",
+        //   element: (
+        //     <ProtectedRoute allowedRoles={["admin"]}>
+        //       <CreateUser />
+        //     </ProtectedRoute>
+        //   ),
+        // },
 
-        {
-          path: "admin/users/edit/:id",
-          element: (
-            <ProtectedRoute allowedRoles={["admin"]}>
-              <EditUser />
-            </ProtectedRoute>
-          ),
-        },
+        // {
+        //   path: "admin/users/edit/:id",
+        //   element: (
+        //     <ProtectedRoute allowedRoles={["admin"]}>
+        //       <EditUser />
+        //     </ProtectedRoute>
+        //   ),
+        // },
 
-        {
-          path: "admin/articles",
-          element: (
-            <ProtectedRoute allowedRoles={["admin"]}>
-              <AdminArticles />
-            </ProtectedRoute>
-          ),
-        },
+        // {
+        //   path: "admin/articles",
+        //   element: (
+        //     <ProtectedRoute allowedRoles={["admin"]}>
+        //       <AdminArticles />
+        //     </ProtectedRoute>
+        //   ),
+        // },
 
-        // =========================
-        // CONTRIBUTOR ROUTES
-        // =========================
+        // // =========================
+        // // CONTRIBUTOR ROUTES
+        // // =========================
 
-        {
-          path: "dashboard",
-          element: (
-            <ProtectedRoute allowedRoles={["contributor"]}>
-              <ContributorDashboard />
-            </ProtectedRoute>
-          ),
-        },
+        // {
+        //   path: "dashboard",
+        //   element: (
+        //     <ProtectedRoute allowedRoles={["contributor"]}>
+        //       <ContributorDashboard />
+        //     </ProtectedRoute>
+        //   ),
+        // },
 
-        {
-          path: "dashboard/articles",
-          element: (
-            <ProtectedRoute allowedRoles={["contributor"]}>
-              <ContributorArticles />
-            </ProtectedRoute>
-          ),
-        },
+        // {
+        //   path: "dashboard/articles",
+        //   element: (
+        //     <ProtectedRoute allowedRoles={["contributor"]}>
+        //       <ContributorArticles />
+        //     </ProtectedRoute>
+        //   ),
+        // },
 
-        {
-          path: "dashboard/articles/create",
-          element: (
-            <ProtectedRoute allowedRoles={["contributor", "admin"]}>
-              <CreateArticle />
-            </ProtectedRoute>
-          ),
-        },
+        // {
+        //   path: "dashboard/articles/create",
+        //   element: (
+        //     <ProtectedRoute allowedRoles={["contributor", "admin"]}>
+        //       <CreateArticle />
+        //     </ProtectedRoute>
+        //   ),
+        // },
 
-        {
-          path: "dashboard/articles/edit/:id",
-          element: (
-            <ProtectedRoute allowedRoles={["contributor", "admin"]}>
-              <EditArticle />
-            </ProtectedRoute>
-          ),
-        },
+        // {
+        //   path: "dashboard/articles/edit/:id",
+        //   element: (
+        //     <ProtectedRoute allowedRoles={["contributor", "admin"]}>
+        //       <EditArticle />
+        //     </ProtectedRoute>
+        //   ),
+        // },
       
-        {
-          path: "/profile",
-          element: (
-            <ProtectedRoute
-              allowedRoles={["admin", "contributor", "viewer"]}
-            >
-              <Profile />
-            </ProtectedRoute>
-          ),
-        },
+        // {
+        //   path: "/profile",
+        //   element: (
+        //     <ProtectedRoute
+        //       allowedRoles={["admin", "contributor", "viewer"]}
+        //     >
+        //       <Profile />
+        //     </ProtectedRoute>
+        //   ),
+        // },
         
         {
           path: "thank-you",

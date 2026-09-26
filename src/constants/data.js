@@ -18,10 +18,10 @@ export const navMenu = [
   //   id: "Services",
   //   href: "/services",
   // },
-  {
-    id: "Blogs",
-    href: "/blogs",
-  },
+  // {
+  //   id: "Blogs",
+  //   href: "/blogs",
+  // },
   {
     id: "Coding",
     href: "/coding",
