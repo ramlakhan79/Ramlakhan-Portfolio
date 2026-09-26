@@ -39,8 +39,31 @@ export default function Home() {
                 <Socials />
                 <p className="text-center">Are you ready to connect me? Let&apos;s chat!</p>
                 <ContactForm />
-            </section>           
-            
+            </section>
+
+            <a
+                href="https://code-with-ram.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center gap-3 overflow-hidden rounded-xl border border-suppYellow-400/40 bg-suppYellow-500/5 px-5 py-3 shadow-[0_0_15px_rgba(59,130,246,0.12)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]"
+            >
+                <span className="absolute inset-y-0 -left-1/2 w-1/2 animate-[shine_3s_ease-in-out_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
+
+                <span className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-blue-500/10 text-suppYellow-400">
+                    <i className="fa-solid fa-globe" />
+                </span>
+
+                <span className="relative">
+                    {/* <span className="block text-sm font-semibold text-gray-900 dark:text-white">
+                        Code With Ram
+                    </span> */}
+
+                    <span className="block text-xs text-suppYellow-400 dark:text-suppRed-400 animate-pulse"> Visit my website </span>
+                </span>
+
+                <i className="fa-solid fa-arrow-up-right-from-square relative text-xs text-suppYellow-400 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </a>
+
         </>
     );
 }
